@@ -281,6 +281,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Com crear nous projectes en MkDocs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opcional
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -377,6 +392,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Com crear nous projectes en MkDocs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opcional
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -413,6 +443,35 @@
 ├── mkdocs.yml        ← configuració del lloc web
 └── docs/
     └── index.md      ← la teua primera pàgina 
+</code></pre>
+<p>Ara en Github aneu al vostre perfil i creeu un nou repositori, exactament té que ser de la següent forma:</p>
+<pre><code class="language-bash">NomUsuari.github.io
+</code></pre>
+<p><strong>IMPORTANT</strong>
+No poseu ni README, ni .gitignore ni res més i és recomanable que el nom del repositori siga en <code>*MINUSCULES*</code>.
+Ara tornem a la terminal, perque tenim que vincular-lo al repositori de Github que acabem de crear, conseguint-ho de la següent forma en el vostre terminal:</p>
+<pre><code class="language-bash">git init
+git remote add origin https://github.com/NomUsuari/NomUsuari.github.io.git
+git add .
+git commit -m &quot;Primer commit&quot;
+git push -u origin main
+
+</code></pre>
+<p>I per a iniciar-lo usarem el següent comando</p>
+<pre><code class="language-bash">mkdocs gh-deploy
+</code></pre>
+<p>Si dona problemes podeu forçar-lo:</p>
+<pre><code class="language-bash">python -m mkdocs gh-deploy --force
+</code></pre>
+<h3 id="opcional">Opcional</h3>
+<p>Si voleu posar un tema podeu fer-lo de la següent forma:</p>
+<pre><code class="language-bash">pip install mkdocs-material
+</code></pre>
+<p>I en el <code>mkdocs.yml</code> agregueu el següent:</p>
+<pre><code class="language-yaml">site_name: Nom de la web
+theme:
+  name: material
+
 </code></pre>
 
 
