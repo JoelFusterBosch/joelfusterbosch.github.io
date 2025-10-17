@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>MkDocs - Pàgina de Joel</title>
+        <title>Com fer el MkDocs - Pàgina de Joel</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -38,6 +38,9 @@
                                 <a href=".." class="nav-link">Inici</a>
                             </li>
                             <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Com fer el MkDocs</a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="../DWEC/" class="nav-link">DWEC</a>
                             </li>
                             <li class="nav-item">
@@ -51,6 +54,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../DWEC/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -68,12 +81,36 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#que-es-mkdocs" class="nav-link">Què és MkDocs</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#com-installar-lo" class="nav-link">Com instal·lar-lo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#com-crear-nous-projectes-en-mkdocs" class="nav-link">Com crear nous projectes en MkDocs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-</div>
+<h1 id="que-es-mkdocs">Què és MkDocs</h1>
+<p>MkDocs es una eina que converteix els fitxers <code>Markdown</code>(.md) en pàgines web estàtiques amb un disseny net — ideal per a apunts, documentació o blogs tècnics. </p>
+<h2 id="com-installar-lo">Com instal·lar-lo</h2>
+<p>Per a instal·lar <code>MkDocs</code> has de tindre <code>Python</code> instal·lat en el sistema, després en la terminal hauras d'executar el següent:</p>
+<pre><code class="language-bash">pip install mkdocs
+</code></pre>
+<p>Si vols vore si s'ha executat correctament pots executar el següent comando:</p>
+<pre><code class="language-bash">mkdocs --version
+</code></pre>
+<h2 id="com-crear-nous-projectes-en-mkdocs">Com crear nous projectes en MkDocs</h2>
+<pre><code class="language-bash">mkdocs new nom-del-projecte
+</code></pre></div>
             </div>
         </div>
 
