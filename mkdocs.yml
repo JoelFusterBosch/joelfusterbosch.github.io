@@ -1,1 +1,6 @@
-site_name: My Docs
+site_name: Pàgina de Joel
+
+nav:
+  - Inici: index.md
+  - DWEC: DWEC.md
+  - DWES: DWES.md
