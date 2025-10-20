@@ -1,6 +1,30 @@
 site_name: Pàgina de Joel
 
+theme:
+  name: material
+  code:
+    highlight_theme: dracula
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Tema fosc
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Tema clar
+  features:
+    - content.code.copy
+    - palette.toggle
+
+
+
 nav:
   - Inici: index.md
-  - DWEC: DWEC.md
-  - DWES: DWES.md
+  - Com fer el MkDocs: MkDocs.md
+  - DWEC: 
+      - Base de dades : DWEC/BD.md
+      - Backend en APIS amb Node.js : DWEC/Backend.md
+  - DWES: 
+      - Base de dades : DWES/BD.md
+      - Backend en APIS amb Node.js : DWES/Backend.md
