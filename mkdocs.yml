@@ -22,9 +22,12 @@ theme:
 nav:
   - Inici: index.md
   - Com fer el MkDocs: MkDocs.md
-  - DWEC: 
-      - Base de dades : DWEC/BD.md
-      - Backend en APIS amb Node.js : DWEC/Backend.md
-  - DWES: 
-      - Base de dades : DWES/BD.md
-      - Backend en APIS amb Node.js : DWES/Backend.md
+  - DAM:
+    - PMDM: DAM/PMDM/Flutter.md
+  - DAW:
+    - DWEC: 
+      - Base de dades : DAW/DWEC/BD.md
+      - Backend en APIS amb Node.js : DAW/DWEC/Backend.md
+    - DWES: 
+      - Base de dades : DAW/DWES/BD.md
+      - Backend en APIS amb Node.js : DAW/DWES/Backend.md
