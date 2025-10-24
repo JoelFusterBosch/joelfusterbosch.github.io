@@ -534,6 +534,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formulari-basic-amb-exemples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formulari bàsic amb exemples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -549,6 +564,48 @@
   <a href="#javascript" class="md-nav__link">
     <span class="md-ellipsis">
       JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultat-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultat final
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resultat final">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fitxer-indexhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fitxer index.html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitxer-stylescss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fitxer styles.css
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitxer-formjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fitxer form.js
     </span>
   </a>
   
@@ -718,6 +775,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formulari-basic-amb-exemples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formulari bàsic amb exemples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -733,6 +805,48 @@
   <a href="#javascript" class="md-nav__link">
     <span class="md-ellipsis">
       JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultat-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultat final
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resultat final">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fitxer-indexhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fitxer index.html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitxer-stylescss" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fitxer styles.css
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitxer-formjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fitxer form.js
     </span>
   </a>
   
@@ -768,6 +882,7 @@
 </ul>
 <h2 id="eines-a-utilitzar">Eines a utilitzar</h2>
 <h3 id="html">HTML</h3>
+<h4 id="formulari-basic-amb-exemples">Formulari bàsic amb exemples</h4>
 <p>En HTML anem a donar-li la estructura necessaria per a que apareguen els formularis en la aplicació web, però per a fer-ho possible hem de connectar el fitxer HTML a CSS i amb JavaScript mitjançant les etiquetes <code>&lt;script&gt;</code> i <code>&lt;style&gt;</code> de la següent forma:</p>
 <pre><code class="language-html">&lt;head&gt;
     &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
@@ -775,160 +890,238 @@
 &lt;/head&gt;
 </code></pre>
 <p>Per crear i usar formularis en HTML necessitem usar la etiqueta <code>&lt;form&gt;</code>, i esta etiqueta també té altres propietats com per exemple:
-- fieldset: Area definida per al formulari
-    <code>html
-    &lt;body&gt;
-        &lt;form&gt;
-            &lt;fieldset&gt;
-                &lt;legend&gt;Formulari&lt;/legend&gt;
-                &lt;label for="camp1"&gt;Camp1:&lt;/label&gt;
-                &lt;input type="text" id="camp1" name="camp1"&gt;&lt;br&gt;
-            &lt;/fieldset&gt;
-        &lt;/form&gt;
-    &lt;/body&gt;</code>
-- legend: Posar un titol al formulari
-    <code>html
-    &lt;body&gt;
-        &lt;form&gt;
-            &lt;legend&gt;Titol del formulari&lt;/legend&gt;
-        &lt;/form&gt;
-    &lt;/body&gt;</code>
-- label: El nom d'un camp en el formulari
-    <code>html
-    &lt;body&gt;
-        &lt;form&gt;
-            &lt;label for="camp"&gt;Nom del camp:&lt;/label&gt;
-        &lt;/form&gt;
-    &lt;/body&gt;</code>
-- input: El camp a replenar del formulari, aquest últim té també unes quantes propietats que pots posar en el camp <code>type</code>:
-    - text: El camp per a replenar en text
-        <code>html
-        &lt;body&gt;
-            &lt;form&gt;
-                &lt;fieldset&gt;
-                    &lt;legend&gt;Formulari&lt;/legend&gt;
-                    &lt;label for="camptext"&gt;Camp de text:&lt;/label&gt;
-                    &lt;input type="text" id="camptext" name="camptext"&gt;&lt;br&gt;
-                &lt;/fieldset&gt;
-            &lt;/form&gt;
-        &lt;/body&gt;</code>
-    - number: El camp per a replenar en numeros
-        <code>html
-        &lt;body&gt;
-            &lt;form&gt;
-                &lt;fieldset&gt;
-                    &lt;legend&gt;Formulari&lt;/legend&gt;
-                    &lt;label for="campnum"&gt;Camp de números:&lt;/label&gt;
-                    &lt;input type="number" id="campnum" name="campnum"&gt;&lt;br&gt;
-                &lt;/fieldset&gt;
-            &lt;/form&gt;
-        &lt;/body&gt;</code>
-    - tel: El camp per a replenar el numero de teleèfon valid
-        <code>html
-        &lt;body&gt;
-            &lt;form&gt;
-                &lt;fieldset&gt;
-                    &lt;legend&gt;Formulari&lt;/legend&gt;
-                    &lt;label for="camptel"&gt;Camp de telèfon:&lt;/label&gt;
-                    &lt;input type="tel" id="camptel" name="camptel"&gt;&lt;br&gt;
-                &lt;/fieldset&gt;
-            &lt;/form&gt;
-        &lt;/body&gt;</code>
-    - email: El camp per a replenar el numero de telèfon valid
-        <code>html
-        &lt;body&gt;
-            &lt;form&gt;
-                &lt;fieldset&gt;
-                    &lt;legend&gt;Formulari&lt;/legend&gt;
-                    &lt;label for="campemail"&gt;Camp de correu electrònic:&lt;/label&gt;
-                    &lt;input type="email" id="campemail" name="campemail"&gt;&lt;br&gt;
-                &lt;/fieldset&gt;
-            &lt;/form&gt;
-        &lt;/body&gt;</code>
-    - date: El camp per a replenar amb una data format (dd/mm/aaaa)
-        <code>html
-        &lt;body&gt;
-            &lt;form&gt;
-                &lt;fieldset&gt;
-                    &lt;legend&gt;Formulari&lt;/legend&gt;
-                    &lt;label for="campdate"&gt;Data:&lt;/label&gt;
-                    &lt;input type="date" id="campdate" name="campdate"&gt;&lt;br&gt;
-                &lt;/fieldset&gt;
-            &lt;/form&gt;
-        &lt;/body&gt;</code>
-    - password: El camp per a replenar amb una contrasenya
-        <code>html
-        &lt;body&gt;
-            &lt;form&gt;
-                &lt;fieldset&gt;
-                    &lt;legend&gt;Formulari&lt;/legend&gt;
-                    &lt;label for="camppasswd"&gt;Data:&lt;/label&gt;
-                    &lt;input type="password" id="camppasswd" name="camppasswd"&gt;&lt;br&gt;
-                &lt;/fieldset&gt;
-            &lt;/form&gt;
-        &lt;/body&gt;</code>
-    -ratio: Permet utilitzar la casella d'opció
-        <code>html
-        &lt;body&gt;
-            &lt;form&gt;
-                &lt;fieldset&gt;
-                    &lt;legend&gt;Formulari&lt;/legend&gt;
-                        &lt;input type="radio" id="opcio1" name="opcions" value="opcio1"&gt; &lt;label for="opcio1"&gt;Opcio 1&lt;/label&gt;&lt;br&gt;
-                        &lt;input type="radio" id="opcio2" name="opcions" value="opcio2"&gt; &lt;label for="opcio2"&gt;Opcio 2&lt;/label&gt;&lt;br&gt;
-                        &lt;input type="radio" id="opcio3" name="opcions" value="opcio3"&gt;&lt;label for="opcio3"&gt;Opcio 3&lt;/label&gt;
-                &lt;/fieldset&gt;
-            &lt;/form&gt;
-        &lt;/body&gt;</code>
-    -ratio: Permet utilitzar la casella de selecció multiple
-        <code>html
-        &lt;body&gt;
-            &lt;form&gt;
-                &lt;fieldset&gt;
-                    &lt;legend&gt;Formulari&lt;/legend&gt;
-                        &lt;input type="checkbox" id="vehicle1" name="vehicle1" value="vehicle1"&gt;
-                        &lt;label for="vehicle1"&gt; Vehicle1 &lt;/label&gt;&lt;br&gt;
-                        &lt;input type="checkbox" id="vehicle2" name="vehicle2" value="vehicle2"&gt;
-                        &lt;label for="vehicle2"&gt; Vehicle2 &lt;/label&gt;&lt;br&gt;
-                        &lt;input type="checkbox" id="vehicle3" name="vehicle3" value="vehicle3"&gt;
-                        &lt;label for="vehicle3"&gt; Vehicle3 &lt;/label&gt;
-                &lt;/fieldset&gt;
-            &lt;/form&gt;
-        &lt;/body&gt;</code>
-    -button: Permet utilitzar botons
-        <code>html
-        &lt;body&gt;
-            &lt;form&gt;
-                &lt;fieldset&gt;
-                    &lt;legend&gt;Formulari&lt;/legend&gt;
-                        &lt;input type="button" 
-                        onclick="alert('Has fet clic al botó!')"
-                        value="boto_clicat"&gt;
-                &lt;/fieldset&gt;
-            &lt;/form&gt;
-        &lt;/body&gt;</code>
-    -submit: Permet enviar la informació al servidor mitjançant un botó
-        <code>html
-        &lt;body&gt;
-            &lt;form&gt;
-                &lt;fieldset&gt;
-                    &lt;legend&gt;Formulari&lt;/legend&gt;
-                        &lt;input type="submit" value="Enviar" action="enviar.js"&gt;
-                &lt;/fieldset&gt;
-            &lt;/form&gt;
-        &lt;/body&gt;</code>
-    -reset: Permet eliminar la informació que hages posat en el formulari
-        <code>html
-        &lt;body&gt;
-            &lt;form&gt;
-                &lt;fieldset&gt;
-                    &lt;legend&gt;Formulari&lt;/legend&gt;
-                        &lt;input type="reset" value="Netejar"&gt;
-                &lt;/fieldset&gt;
-            &lt;/form&gt;
-        &lt;/body&gt;</code>
-- selection</p>
+- fieldset: Area definida per al formulari</p>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Formulari&lt;/legend&gt;
+            &lt;label for=&quot;camp1&quot;&gt;Camp1:&lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;camp1&quot; name=&quot;camp1&quot;&gt;&lt;br&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>legend: Posar un titol al formulari</li>
+</ul>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;form&gt;
+        &lt;legend&gt;Titol del formulari&lt;/legend&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>label: El nom d'un camp en el formulari</li>
+</ul>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;form&gt;
+        &lt;label for=&quot;camp&quot;&gt;Nom del camp:&lt;/label&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>input: El camp a replenar del formulari, aquest últim té també unes quantes propietats que pots posar en el camp <code>type</code>:</li>
+<li>text: El camp per a replenar en text</li>
+</ul>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Formulari&lt;/legend&gt;
+            &lt;label for=&quot;camptext&quot;&gt;Camp de text:&lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;camptext&quot; name=&quot;camptext&quot;&gt;&lt;br&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>number: El camp per a replenar en numeros</li>
+</ul>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Formulari&lt;/legend&gt;
+            &lt;label for=&quot;campnum&quot;&gt;Camp de números:&lt;/label&gt;
+            &lt;input type=&quot;number&quot; id=&quot;campnum&quot; name=&quot;campnum&quot;&gt;&lt;br&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>tel: El camp per a replenar el numero de teleèfon valid</li>
+</ul>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Formulari&lt;/legend&gt;
+            &lt;label for=&quot;camptel&quot;&gt;Camp de telèfon:&lt;/label&gt;
+            &lt;input type=&quot;tel&quot; id=&quot;camptel&quot; name=&quot;camptel&quot;&gt;&lt;br&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>email: El camp per a replenar el numero de telèfon valid</li>
+</ul>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Formulari&lt;/legend&gt;
+            &lt;label for=&quot;campemail&quot;&gt;Camp de correu electrònic:&lt;/label&gt;
+            &lt;input type=&quot;email&quot; id=&quot;campemail&quot; name=&quot;campemail&quot;&gt;&lt;br&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>date: El camp per a replenar amb una data format (dd/mm/aaaa)</li>
+</ul>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Formulari&lt;/legend&gt;
+            &lt;label for=&quot;campdate&quot;&gt;Data:&lt;/label&gt;
+            &lt;input type=&quot;date&quot; id=&quot;campdate&quot; name=&quot;campdate&quot;&gt;&lt;br&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>password: El camp per a replenar amb una contrasenya</li>
+</ul>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Formulari&lt;/legend&gt;
+            &lt;label for=&quot;camppasswd&quot;&gt;Data:&lt;/label&gt;
+            &lt;input type=&quot;password&quot; id=&quot;camppasswd&quot; name=&quot;camppasswd&quot;&gt;&lt;br&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>ratio: Permet utilitzar la casella d'opció</li>
+</ul>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Formulari&lt;/legend&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;opcio1&quot; name=&quot;opcions&quot; value=&quot;opcio1&quot;&gt; &lt;label for=&quot;opcio1&quot;&gt;Opcio 1&lt;/label&gt;&lt;br&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;opcio2&quot; name=&quot;opcions&quot; value=&quot;opcio2&quot;&gt; &lt;label for=&quot;opcio2&quot;&gt;Opcio 2&lt;/label&gt;&lt;br&gt;
+                &lt;input type=&quot;radio&quot; id=&quot;opcio3&quot; name=&quot;opcions&quot; value=&quot;opcio3&quot;&gt;&lt;label for=&quot;opcio3&quot;&gt;Opcio 3&lt;/label&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>checkbox: Permet utilitzar la casella de selecció multiple</li>
+</ul>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Formulari&lt;/legend&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;vehicle1&quot; name=&quot;vehicle1&quot; value=&quot;vehicle1&quot;&gt;
+                &lt;label for=&quot;vehicle1&quot;&gt; Vehicle1 &lt;/label&gt;&lt;br&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;vehicle2&quot; name=&quot;vehicle2&quot; value=&quot;vehicle2&quot;&gt;
+                &lt;label for=&quot;vehicle2&quot;&gt; Vehicle2 &lt;/label&gt;&lt;br&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;vehicle3&quot; name=&quot;vehicle3&quot; value=&quot;vehicle3&quot;&gt;
+                &lt;label for=&quot;vehicle3&quot;&gt; Vehicle3 &lt;/label&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>button: Permet utilitzar botons</li>
+</ul>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Formulari&lt;/legend&gt;
+                &lt;input type=&quot;button&quot; 
+                onclick=&quot;alert('Has fet clic al botó!')&quot;
+                value=&quot;boto_clicat&quot;&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>submit: Permet enviar la informació al servidor mitjançant un botó</li>
+</ul>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Formulari&lt;/legend&gt;
+                &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot; action=&quot;enviar.js&quot;&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>reset: Permet eliminar la informació que hages posat en el formulari</li>
+</ul>
+<pre><code class="language-html">&lt;body&gt;
+    &lt;form&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Formulari&lt;/legend&gt;
+                &lt;input type=&quot;reset&quot; value=&quot;Netejar&quot;&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>selection</li>
+</ul>
 <h3 id="css">CSS</h3>
 <h3 id="javascript">JavaScript</h3>
+<h2 id="resultat-final">Resultat final</h2>
+<h3 id="fitxer-indexhtml">Fitxer index.html</h3>
+<pre><code class="language-html">&lt;form name=&quot;persona&quot; action=&quot;#&quot; method=&quot;post&quot;&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Persona&lt;/legend&gt;
+            &lt;label for=&quot;nom&quot;&gt;Nom:&lt;/label&gt;&lt;br&gt;
+            &lt;input type=&quot;text&quot; id=&quot;nom&quot; name=&quot;nom&quot; required&gt;&lt;br&gt;
+            &lt;label for=&quot;dni&quot;&gt;DNI:&lt;/label&gt;&lt;br&gt;
+            &lt;input type=&quot;text&quot; id=&quot;dni&quot; name=&quot;dni&quot; required&gt;&lt;br&gt;
+            &lt;label for=&quot;persona&quot;&gt;Tipus de persona:&lt;/label&gt;&lt;br&gt;
+            &lt;select id=&quot;classePersona&quot; name=&quot;persona&quot; onChange=&quot;mostrarCampsPersona()&quot; required&gt;
+                &lt;option value=&quot;soci&quot;&gt;Soci&lt;/option&gt;
+                &lt;option value=&quot;administrador&quot;&gt;Administrador&lt;/option&gt;
+            &lt;/select&gt;&lt;br&gt;
+
+            &lt;div id=&quot;soci&quot; class=&quot;ocult&quot;&gt;
+                &lt;label for=&quot;soci&quot;&gt;Camp per a opció soci:&lt;/label&gt;
+                &lt;input type=&quot;text&quot; id=&quot;soci&quot; name=&quot;soci&quot;&gt;&lt;br&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;administrador&quot; class=&quot;ocult&quot;&gt;
+                &lt;label for=&quot;administrador&quot;&gt;Tipus de administrador:&lt;/label&gt;&lt;br&gt;
+                &lt;select id=&quot;administrador&quot; name=&quot;administrador&quot; required&gt;
+                    &lt;option value=&quot;ajudant&quot;&gt;Ajudant&lt;/option&gt;
+                    &lt;option value=&quot;admin&quot;&gt;Administrador&lt;/option&gt;
+                &lt;/select&gt;&lt;br&gt;
+            &lt;/div&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot;&gt;
+            &lt;input type=&quot;reset&quot; value=&quot;Reset&quot;&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+<h3 id="fitxer-stylescss">Fitxer styles.css</h3>
+<pre><code class="language-css">.ocult{
+    display: none;
+}
+</code></pre>
+<h3 id="fitxer-formjs">Fitxer form.js</h3>
+<pre><code class="language-javascript">function mostrarCampsPersona(){
+    document.getElementById('soci').classList.add('ocult');
+    document.getElementById('administrador').classList.add('ocult');
+
+    const opcioSeleccionada = document.getElementById('classePersona').value;
+
+    if(opcioSeleccionada === 'soci'){
+        document.getElementById('soci').classList.remove('ocult');
+    } else if(opcioSeleccionada === 'administrador'){
+        document.getElementById('administrador').classList.remove('ocult')
+    }
+}
+</code></pre>
 
 
 
