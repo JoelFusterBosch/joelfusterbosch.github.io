@@ -641,7 +641,7 @@
   
   
   <span class="md-ellipsis">
-    Base de dades
+    Problemes amb la base de dades en docker i solucions
     
   </span>
   
@@ -665,6 +665,98 @@
   
   <span class="md-ellipsis">
     Backend en APIS amb Node.js
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DIW
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            DIW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DIW/HTML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DIW/CSS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS
     
   </span>
   
@@ -792,61 +884,61 @@
 <h1 id="apis-en-nodejs">APIS en Node.js</h1>
 <h2 id="installacio-i-creacio-dun-projecte-de-nodejs">Instal·lació i creació d'un projecte de Node.js</h2>
 <h3 id="installacio-en-local">Instal·lació en local</h3>
-<p>Per a instal·lar Node.js en local en <code>Linux</code> és tan fàcil com fer </p>
-<pre><code class="language-bash"># En sistemes com Ubuntu o Linux Mint
-sudo apt install nodejs
-</code></pre>
-<p>i també es pot anar a la pàgna oficial de Node a través d'<a href="https://nodejs.org/es/download">este enllaç</a> per a descarregar el instal·lador tant en Linux com en els altres sistemes operatius com <code>Windows</code> o <code>Mac</code>.</p>
+<p>Per a instal·lar Node.js en local en <code>Linux</code> és tan fàcil com fer 
+<div class="highlight"><pre><span></span><code><span class="c1"># En sistemes com Ubuntu o Linux Mint</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nodejs
+</code></pre></div>
+i també es pot anar a la pàgna oficial de Node a través d'<a href="https://nodejs.org/es/download">este enllaç</a> per a descarregar el instal·lador tant en Linux com en els altres sistemes operatius com <code>Windows</code> o <code>Mac</code>.</p>
 <h3 id="installacio-en-docker">Instal·lació en Docker</h3>
 <p>Per a instal·lar Node en Docker podeu basar-se en el següent apartat de la pàgina oficial de Nodejs:</p>
-<pre><code class="language-bash"># Docker provee instrucciones dedicadas para cada sistema operativo.
-# Por favor consulta la documentación oficial en https://www.docker.com/get-started/
+<div class="highlight"><pre><span></span><code><span class="c1"># Docker provee instrucciones dedicadas para cada sistema operativo.</span>
+<span class="c1"># Por favor consulta la documentación oficial en https://www.docker.com/get-started/</span>
 
-# Descarga la imagen de Docker de Node.js:
-docker pull node:22-alpine
+<span class="c1"># Descarga la imagen de Docker de Node.js:</span>
+docker<span class="w"> </span>pull<span class="w"> </span>node:22-alpine
 
-# Crea un contenedor de Node.js e inicia una sesión shell:
-docker run -it --rm --entrypoint sh node:22-alpine
+<span class="c1"># Crea un contenedor de Node.js e inicia una sesión shell:</span>
+docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>--entrypoint<span class="w"> </span>sh<span class="w"> </span>node:22-alpine
 
-# Verify the Node.js version:
-node -v # Should print &quot;v22.20.0&quot;.
+<span class="c1"># Verify the Node.js version:</span>
+node<span class="w"> </span>-v<span class="w"> </span><span class="c1"># Should print &quot;v22.20.0&quot;.</span>
 
-# Verifica versión de npm:
-npm -v # Debería mostrar &quot;10.9.3&quot;.
-</code></pre>
+<span class="c1"># Verifica versión de npm:</span>
+npm<span class="w"> </span>-v<span class="w"> </span><span class="c1"># Debería mostrar &quot;10.9.3&quot;.</span>
+</code></pre></div>
 <h3 id="creacio-i-configuracio-dun-projecte-de-nodejs">Creació i configuració d'un projecte de Node.js</h3>
-<p>Per a crear un projecte en Node.js clarament necessitem tindre Node.js iinstal·lat i executar aquest comand:</p>
-<pre><code class="language-bash">npm init
-</code></pre>
-<p>Ara amb el projecte creat necessitem instal·lar unes quantes llibreries per a poder tant connectar-mo'n a la base de dades com per a poder fer APIs, instal·larem les següents llibreries que tenen les següents funcions:
+<p>Per a crear un projecte en Node.js clarament necessitem tindre Node.js iinstal·lat i executar aquest comand:
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>init
+</code></pre></div>
+Ara amb el projecte creat necessitem instal·lar unes quantes llibreries per a poder tant connectar-mo'n a la base de dades com per a poder fer APIs, instal·larem les següents llibreries que tenen les següents funcions:
 - Express: Aquesta llibreria ens permet crear la creació i utilització de les APIs.
 - mysql2: Permet l'utilització de sentencies de MySQL.
 - dotenv: Permet llegir els fitxers .env que n'hi hagen en el projecte Node.
 - router:</p>
-<p>I totes aquestes llibreries podem instal·lar-les de la següent forma:</p>
-<pre><code class="language-bash">npm install express
-npm install mysql2
-npm install dotenv
-npm install router
+<p>I totes aquestes llibreries podem instal·lar-les de la següent forma:
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>express
+npm<span class="w"> </span>install<span class="w"> </span>mysql2
+npm<span class="w"> </span>install<span class="w"> </span>dotenv
+npm<span class="w"> </span>install<span class="w"> </span>router
 ...
-</code></pre>
-<p>Ara que ja tenim les llibreries anem a fer el projecte en general, seguirem la següent estructura:</p>
-<pre><code class="language-bash">Carpeta arrel del projecte/
-├── node_modules/
-│   └── No entrem en detall
-├── routes/ (importan fer la carpeta si vols tindre els endpoints en 1 lloc)
-│   └── &quot;Nom del endpoint&quot;.js (pots fer 1 o més endpoints, pots fer els que vullgues)
-├── package-lock.json
-├── package.json
-├── .env
-├── db.js (pots posar-lo en una carpeta també, dona igual)
-└── &quot;main&quot;.js (o com siga el fitxer principal creat amb npm init) 
-</code></pre>
+</code></pre></div>
+Ara que ja tenim les llibreries anem a fer el projecte en general, seguirem la següent estructura:
+<div class="highlight"><pre><span></span><code>Carpeta<span class="w"> </span>arrel<span class="w"> </span>del<span class="w"> </span>projecte/
+├──<span class="w"> </span>node_modules/
+│<span class="w">   </span>└──<span class="w"> </span>No<span class="w"> </span>entrem<span class="w"> </span>en<span class="w"> </span>detall
+├──<span class="w"> </span>routes/<span class="w"> </span><span class="o">(</span>importan<span class="w"> </span>fer<span class="w"> </span>la<span class="w"> </span>carpeta<span class="w"> </span>si<span class="w"> </span>vols<span class="w"> </span>tindre<span class="w"> </span>els<span class="w"> </span>endpoints<span class="w"> </span>en<span class="w"> </span><span class="m">1</span><span class="w"> </span>lloc<span class="o">)</span>
+│<span class="w">   </span>└──<span class="w"> </span><span class="s2">&quot;Nom del endpoint&quot;</span>.js<span class="w"> </span><span class="o">(</span>pots<span class="w"> </span>fer<span class="w"> </span><span class="m">1</span><span class="w"> </span>o<span class="w"> </span>més<span class="w"> </span>endpoints,<span class="w"> </span>pots<span class="w"> </span>fer<span class="w"> </span>els<span class="w"> </span>que<span class="w"> </span>vullgues<span class="o">)</span>
+├──<span class="w"> </span>package-lock.json
+├──<span class="w"> </span>package.json
+├──<span class="w"> </span>.env
+├──<span class="w"> </span>db.js<span class="w"> </span><span class="o">(</span>pots<span class="w"> </span>posar-lo<span class="w"> </span>en<span class="w"> </span>una<span class="w"> </span>carpeta<span class="w"> </span>també,<span class="w"> </span>dona<span class="w"> </span>igual<span class="o">)</span>
+└──<span class="w"> </span><span class="s2">&quot;main&quot;</span>.js<span class="w"> </span><span class="o">(</span>o<span class="w"> </span>com<span class="w"> </span>siga<span class="w"> </span>el<span class="w"> </span>fitxer<span class="w"> </span>principal<span class="w"> </span>creat<span class="w"> </span>amb<span class="w"> </span>npm<span class="w"> </span>init<span class="o">)</span><span class="w"> </span>
+</code></pre></div></p>
 <h4 id="contingut-dels-fitxers">Contingut dels fitxers</h4>
 <p>Ara ambels fitxers creat vos dire que heu de posar en ells:
 - .env</p>
-<p>Ací hem de posar les dades de la base de dades, i opcionalment el port del servidor.</p>
-<pre><code class="language-env"># MySQL
+<p>Ací hem de posar les dades de la base de dades, i opcionalment el port del servidor.
+<div class="highlight"><pre><span></span><code># MySQL
 DB_USER=Nom del usuari
 DB_HOST=localhost (en la majoria de casos, si no posa la ip de la màquina)
 DB_DATABASE=Nom de la Base de dades
@@ -855,194 +947,182 @@ DB_PORT=3306 (Per defecte el port de la base de dades MySQL es 3306, però pots 
 
 # Port del servidor
 PORT=3000 (El mateix que en el de MySQL, però que siga diferent)
-</code></pre>
-<ul>
-<li>db.js</li>
-</ul>
-<p>En aquest fitxer és posen les dades de la base de dades, però com ja les tenim en el fitxer <code>.env</code> les importem allí:</p>
-<pre><code class="language-javascript">require('dotenv').config();
-const mysql = require('mysql2');
+</code></pre></div>
+- db.js</p>
+<p>En aquest fitxer és posen les dades de la base de dades, però com ja les tenim en el fitxer <code>.env</code> les importem allí:
+<div class="highlight"><pre><span></span><code><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dotenv&#39;</span><span class="p">).</span><span class="nx">config</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mysql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mysql2&#39;</span><span class="p">);</span>
 
-const pool = mysql.createPool({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_DATABASE,
-  port: parseInt(process.env.DB_PORT, 10) || 3306,
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0
-});
+<span class="kd">const</span><span class="w"> </span><span class="nx">pool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mysql</span><span class="p">.</span><span class="nx">createPool</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">host</span><span class="o">:</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">DB_HOST</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">DB_USER</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">password</span><span class="o">:</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">DB_PASSWORD</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">database</span><span class="o">:</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">DB_DATABASE</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">DB_PORT</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="mf">3306</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">waitForConnections</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">connectionLimit</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">queueLimit</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
+<span class="p">});</span>
 
-// Exportamos la versión que soporta Promesas
-module.exports = pool.promise();
-</code></pre>
-<ul>
-<li>"Nom del endpoint".js (o el endpoint que necessites)
-Ací sera on farem els endpoints de les nostres taules en SQL, este apartat és dividira en 4 parts, però en el exercici són 3 perquè és important que saber totes les instancies dels endpoints en una API:</li>
-<li>GET</li>
-</ul>
+<span class="c1">// Exportamos la versión que soporta Promesas</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">pool</span><span class="p">.</span><span class="nx">promise</span><span class="p">();</span>
+</code></pre></div>
+- "Nom del endpoint".js (o el endpoint que necessites)
+Ací sera on farem els endpoints de les nostres taules en SQL, este apartat és dividira en 4 parts, però en el exercici són 3 perquè és important que saber totes les instancies dels endpoints en una API:
+  - GET</p>
 <p>Utilitzem GET per a ontindre informació del servidor, comunment per a obtindre les dades de la base de dades.
-En Node seria fer el següent:</p>
-<pre><code class="language-javascript">router.get('/', async (req, res) =&gt; {
-    try {
-        const [rows] = await pool.query('SELECT * FROM &quot;taula&quot;');
-        res.json(rows);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: &quot;Error a l'hora de llistar els recursos de la taula&quot; });
-    }
-});
-</code></pre>
-<p>o també podria ser així si vols agafar algo en específic com en este cas el <code>id</code>:</p>
-<pre><code class="language-javascript">router.get('/:id', async (req, res) =&gt; {
-    const { id } = req.params;
-    try {
-        const [rows] = await pool.query('SELECT * FROM taula WHERE id = ?', [id]);
-        if (rows.length === 0) return res.status(404).json({ error: &quot;Recurs de la taula no trobat&quot; });
-        res.json(rows[0]);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: &quot;Error a l'hora de llistar els recursos de la tauña&quot; });
-    }
-});
-</code></pre>
+En Node seria fer el següent:
+<div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">rows</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">pool</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM &quot;taula&quot;&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">rows</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Error a l&#39;hora de llistar els recursos de la taula&quot;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+o també podria ser així si vols agafar algo en específic com en este cas el <code>id</code>:
+<div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/:id&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">rows</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">pool</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM taula WHERE id = ?&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nx">id</span><span class="p">]);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">rows</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">404</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Recurs de la taula no trobat&quot;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">rows</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Error a l&#39;hora de llistar els recursos de la tauña&quot;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></p>
 <ul>
 <li>POST</li>
 </ul>
 <p>Utilitzem POST per a enviar la informació al servidor, comunment per a enviar dades a la base de dades.
-En Node seria fer el següent:</p>
-<pre><code class="language-javascript">router.post('/addTaula', async (req, res) =&gt; {
-    const {atr1, atr2} = req.body;
-    try {
-        const [rows] = await pool.query('INSERT INTO &quot;taula&quot; VALUES(atr1, atr2) (?,?)',[atr1, atr2]);
-        res.json(rows);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: &quot;Error a l'hora d'afegir els recursos de la taula&quot; });
-    }
-});
-</code></pre>
-<ul>
-<li>UPDATE</li>
-</ul>
+En Node seria fer el següent:
+<div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/addTaula&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="nx">atr1</span><span class="p">,</span><span class="w"> </span><span class="nx">atr2</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">rows</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">pool</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s1">&#39;INSERT INTO &quot;taula&quot; VALUES(atr1, atr2) (?,?)&#39;</span><span class="p">,[</span><span class="nx">atr1</span><span class="p">,</span><span class="w"> </span><span class="nx">atr2</span><span class="p">]);</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">rows</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Error a l&#39;hora d&#39;afegir els recursos de la taula&quot;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+  - UPDATE</p>
 <p>Utilitzem UPDATE per a actualitzar la informació del servidor, comunment per a actualitzar les dades de la base de dades.
-En Node seria fer el següent:</p>
-<pre><code class="language-javascript">router.update('/update/:id', async (req, res) =&gt; {
-    const { id } = req.params;
-    const { atr1, atr2 } = req.body;
-    try {
-        const [rows] = await pool.query('UPDATE &quot;taula&quot; SET atr1 = ?, atr2 = ? WHERE id = ?',[atr1, atr2, id]);
-        res.json(rows);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: &quot;Error a l'hora d'actualitzar els recursos de la taula&quot; });
-    }
-});
-</code></pre>
-<ul>
-<li>DELETE
+En Node seria fer el següent:
+<div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="s1">&#39;/update/:id&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">atr1</span><span class="p">,</span><span class="w"> </span><span class="nx">atr2</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">rows</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">pool</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s1">&#39;UPDATE &quot;taula&quot; SET atr1 = ?, atr2 = ? WHERE id = ?&#39;</span><span class="p">,[</span><span class="nx">atr1</span><span class="p">,</span><span class="w"> </span><span class="nx">atr2</span><span class="p">,</span><span class="w"> </span><span class="nx">id</span><span class="p">]);</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">rows</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Error a l&#39;hora d&#39;actualitzar els recursos de la taula&quot;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+  - DELETE
 Utilitzem DELETE per a eliminar la informació del servidor, comunment per a eliminar les dades de la base de dades.
-En Node seria fer el següent:</li>
-</ul>
-<pre><code class="language-javascript">router.delete('/borrar/:id', async (req, res) =&gt; {
-  const { id } = req.params;
-  try {
-    await pool.query('DELETE FROM atr WHERE id = ?', [id]);
-    res.json({ missatge: 'Faller borrat' });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: &quot;Error a l'hora de borrar els recursos de la taula&quot; });
-  }
-});
-</code></pre>
+En Node seria fer el següent:
+<div class="highlight"><pre><span></span><code><span class="nx">router</span><span class="p">.</span><span class="ow">delete</span><span class="p">(</span><span class="s1">&#39;/borrar/:id&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">pool</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s1">&#39;DELETE FROM atr WHERE id = ?&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nx">id</span><span class="p">]);</span>
+<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">missatge</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Faller borrat&#39;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Error a l&#39;hora de borrar els recursos de la taula&quot;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></p>
 <hr />
-<p>Amb això ja explicat el programa deuria de quedar de la següent forma:</p>
-<pre><code class="language-javascript">const express = require('express');
-const router = express.Router();
-const pool = require('../db');
+<p>Amb això ja explicat el programa deuria de quedar de la següent forma:
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">express</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">router</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">express</span><span class="p">.</span><span class="nx">Router</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">pool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../db&#39;</span><span class="p">);</span>
 
-/*
-   GETS
-*/
+<span class="cm">/*</span>
+<span class="cm">   GETS</span>
+<span class="cm">*/</span>
 
-router.get('/', async (req, res) =&gt; {
-    try {
-        const [rows] = await pool.query('SELECT * FROM Recurs');
-        res.json(rows);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: &quot;Error a l'hora de llistar els recursos&quot; });
-    }
-});
+<span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">rows</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">pool</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM Recurs&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">rows</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Error a l&#39;hora de llistar els recursos&quot;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
 
-router.post('/addLlibre', async (req, res) =&gt; {
-    const { autor, material_id } = req.body;
-    try {
-        const [result] = await pool.query(
-            'INSERT INTO Llibre (autor, material_id) VALUES (?, ?)',
-            [autor, material_id]
-        );
-        const [rows] = await pool.query('SELECT * FROM Llibre WHERE id = ?', [result.insertId]);
-        res.json(rows[0]);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: &quot;Error a l'hora d'afegir el llibre&quot; });
-    }
-});
-/*
-   PUTS
-*/
+<span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/addLlibre&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">autor</span><span class="p">,</span><span class="w"> </span><span class="nx">material_id</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">result</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">pool</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span>
+<span class="w">            </span><span class="s1">&#39;INSERT INTO Llibre (autor, material_id) VALUES (?, ?)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="p">[</span><span class="nx">autor</span><span class="p">,</span><span class="w"> </span><span class="nx">material_id</span><span class="p">]</span>
+<span class="w">        </span><span class="p">);</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">rows</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">pool</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM Llibre WHERE id = ?&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nx">result</span><span class="p">.</span><span class="nx">insertId</span><span class="p">]);</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">rows</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Error a l&#39;hora d&#39;afegir el llibre&quot;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+<span class="cm">/*</span>
+<span class="cm">   PUTS</span>
+<span class="cm">*/</span>
 
-router.put('/updLlibre/:id', async (req, res) =&gt; {
-    const { id } = req.params;
-    const { autor, material_id } = req.body;
+<span class="nx">router</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="s1">&#39;/updLlibre/:id&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">autor</span><span class="p">,</span><span class="w"> </span><span class="nx">material_id</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
 
-    try {
-        await pool.query(
-            'UPDATE Llibre SET autor = ?, material_id = ? WHERE id = ?',
-            [autor, material_id, id]
-        );
-        const [rows] = await pool.query('SELECT * FROM Llibre WHERE id = ?', [id]);
-        if (rows.length === 0) return res.status(404).json({ error: &quot;Llibre no trobat&quot; });
-        res.json(rows[0]);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: err.message });
-    }
-});
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="nx">pool</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span>
+<span class="w">            </span><span class="s1">&#39;UPDATE Llibre SET autor = ?, material_id = ? WHERE id = ?&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="p">[</span><span class="nx">autor</span><span class="p">,</span><span class="w"> </span><span class="nx">material_id</span><span class="p">,</span><span class="w"> </span><span class="nx">id</span><span class="p">]</span>
+<span class="w">        </span><span class="p">);</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">rows</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">pool</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM Llibre WHERE id = ?&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nx">id</span><span class="p">]);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">rows</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">404</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Llibre no trobat&quot;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">rows</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
 
-module.exports = router;
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">router</span><span class="p">;</span>
+</code></pre></div>
+- index.js (o com siga el fitxer principal creat amb npm init)</p>
+<p>En el ftxer principal hem de crear la connexió al endpoint principal, i on el servidor tindra accés als altres endpoints que teniem en la carpteta routes, que deuria de quedar de la següent forma:
+<div class="highlight"><pre><span></span><code><span class="c1">// Importem les llibreries de express i les usem</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">express</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">express</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="mf">3001</span><span class="p">;</span>
 
-</code></pre>
-<ul>
-<li>index.js (o com siga el fitxer principal creat amb npm init)</li>
-</ul>
-<p>En el ftxer principal hem de crear la connexió al endpoint principal, i on el servidor tindra accés als altres endpoints que teniem en la carpteta routes, que deuria de quedar de la següent forma:</p>
-<pre><code class="language-javascript">// Importem les llibreries de express i les usem
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 3001;
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span>
 
-app.use(express.json());
+<span class="c1">// Importació i ús dels endpoints</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">recursos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./routes/recursos&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">persones</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./routes/persones&#39;</span><span class="p">);</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">&#39;/recursos&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">recursos</span><span class="p">);</span><span class="w">  </span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">&#39;/persones&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">persones</span><span class="p">);</span><span class="w">  </span>
 
-// Importació i ús dels endpoints
-const recursos = require('./routes/recursos');
-const persones = require('./routes/persones');
-app.use('/recursos', recursos);  
-app.use('/persones', persones);  
+<span class="c1">//Endopint principal amb una salutació</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">missatge</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Hola des de Node.js&#39;</span><span class="w"> </span><span class="p">});</span>
+<span class="p">});</span>
 
-//Endopint principal amb una salutació
-app.get('/', (req, res) =&gt; {
-  res.json({ missatge: 'Hola des de Node.js' });
-});
-
-//En el terminal apareixera el següent quan iniciem el servidor
-app.listen(port, '0.0.0.0', () =&gt; {
-  console.log(`Servidor escoltant en http://0.0.0.0:${port}`);
-});
-
-</code></pre>
+<span class="c1">//En el terminal apareixera el següent quan iniciem el servidor</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Servidor escoltant en http://0.0.0.0:</span><span class="si">${</span><span class="nx">port</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></p>
 
 
 

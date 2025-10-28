@@ -683,7 +683,7 @@
   
   
   <span class="md-ellipsis">
-    Base de dades
+    Problemes amb la base de dades en docker i solucions
     
   </span>
   
@@ -707,6 +707,98 @@
   
   <span class="md-ellipsis">
     Backend en APIS amb Node.js
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DIW
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            DIW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DIW/HTML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DIW/CSS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS
     
   </span>
   
@@ -883,245 +975,108 @@
 <h2 id="eines-a-utilitzar">Eines a utilitzar</h2>
 <h3 id="html">HTML</h3>
 <h4 id="formulari-basic-amb-exemples">Formulari bàsic amb exemples</h4>
-<p>En HTML anem a donar-li la estructura necessaria per a que apareguen els formularis en la aplicació web, però per a fer-ho possible hem de connectar el fitxer HTML a CSS i amb JavaScript mitjançant les etiquetes <code>&lt;script&gt;</code> i <code>&lt;style&gt;</code> de la següent forma:</p>
-<pre><code class="language-html">&lt;head&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
-    &lt;script src=&quot;formulari.js&quot; defer&gt;&lt;/script&gt;
-&lt;/head&gt;
-</code></pre>
-<p>Per crear i usar formularis en HTML necessitem usar la etiqueta <code>&lt;form&gt;</code>, i esta etiqueta també té altres propietats com per exemple:
-- fieldset: Area definida per al formulari</p>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;form&gt;
-        &lt;fieldset&gt;
-            &lt;legend&gt;Formulari&lt;/legend&gt;
-            &lt;label for=&quot;camp1&quot;&gt;Camp1:&lt;/label&gt;
-            &lt;input type=&quot;text&quot; id=&quot;camp1&quot; name=&quot;camp1&quot;&gt;&lt;br&gt;
-        &lt;/fieldset&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre>
+<p>En HTML anem a donar-li la estructura necessaria per a que apareguen els formularis en la aplicació web, però per a fer-ho possible hem de connectar el fitxer HTML a CSS i amb JavaScript mitjançant les etiquetes <code>&lt;script&gt;</code> i <code>&lt;style&gt;</code> de la següent forma:
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;formulari.js&quot;</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+N'hi ha més informació sobre els formularis en <a href="https://joelfusterbosch.github.io/DAW/DIW/HTML/#form">l'apartat de HTML de DIW</a>, però en que vos quedeu en com fer un formulari sobra.</p>
+<p>Per a crear caixes usem l'etiqueta <code>div</code> principalment per a limitar en una caixa i donar facilitat a l'hora de donar-li estil al CSS i l'usarem per a ocultar els camps del desplegable que NO estiguen seleccionats.</p>
 <ul>
-<li>legend: Posar un titol al formulari</li>
+<li>Exemple:</li>
 </ul>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;form&gt;
-        &lt;legend&gt;Titol del formulari&lt;/legend&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre>
-<ul>
-<li>label: El nom d'un camp en el formulari</li>
-</ul>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;form&gt;
-        &lt;label for=&quot;camp&quot;&gt;Nom del camp:&lt;/label&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre>
-<ul>
-<li>input: El camp a replenar del formulari, aquest últim té també unes quantes propietats que pots posar en el camp <code>type</code>:</li>
-<li>text: El camp per a replenar en text</li>
-</ul>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;form&gt;
-        &lt;fieldset&gt;
-            &lt;legend&gt;Formulari&lt;/legend&gt;
-            &lt;label for=&quot;camptext&quot;&gt;Camp de text:&lt;/label&gt;
-            &lt;input type=&quot;text&quot; id=&quot;camptext&quot; name=&quot;camptext&quot;&gt;&lt;br&gt;
-        &lt;/fieldset&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre>
-<ul>
-<li>number: El camp per a replenar en numeros</li>
-</ul>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;form&gt;
-        &lt;fieldset&gt;
-            &lt;legend&gt;Formulari&lt;/legend&gt;
-            &lt;label for=&quot;campnum&quot;&gt;Camp de números:&lt;/label&gt;
-            &lt;input type=&quot;number&quot; id=&quot;campnum&quot; name=&quot;campnum&quot;&gt;&lt;br&gt;
-        &lt;/fieldset&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre>
-<ul>
-<li>tel: El camp per a replenar el numero de teleèfon valid</li>
-</ul>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;form&gt;
-        &lt;fieldset&gt;
-            &lt;legend&gt;Formulari&lt;/legend&gt;
-            &lt;label for=&quot;camptel&quot;&gt;Camp de telèfon:&lt;/label&gt;
-            &lt;input type=&quot;tel&quot; id=&quot;camptel&quot; name=&quot;camptel&quot;&gt;&lt;br&gt;
-        &lt;/fieldset&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre>
-<ul>
-<li>email: El camp per a replenar el numero de telèfon valid</li>
-</ul>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;form&gt;
-        &lt;fieldset&gt;
-            &lt;legend&gt;Formulari&lt;/legend&gt;
-            &lt;label for=&quot;campemail&quot;&gt;Camp de correu electrònic:&lt;/label&gt;
-            &lt;input type=&quot;email&quot; id=&quot;campemail&quot; name=&quot;campemail&quot;&gt;&lt;br&gt;
-        &lt;/fieldset&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre>
-<ul>
-<li>date: El camp per a replenar amb una data format (dd/mm/aaaa)</li>
-</ul>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;form&gt;
-        &lt;fieldset&gt;
-            &lt;legend&gt;Formulari&lt;/legend&gt;
-            &lt;label for=&quot;campdate&quot;&gt;Data:&lt;/label&gt;
-            &lt;input type=&quot;date&quot; id=&quot;campdate&quot; name=&quot;campdate&quot;&gt;&lt;br&gt;
-        &lt;/fieldset&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre>
-<ul>
-<li>password: El camp per a replenar amb una contrasenya</li>
-</ul>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;form&gt;
-        &lt;fieldset&gt;
-            &lt;legend&gt;Formulari&lt;/legend&gt;
-            &lt;label for=&quot;camppasswd&quot;&gt;Data:&lt;/label&gt;
-            &lt;input type=&quot;password&quot; id=&quot;camppasswd&quot; name=&quot;camppasswd&quot;&gt;&lt;br&gt;
-        &lt;/fieldset&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre>
-<ul>
-<li>ratio: Permet utilitzar la casella d'opció</li>
-</ul>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;form&gt;
-        &lt;fieldset&gt;
-            &lt;legend&gt;Formulari&lt;/legend&gt;
-                &lt;input type=&quot;radio&quot; id=&quot;opcio1&quot; name=&quot;opcions&quot; value=&quot;opcio1&quot;&gt; &lt;label for=&quot;opcio1&quot;&gt;Opcio 1&lt;/label&gt;&lt;br&gt;
-                &lt;input type=&quot;radio&quot; id=&quot;opcio2&quot; name=&quot;opcions&quot; value=&quot;opcio2&quot;&gt; &lt;label for=&quot;opcio2&quot;&gt;Opcio 2&lt;/label&gt;&lt;br&gt;
-                &lt;input type=&quot;radio&quot; id=&quot;opcio3&quot; name=&quot;opcions&quot; value=&quot;opcio3&quot;&gt;&lt;label for=&quot;opcio3&quot;&gt;Opcio 3&lt;/label&gt;
-        &lt;/fieldset&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre>
-<ul>
-<li>checkbox: Permet utilitzar la casella de selecció multiple</li>
-</ul>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;form&gt;
-        &lt;fieldset&gt;
-            &lt;legend&gt;Formulari&lt;/legend&gt;
-                &lt;input type=&quot;checkbox&quot; id=&quot;vehicle1&quot; name=&quot;vehicle1&quot; value=&quot;vehicle1&quot;&gt;
-                &lt;label for=&quot;vehicle1&quot;&gt; Vehicle1 &lt;/label&gt;&lt;br&gt;
-                &lt;input type=&quot;checkbox&quot; id=&quot;vehicle2&quot; name=&quot;vehicle2&quot; value=&quot;vehicle2&quot;&gt;
-                &lt;label for=&quot;vehicle2&quot;&gt; Vehicle2 &lt;/label&gt;&lt;br&gt;
-                &lt;input type=&quot;checkbox&quot; id=&quot;vehicle3&quot; name=&quot;vehicle3&quot; value=&quot;vehicle3&quot;&gt;
-                &lt;label for=&quot;vehicle3&quot;&gt; Vehicle3 &lt;/label&gt;
-        &lt;/fieldset&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre>
-<ul>
-<li>button: Permet utilitzar botons</li>
-</ul>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;form&gt;
-        &lt;fieldset&gt;
-            &lt;legend&gt;Formulari&lt;/legend&gt;
-                &lt;input type=&quot;button&quot; 
-                onclick=&quot;alert('Has fet clic al botó!')&quot;
-                value=&quot;boto_clicat&quot;&gt;
-        &lt;/fieldset&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre>
-<ul>
-<li>submit: Permet enviar la informació al servidor mitjançant un botó</li>
-</ul>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;form&gt;
-        &lt;fieldset&gt;
-            &lt;legend&gt;Formulari&lt;/legend&gt;
-                &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot; action=&quot;enviar.js&quot;&gt;
-        &lt;/fieldset&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre>
-<ul>
-<li>reset: Permet eliminar la informació que hages posat en el formulari</li>
-</ul>
-<pre><code class="language-html">&lt;body&gt;
-    &lt;form&gt;
-        &lt;fieldset&gt;
-            &lt;legend&gt;Formulari&lt;/legend&gt;
-                &lt;input type=&quot;reset&quot; value=&quot;Netejar&quot;&gt;
-        &lt;/fieldset&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre>
-<ul>
-<li>selection</li>
-</ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;Camp ocult&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ocult&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;camp ocult&quot;</span><span class="p">&gt;</span>Camp ocult amb el element div:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;camp ocult&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;camp ocult&quot;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
 <h3 id="css">CSS</h3>
+<p>En CSS anem a donar-li estil a l'aplicació web, però anem a usar-lo de moment per a ocultar els camps extra mentre no es seleccionen, en JavaScript activarem els que vullgam que teniem en html en la classe <code>ocult</code>.
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">ocult</span><span class="p">{</span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
 <h3 id="javascript">JavaScript</h3>
+<p>En JavaScript anem a donar-li funcionalitat al codi de html i a activar els camps ocults de css, però sols en els que ens interesse en eixe moment.
+Farem una funció per a poder cridar-la des de HTML:
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">mostrarCampsPersona</span><span class="p">(){</span>
+
+<span class="p">}</span>
+</code></pre></div>
+Usarem <code>document</code> per a agafar els id dels html per a activar-los i desactivar-los a voluntat amb la classe <code>ocult</code> definida en el html.
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">mostrarCampsPersona</span><span class="p">(){</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;soci&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;ocult&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+Necessitarem saber quin de les opcións del dropdown s'ha elegit en el moment, definides en el html:
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;classePersona&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;persona&quot;</span> <span class="na">onChange</span><span class="o">=</span><span class="s">&quot;mostrarCampsPersona()&quot;</span> <span class="na">required</span><span class="p">&gt;</span> <span class="cm">&lt;!-- Cridem a la funció de JavaScript en la funció onChange--&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;soci&quot;</span><span class="p">&gt;</span>Soci<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;administrador&quot;</span><span class="p">&gt;</span>Administrador<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</code></pre></div>
+Utilitzarem <code>document.getElementById()</code> per a agafar la classe de persona que teniem en el html i eliminem la classe <code>ocult</code> per a eliminar el <code>display:none</code> que haviem posat en el CSS:
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">mostrarCampsPersona</span><span class="p">(){</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">opcioSeleccionada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;classePersona&#39;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span><span class="w"> </span><span class="c1">// La constant value ens permet saber el valor que hem selecionat en el dropdown</span>
+<span class="w">    </span><span class="c1">// Amb el valor ja definit farem un condicional ja siga un &quot;if&quot; o un &quot;switch&quot; per a mostrar el contingut que correspon</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nx">opcioSeleccionada</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;soci&#39;</span><span class="p">){</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;soci&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;ocult&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Li llevem la classe ocult que tenia el display: none que haviem posat en el CSS</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">opcioSeleccionada</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;administrador&#39;</span><span class="p">){</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;administrador&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;ocult&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Li llevem la classe ocult que tenia el display: none que haviem posat en el CSS</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
 <h2 id="resultat-final">Resultat final</h2>
+<p>Al final els fitxers deurien de quedar de la següent forma:</p>
 <h3 id="fitxer-indexhtml">Fitxer index.html</h3>
-<pre><code class="language-html">&lt;form name=&quot;persona&quot; action=&quot;#&quot; method=&quot;post&quot;&gt;
-    &lt;fieldset&gt;
-        &lt;legend&gt;Persona&lt;/legend&gt;
-            &lt;label for=&quot;nom&quot;&gt;Nom:&lt;/label&gt;&lt;br&gt;
-            &lt;input type=&quot;text&quot; id=&quot;nom&quot; name=&quot;nom&quot; required&gt;&lt;br&gt;
-            &lt;label for=&quot;dni&quot;&gt;DNI:&lt;/label&gt;&lt;br&gt;
-            &lt;input type=&quot;text&quot; id=&quot;dni&quot; name=&quot;dni&quot; required&gt;&lt;br&gt;
-            &lt;label for=&quot;persona&quot;&gt;Tipus de persona:&lt;/label&gt;&lt;br&gt;
-            &lt;select id=&quot;classePersona&quot; name=&quot;persona&quot; onChange=&quot;mostrarCampsPersona()&quot; required&gt;
-                &lt;option value=&quot;soci&quot;&gt;Soci&lt;/option&gt;
-                &lt;option value=&quot;administrador&quot;&gt;Administrador&lt;/option&gt;
-            &lt;/select&gt;&lt;br&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;persona&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">legend</span><span class="p">&gt;</span>Persona<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;nom&quot;</span><span class="p">&gt;</span>Nom:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;nom&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;nom&quot;</span> <span class="na">required</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;dni&quot;</span><span class="p">&gt;</span>DNI:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;dni&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;dni&quot;</span> <span class="na">required</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;persona&quot;</span><span class="p">&gt;</span>Tipus de persona:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;classePersona&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;persona&quot;</span> <span class="na">onChange</span><span class="o">=</span><span class="s">&quot;mostrarCampsPersona()&quot;</span> <span class="na">required</span><span class="p">&gt;</span> <span class="cm">&lt;!-- Cridem a la funció de JavaScript en la funció onChange--&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;soci&quot;</span><span class="p">&gt;</span>Soci<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;administrador&quot;</span><span class="p">&gt;</span>Administrador<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
 
-            &lt;div id=&quot;soci&quot; class=&quot;ocult&quot;&gt;
-                &lt;label for=&quot;soci&quot;&gt;Camp per a opció soci:&lt;/label&gt;
-                &lt;input type=&quot;text&quot; id=&quot;soci&quot; name=&quot;soci&quot;&gt;&lt;br&gt;
-            &lt;/div&gt;
-            &lt;div id=&quot;administrador&quot; class=&quot;ocult&quot;&gt;
-                &lt;label for=&quot;administrador&quot;&gt;Tipus de administrador:&lt;/label&gt;&lt;br&gt;
-                &lt;select id=&quot;administrador&quot; name=&quot;administrador&quot; required&gt;
-                    &lt;option value=&quot;ajudant&quot;&gt;Ajudant&lt;/option&gt;
-                    &lt;option value=&quot;admin&quot;&gt;Administrador&lt;/option&gt;
-                &lt;/select&gt;&lt;br&gt;
-            &lt;/div&gt;
-            &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot;&gt;
-            &lt;input type=&quot;reset&quot; value=&quot;Reset&quot;&gt;
-    &lt;/fieldset&gt;
-&lt;/form&gt;
-</code></pre>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;soci&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ocult&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;soci&quot;</span><span class="p">&gt;</span>Camp per a opció soci:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;soci&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;soci&quot;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;administrador&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ocult&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;administrador&quot;</span><span class="p">&gt;</span>Tipus de administrador:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;administrador&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;administrador&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;ajudant&quot;</span><span class="p">&gt;</span>Ajudant<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;admin&quot;</span><span class="p">&gt;</span>Administrador<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Enviar&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;reset&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Reset&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
 <h3 id="fitxer-stylescss">Fitxer styles.css</h3>
-<pre><code class="language-css">.ocult{
-    display: none;
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">ocult</span><span class="p">{</span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="fitxer-formjs">Fitxer form.js</h3>
-<pre><code class="language-javascript">function mostrarCampsPersona(){
-    document.getElementById('soci').classList.add('ocult');
-    document.getElementById('administrador').classList.add('ocult');
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">mostrarCampsPersona</span><span class="p">(){</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;soci&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;ocult&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;administrador&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;ocult&#39;</span><span class="p">);</span>
 
-    const opcioSeleccionada = document.getElementById('classePersona').value;
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">opcioSeleccionada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;classePersona&#39;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
 
-    if(opcioSeleccionada === 'soci'){
-        document.getElementById('soci').classList.remove('ocult');
-    } else if(opcioSeleccionada === 'administrador'){
-        document.getElementById('administrador').classList.remove('ocult')
-    }
-}
-</code></pre>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nx">opcioSeleccionada</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;soci&#39;</span><span class="p">){</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;soci&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;ocult&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">opcioSeleccionada</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;administrador&#39;</span><span class="p">){</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;administrador&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;ocult&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 

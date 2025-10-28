@@ -20,7 +20,7 @@
     
     
       
-        <title>Base de dades - Pàgina de Joel</title>
+        <title>Problemes amb la base de dades en docker i solucions - Pàgina de Joel</title>
       
     
     
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Base de dades
+              Problemes amb la base de dades en docker i solucions
             
           </span>
         </div>
@@ -551,7 +551,7 @@
   
   
   <span class="md-ellipsis">
-    Base de dades
+    Problemes amb la base de dades en docker i solucions
     
   </span>
   
@@ -564,7 +564,7 @@
   
   
   <span class="md-ellipsis">
-    Base de dades
+    Problemes amb la base de dades en docker i solucions
     
   </span>
   
@@ -641,6 +641,98 @@
   
   <span class="md-ellipsis">
     Backend en APIS amb Node.js
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DIW
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            DIW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DIW/HTML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DIW/CSS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS
     
   </span>
   
@@ -745,32 +837,32 @@
 <h2 id="solucions-al-crear-el-docker-compose-si-apareixen-problemes">Solucions al crear el docker-compose si apareixen problemes</h2>
 <h3 id="no-apareix-lusuari">No apareix l'usuari</h3>
 <p>En la terminal en el docker accedim al docker de la següent forma:</p>
-<pre><code class="language-bash"># Canvia &quot;slim_mysql&quot; pel nom del contenidor de la base de dades 
-docker exec -it slim_mysql mysql -u root -p
-</code></pre>
-<p>Si voleu vore els usuaris que teniu en la base de dades els podeu vore amb este comand:</p>
-<pre><code class="language-bash">select user.user, user.host from mysql.user;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Canvia &quot;slim_mysql&quot; pel nom del contenidor de la base de dades </span>
+docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>slim_mysql<span class="w"> </span>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p
+</code></pre></div>
+<p>Si voleu vore els usuaris que teniu en la base de dades els podeu vore amb este comand:
+<div class="highlight"><pre><span></span><code><span class="k">select</span><span class="w"> </span>user.user,<span class="w"> </span>user.host<span class="w"> </span>from<span class="w"> </span>mysql.user<span class="p">;</span>
+</code></pre></div></p>
 <p>Si en el cas de que no aparega el usuari, en este el usuari <code>alumno</code> el crearem de la següent forma:</p>
-<pre><code class="language-bash"># Crea l'usuari &quot;alumno&quot; amb la contrasenya &quot;alumno&quot;
-CREATE USER 'alumno'@'%' IDENTIFIED BY 'alumno';
+<div class="highlight"><pre><span></span><code><span class="c1"># Crea l&#39;usuari &quot;alumno&quot; amb la contrasenya &quot;alumno&quot;</span>
+CREATE<span class="w"> </span>USER<span class="w"> </span><span class="s1">&#39;alumno&#39;</span>@<span class="s1">&#39;%&#39;</span><span class="w"> </span>IDENTIFIED<span class="w"> </span>BY<span class="w"> </span><span class="s1">&#39;alumno&#39;</span><span class="p">;</span>
 
-#Li dona els permisos al usuari &quot;alumno&quot;
-GRANT ALL PRIVILEGES ON *.* TO 'alumno'@'%';
-GRANT ALL PRIVILEGES ON *.* to 'alumno'@'%' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
-</code></pre>
+<span class="c1">#Li dona els permisos al usuari &quot;alumno&quot;</span>
+GRANT<span class="w"> </span>ALL<span class="w"> </span>PRIVILEGES<span class="w"> </span>ON<span class="w"> </span>*.*<span class="w"> </span>TO<span class="w"> </span><span class="s1">&#39;alumno&#39;</span>@<span class="s1">&#39;%&#39;</span><span class="p">;</span>
+GRANT<span class="w"> </span>ALL<span class="w"> </span>PRIVILEGES<span class="w"> </span>ON<span class="w"> </span>*.*<span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;alumno&#39;</span>@<span class="s1">&#39;%&#39;</span><span class="w"> </span>WITH<span class="w"> </span>GRANT<span class="w"> </span>OPTION<span class="p">;</span>
+FLUSH<span class="w"> </span>PRIVILEGES<span class="p">;</span>
+</code></pre></div>
 <p>I ja estaria creat l'usuari "alumno" amb els permisos necessaris</p>
 <h3 id="no-sha-creat-la-base-de-dades">No s'ha creat la base de dades</h3>
-<p>Si al anar a la web i voss dona error paregut a </p>
-<pre><code class="language-bash">Unknown databse 'test'
-</code></pre>
-<p>Simplement entrem al conenedor de mysql:</p>
-<pre><code class="language-bash">docker exec -it slim_mysql mysql -u root -p
-</code></pre>
-<p>I el crearem la base de dades de la següent forma:</p>
-<pre><code class="language-bash">CREATE DATABASE test;
-</code></pre>
+<p>Si al anar a la web i voss dona error paregut a 
+<div class="highlight"><pre><span></span><code>Unknown<span class="w"> </span>databse<span class="w"> </span><span class="s1">&#39;test&#39;</span>
+</code></pre></div></p>
+<p>Simplement entrem al conenedor de mysql:
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>slim_mysql<span class="w"> </span>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p
+</code></pre></div></p>
+<p>I el crearem la base de dades de la següent forma:
+<div class="highlight"><pre><span></span><code>CREATE<span class="w"> </span>DATABASE<span class="w"> </span>test<span class="p">;</span>
+</code></pre></div></p>
 
 
 

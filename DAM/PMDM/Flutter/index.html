@@ -770,7 +770,7 @@
   
   
   <span class="md-ellipsis">
-    Base de dades
+    Problemes amb la base de dades en docker i solucions
     
   </span>
   
@@ -794,6 +794,98 @@
   
   <span class="md-ellipsis">
     Backend en APIS amb Node.js
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DIW
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            DIW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DAW/DIW/HTML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DAW/DIW/CSS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS
     
   </span>
   
@@ -1065,9 +1157,9 @@
 <hr />
 <p>Per a provar les apps de flutter en Android has de tindre Android Studio segons els requisits de <strong>flutter Doctor</strong>, o simplement vols un emulador d'Android o veure el dispositiu físic en la pantalla del teu ordinador, Android Studio pot ajudar-te en aquest apartat.<p>
 Per a veure si tens totes les ferramentes per a usar flutter pots saber-ho amb aquest comando:<p></p>
-<p><code>bash
- # Comprovar l'estat del sistema amb Flutter
- flutter doctor</code></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Comprovar l&#39;estat del sistema amb Flutter</span>
+flutter<span class="w"> </span>doctor
+</code></pre></div>
 <p>Ara que tenim el SDK instal·lat ara la pregunta és... On puc programar en Flutter?<p>
 Pots programar Flutter en VSCode si primerament instal·les les següents extensions (Fixat que per a instal·lar extensions en VSCode és en la següent icona):<p>
 <img src="./README/Extensions.png" alt="Pas 2: Icona d'extensions de Visual Studio Code" width="200"/><p></p>
@@ -1114,9 +1206,9 @@ Pots programar Flutter en VSCode si primerament instal·les les següents extens
 </p>
 <p align="center"><em>Pas 1: Creació del projecte de Flutter</em></p>
 
-<pre><code class="language-bash"># Crear nou projecte de flutter en VSCode
-Flutter: New Project 
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Crear nou projecte de flutter en VSCode</span>
+Flutter:<span class="w"> </span>New<span class="w"> </span>Project<span class="w"> </span>
+</code></pre></div>
 <p>Quan premem la tecla <em>Enter</em> apareixerà el següent:</p>
 <p align= "center">
    <img src="./README/Creacio aplicació Flutter.png" alt="Pas 2: Creació de l'aplicació de Flutter" width="600"/>
@@ -1136,221 +1228,221 @@ Perquè genera les carpetes dels respectius sistemes operatius, ara hem d'assign
 </p>
 <p align="center"><em>Pas 4: Nom de l'aplicació</em></p>
 
-<p>Al posar-li el nom, premeu la tecla <em>Enter</em> i se us generara de forma aproximada el següent:</p>
-<pre><code class="language-bash"># Estructura de directoris 
+<p>Al posar-li el nom, premeu la tecla <em>Enter</em> i se us generara de forma aproximada el següent:
+<div class="highlight"><pre><span></span><code><span class="c1"># Estructura de directoris </span>
 prova/
-├── .dart.tool/
-├── .idea/
-│   ├── libraries/
-│   │   ├── Dart_SDK.xml
-│   │   └── KotlinJavaRuntime.xml
-│   ├── runConfigurations/
-│   │   └── main_dart.xml
-│   ├── modules.xml
-│   ├── workspace.xml
-├── android/
-│   ├── buildOutputcleanup/
-│   │   ├── buildOutputcleanup
-│   │   ├── cache.prperties
-│   │   └── outputFiles.bin
-│   ├── kotlin/
-│   │   ├── errors/
-│   │   └── sessions/
-│   ├── noVersion/
-│   │   └── buildLogic.lock/
-│   ├── noVersion/
-│   │   └── vcs-1/
-│   ├── gc.properties
-│   ├── app/
-│   │   ├── .cxx/     
-│   │   ├── src/
-│   │   │   ├── debug/ 
-│   │   │   │   ├── AndroidManifest.xml
-│   │   │   ├── main/
-│   │   │   │   └── java/
-│   │   │   │   │   └── io/
-│   │   │   │   │       └── flutter/
-│   │   │   │   │           └── GeneratedPluginRegistrant.java
-│   │   │   │   ├── kotlin/
-│   │   │   │   │   └── MainActivity.kt
-│   │   │   │   ├── res/
-│   │   │   │   │   ├── drawable/
-│   │   │   │   │   │   ├── launch_background.xml
-│   │   │   │   │   ├── drawable-v21/
-│   │   │   │   │   │   ├── launch_background.xml
-│   │   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   │   ├── ic_launcher.png
-│   │   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   │   ├── ic_launcher.png
-│   │   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   │   ├── ic_launcher.png
-│   │   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   │   ├── ic_launcher.png
-│   │   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   │   ├── ic_launcher.png
-│   │   │   │   │   ├── values/
-│   │   │   │   │   │   ├── style.xml
-│   │   │   │   │   └── values-night/
-│   │   │   │   │       └── style.xml
-│   │   │   │   └── AndroidManifest.xml    
-│   │   │   └── profile/         
-│   │   └── build.gradle.kts
-│   ├── gradle/
-│   ├── .gitignore
-│   ├── build.gradle.kts
-│   ├── prova_android.iml
-│   ├── gradle.properties
-│   ├── gradlew
-│   ├── gradlew.bat
-│   ├── local.properties
-│   ├── settings.gradle.kts
-├── build/
-│   ├──reports
-│   │   └──problems
-│   │       └── problems-report.html
-├── ios/
-│   ├── Flutter/
-│   │   ├── .AppFrameworkinfo.plist 
-│   │   ├── Debug.xconfig
-│   │   ├── flutter_export_environment.sh 
-│   │   ├── Generated.xcconfig
-│   │   └── Release.xcconfig
-│   ├── Runner/
-│   │   ├── Assets.xcassets/ 
-│   │   ├── Base.Iproj/
-│   │   ├── AppDelegate.swift
-│   │   ├── GeneratedPluginRegistrant.h
-│   │   ├── GeneratedPluginRegistrant.m
-│   │   ├── Info.plist
-│   │   └── Runner-Bridging-Header.h
-│   ├── Runner.xcodeproj/
-│   │   ├── project.xcworkspace/
-│   │   │   ├── xcshareddata/
-│   │   │   │   ├── IDEWorkspaceChecks.plist
-│   │   │   │   └── WorkspaceSettings.xcsettings    
-│   │   │   └── contents.xcworkspacedata
-│   │   ├── xcshareddata/
-│   │   │   └── xcschemes/
-│   │   │       └── Runner.xcscheme
-│   │   └── project.pbxproj
-│   ├── Runner.xcworkspace/
-│   │   ├── xcshareddata/
-│   │   │   ├── IDEWorkspaceChecks.plist
-│   │   │   └── WorkspaceSettings.xcsettings    
-│   │   └──contents.xcworkspacedata    
-│   ├── RunnerTests/
-│   │   └── RunnerTests.swift
-│   ├── .gitignore
-├── lib/
-│   ├── main.dart
-├── linux/
-│   ├── flutter/
-│   │   └── ephemeral/
-│   │       └── .plugin_symlinks/
-│   ├── runner/
-│   │   ├── CMakeList.txt
-│   │   ├── main.cc
-│   │   ├── my_application.cc
-│   │   └── my_application.h       
-│   ├── .gitignore
-│   ├── CMakeList.txt
-├── macos/ 
-│   ├── Flutter/
-│   │   ├── ephemeral/
-│   │   │   ├── flutter_export_environment.sh
-│   │   │   └── Flutter-Generated.xcconfig
-│   │   ├── Flutter-Debug.xcconfig/  
-│   │   ├── Flutter-Release.xcconfig/
-│   │   └── GeneratedPluginRegistrant.swift/       
-│   ├── Runner/
-│   │   ├── Assets.xcassets/
-│   │   │   ├── AppIcon.appiconset
-│   │   │   │   ├── app_icon_16.png
-│   │   │   │   ├── app_icon_32.png
-│   │   │   │   ├── app_icon_64.png
-│   │   │   │   ├── app_icon_128.png
-│   │   │   │   ├── app_icon_256.png
-│   │   │   │   ├── app_icon_512.png
-│   │   │   │   ├── app_icon_1024.png
-│   │   │   │   └── Contents.json  
-│   │   ├── Base.Iproj/
-│   │   │   └── MainMenu.xib
-│   │   ├── Configs/
-│   │   │   ├── AppInfo.xcconfig
-│   │   │   ├── Debug.xcconfig
-│   │   │   ├── Release.xcconfig
-│   │   │   └── Warnings.xcconfig
-│   │   ├── AppDelegate.swift
-│   │   ├── DebugProfile.entitlements
-│   │   ├── Info.plist
-│   │   ├── MainFlutterWindow.swift
-│   │   └── Release.entitlements      
-│   ├── Runner.xcodeproj/
-│   │   ├── project.xcworkspace/
-│   │   │   └── IDEWorkspaceChecks.plist
-│   │   ├── xcshareddata/ 
-│   │   │   └── Runner.xcscheme 
-│   │   └── project.pbxproj   
-│   ├── Runner.xcworkspace/
-│   │   ├── xcshareddata/
-│   │   │   └── IDEWorkspaceChecks.plist
-│   │   └── contents.xcworkspacedata  
-│   ├── RunnerTets/
-│   │   └── RunnerTests.swift  
-│   └── .gitignore   
-├── web/    
-│   ├── icons/
-│   │   ├── Icon-192.png 
-│   │   ├── Icon-512.png
-│   │   ├── Icon-maskable-192.png  
-│   │   └── Icon-maskable-512.png  
-│   ├── favicon.png
-│   ├── index.html
-│   ├── manifest.json 
-├── windows/
-│   ├── flutter/
-│   │   ├── ephemeral/
-│   │   │   └── plugin_symlinks
-│   │   ├── Flutter-Debug.xcconfig/  
-│   │   ├── Flutter-Release.xcconfig/
-│   │   └── GeneratedPluginRegistrant.swift/ 
-│   ├── runner/
-│   │   ├── resources/
-│   │   │   └── app_icon.ico
-│   │   ├── CMakeLists.txt  
-│   │   ├── flutter_window.cpp
-│   │   ├── flutter_window.h
-│   │   ├── main.cpp
-│   │   ├── resource.h
-│   │   ├── runner.exe.manifest
-│   │   ├── Runner.rc
-│   │   ├── utils.cpp
-│   │   ├── utils.h
-│   │   ├── win32_window.cpp
-│   │   └── win32_window.h   
-│   ├── .gitignore
-│   └── CMakeLists.txt
-├── .flutter-plugins
-├── .flutter-plugins-dependencies
-├── .gitignore
-├── .metadata
-├── analysis_options.yaml
-├── devtools_options.yaml
-├── prova.iml
-├── pubspec.yaml
-└── README.md              
-</code></pre>
-<p>I se us obrira el main automàticament amb el següent contingut:</p>
+├──<span class="w"> </span>.dart.tool/
+├──<span class="w"> </span>.idea/
+│<span class="w">   </span>├──<span class="w"> </span>libraries/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Dart_SDK.xml
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>KotlinJavaRuntime.xml
+│<span class="w">   </span>├──<span class="w"> </span>runConfigurations/
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>main_dart.xml
+│<span class="w">   </span>├──<span class="w"> </span>modules.xml
+│<span class="w">   </span>├──<span class="w"> </span>workspace.xml
+├──<span class="w"> </span>android/
+│<span class="w">   </span>├──<span class="w"> </span>buildOutputcleanup/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>buildOutputcleanup
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>cache.prperties
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>outputFiles.bin
+│<span class="w">   </span>├──<span class="w"> </span>kotlin/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>errors/
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>sessions/
+│<span class="w">   </span>├──<span class="w"> </span>noVersion/
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>buildLogic.lock/
+│<span class="w">   </span>├──<span class="w"> </span>noVersion/
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>vcs-1/
+│<span class="w">   </span>├──<span class="w"> </span>gc.properties
+│<span class="w">   </span>├──<span class="w"> </span>app/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>.cxx/<span class="w">     </span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>src/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>debug/<span class="w"> </span>
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>AndroidManifest.xml
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>main/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>java/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>io/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">       </span>└──<span class="w"> </span>flutter/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">           </span>└──<span class="w"> </span>GeneratedPluginRegistrant.java
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>kotlin/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>MainActivity.kt
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>res/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>drawable/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>launch_background.xml
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>drawable-v21/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>launch_background.xml
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>mipmap-hdpi/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>ic_launcher.png
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>mipmap-mdpi/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>ic_launcher.png
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>mipmap-xhdpi/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>ic_launcher.png
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>mipmap-xxhdpi/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>ic_launcher.png
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>mipmap-xxxhdpi/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>ic_launcher.png
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>values/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>style.xml
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>values-night/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">       </span>└──<span class="w"> </span>style.xml
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>AndroidManifest.xml<span class="w">    </span>
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>profile/<span class="w">         </span>
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>build.gradle.kts
+│<span class="w">   </span>├──<span class="w"> </span>gradle/
+│<span class="w">   </span>├──<span class="w"> </span>.gitignore
+│<span class="w">   </span>├──<span class="w"> </span>build.gradle.kts
+│<span class="w">   </span>├──<span class="w"> </span>prova_android.iml
+│<span class="w">   </span>├──<span class="w"> </span>gradle.properties
+│<span class="w">   </span>├──<span class="w"> </span>gradlew
+│<span class="w">   </span>├──<span class="w"> </span>gradlew.bat
+│<span class="w">   </span>├──<span class="w"> </span>local.properties
+│<span class="w">   </span>├──<span class="w"> </span>settings.gradle.kts
+├──<span class="w"> </span>build/
+│<span class="w">   </span>├──reports
+│<span class="w">   </span>│<span class="w">   </span>└──problems
+│<span class="w">   </span>│<span class="w">       </span>└──<span class="w"> </span>problems-report.html
+├──<span class="w"> </span>ios/
+│<span class="w">   </span>├──<span class="w"> </span>Flutter/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>.AppFrameworkinfo.plist<span class="w"> </span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Debug.xconfig
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>flutter_export_environment.sh<span class="w"> </span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Generated.xcconfig
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>Release.xcconfig
+│<span class="w">   </span>├──<span class="w"> </span>Runner/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Assets.xcassets/<span class="w"> </span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Base.Iproj/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>AppDelegate.swift
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>GeneratedPluginRegistrant.h
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>GeneratedPluginRegistrant.m
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Info.plist
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>Runner-Bridging-Header.h
+│<span class="w">   </span>├──<span class="w"> </span>Runner.xcodeproj/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>project.xcworkspace/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>xcshareddata/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>IDEWorkspaceChecks.plist
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>WorkspaceSettings.xcsettings<span class="w">    </span>
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>contents.xcworkspacedata
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>xcshareddata/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>xcschemes/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">       </span>└──<span class="w"> </span>Runner.xcscheme
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>project.pbxproj
+│<span class="w">   </span>├──<span class="w"> </span>Runner.xcworkspace/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>xcshareddata/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>IDEWorkspaceChecks.plist
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>WorkspaceSettings.xcsettings<span class="w">    </span>
+│<span class="w">   </span>│<span class="w">   </span>└──contents.xcworkspacedata<span class="w">    </span>
+│<span class="w">   </span>├──<span class="w"> </span>RunnerTests/
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>RunnerTests.swift
+│<span class="w">   </span>├──<span class="w"> </span>.gitignore
+├──<span class="w"> </span>lib/
+│<span class="w">   </span>├──<span class="w"> </span>main.dart
+├──<span class="w"> </span>linux/
+│<span class="w">   </span>├──<span class="w"> </span>flutter/
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>ephemeral/
+│<span class="w">   </span>│<span class="w">       </span>└──<span class="w"> </span>.plugin_symlinks/
+│<span class="w">   </span>├──<span class="w"> </span>runner/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>CMakeList.txt
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>main.cc
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>my_application.cc
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>my_application.h<span class="w">       </span>
+│<span class="w">   </span>├──<span class="w"> </span>.gitignore
+│<span class="w">   </span>├──<span class="w"> </span>CMakeList.txt
+├──<span class="w"> </span>macos/<span class="w"> </span>
+│<span class="w">   </span>├──<span class="w"> </span>Flutter/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>ephemeral/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>flutter_export_environment.sh
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>Flutter-Generated.xcconfig
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Flutter-Debug.xcconfig/<span class="w">  </span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Flutter-Release.xcconfig/
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>GeneratedPluginRegistrant.swift/<span class="w">       </span>
+│<span class="w">   </span>├──<span class="w"> </span>Runner/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Assets.xcassets/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>AppIcon.appiconset
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>app_icon_16.png
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>app_icon_32.png
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>app_icon_64.png
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>app_icon_128.png
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>app_icon_256.png
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>app_icon_512.png
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>app_icon_1024.png
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>Contents.json<span class="w">  </span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Base.Iproj/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>MainMenu.xib
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Configs/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>AppInfo.xcconfig
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Debug.xcconfig
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Release.xcconfig
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>Warnings.xcconfig
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>AppDelegate.swift
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>DebugProfile.entitlements
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Info.plist
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>MainFlutterWindow.swift
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>Release.entitlements<span class="w">      </span>
+│<span class="w">   </span>├──<span class="w"> </span>Runner.xcodeproj/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>project.xcworkspace/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>IDEWorkspaceChecks.plist
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>xcshareddata/<span class="w"> </span>
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>Runner.xcscheme<span class="w"> </span>
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>project.pbxproj<span class="w">   </span>
+│<span class="w">   </span>├──<span class="w"> </span>Runner.xcworkspace/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>xcshareddata/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>IDEWorkspaceChecks.plist
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>contents.xcworkspacedata<span class="w">  </span>
+│<span class="w">   </span>├──<span class="w"> </span>RunnerTets/
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>RunnerTests.swift<span class="w">  </span>
+│<span class="w">   </span>└──<span class="w"> </span>.gitignore<span class="w">   </span>
+├──<span class="w"> </span>web/<span class="w">    </span>
+│<span class="w">   </span>├──<span class="w"> </span>icons/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Icon-192.png<span class="w"> </span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Icon-512.png
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Icon-maskable-192.png<span class="w">  </span>
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>Icon-maskable-512.png<span class="w">  </span>
+│<span class="w">   </span>├──<span class="w"> </span>favicon.png
+│<span class="w">   </span>├──<span class="w"> </span>index.html
+│<span class="w">   </span>├──<span class="w"> </span>manifest.json<span class="w"> </span>
+├──<span class="w"> </span>windows/
+│<span class="w">   </span>├──<span class="w"> </span>flutter/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>ephemeral/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>plugin_symlinks
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Flutter-Debug.xcconfig/<span class="w">  </span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Flutter-Release.xcconfig/
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>GeneratedPluginRegistrant.swift/<span class="w"> </span>
+│<span class="w">   </span>├──<span class="w"> </span>runner/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>resources/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>app_icon.ico
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>CMakeLists.txt<span class="w">  </span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>flutter_window.cpp
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>flutter_window.h
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>main.cpp
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>resource.h
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>runner.exe.manifest
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Runner.rc
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>utils.cpp
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>utils.h
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>win32_window.cpp
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>win32_window.h<span class="w">   </span>
+│<span class="w">   </span>├──<span class="w"> </span>.gitignore
+│<span class="w">   </span>└──<span class="w"> </span>CMakeLists.txt
+├──<span class="w"> </span>.flutter-plugins
+├──<span class="w"> </span>.flutter-plugins-dependencies
+├──<span class="w"> </span>.gitignore
+├──<span class="w"> </span>.metadata
+├──<span class="w"> </span>analysis_options.yaml
+├──<span class="w"> </span>devtools_options.yaml
+├──<span class="w"> </span>prova.iml
+├──<span class="w"> </span>pubspec.yaml
+└──<span class="w"> </span>README.md<span class="w">              </span>
+</code></pre></div>
+I se us obrira el main automàticament amb el següent contingut:</p>
 <p align= "center">
    <img src="./README/main de l&apos;aplicació.png" alt="Contingut del fitxer main.dart de l'aplicació" width="1000"/>
 </p>
 <p align="center"><em>Pas 5: Contingut del fitxer main.dart de l'aplicació</em></p>
 
-<p>Ara si voleu veure que és premeu <strong>F5</strong> o en el terminal escriviu:</p>
-<pre><code class="language-bash">#Executar aplicació flutter
-flutter run
-</code></pre>
-<p>Tardarà una estona en executar, però no us preocupeu, que la primera vegada en Android ha d'instal·lar-se l'aplicació i afegir les dependències a l'aplicació, però quan acabe obrira automàticament l'aplicació.<p>
+<p>Ara si voleu veure que és premeu <strong>F5</strong> o en el terminal escriviu:
+<div class="highlight"><pre><span></span><code><span class="c1">#Executar aplicació flutter</span>
+flutter<span class="w"> </span>run
+</code></pre></div>
+Tardarà una estona en executar, però no us preocupeu, que la primera vegada en Android ha d'instal·lar-se l'aplicació i afegir les dependències a l'aplicació, però quan acabe obrira automàticament l'aplicació.<p>
 Quan s'òbriga veureu el següent:</p>
 <p align= "center">
    <img src="./README/Pantalla demo inicial.jpg" alt="El primer que veus al executar l'aplicació" width="200"/>
@@ -1384,29 +1476,29 @@ En general és recomanable que uses els widgets amb estat (<em>StatefulWidget</e
   Veiem els diferents operadors amb què podem tractar els nuls amb Dart:
    - Declaració de valor nullable (?): Si volem indicar de manera explícita que una variable pot contenir valors nuls, fem ús de l'interrogant en la seua declaració, tal i com es fa en altres llenguatges com Kotlin, ex: <code>dart int? variable1; // variable1 podrà contenir el valor null</code>
    - Operador d'asserció nul·la (null assertion operator) (!): S'utilitza quan volem assignar una variable que pot contenir nuls a variables que no en poden contenir, ex: <code>dart int variable2=variable1!</code>.
-   <code>dart
-   int? variable1;           // variable1 pot contenir nuls
-   print(variable1);         // Mostrem variable1 (null)
-   int variable2=variable1!; // variable2 no pot contenir nuls
-                             // Excepció: Null check operator used on a null value
-   print(variable2);         // Intentem mostrar variable2</code>
+   <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">variable1</span><span class="p">;</span><span class="w">           </span><span class="c1">// variable1 pot contenir nuls</span>
+<span class="n">print</span><span class="p">(</span><span class="n">variable1</span><span class="p">);</span><span class="w">         </span><span class="c1">// Mostrem variable1 (null)</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">variable2</span><span class="o">=</span><span class="n">variable1</span><span class="o">!</span><span class="p">;</span><span class="w"> </span><span class="c1">// variable2 no pot contenir nuls</span>
+<span class="w">                          </span><span class="c1">// Excepció: Null check operator used on a null value</span>
+<span class="n">print</span><span class="p">(</span><span class="n">variable2</span><span class="p">);</span><span class="w">         </span><span class="c1">// Intentem mostrar variable2</span>
+</code></pre></div>
    - Operador nul (??): Aquest operador retorna el valor resultant de l'expressió de la part esquera de l'operador, sempre que no siga nul. En cas contrari ens retornarà l'expressió de la dreta. Podem veure-ho com una mena d'operador condicional als valors nuls:
-   <code>dart
-   var nom;
-   // Escriu el nom si no és nul, o escriu "Anònim"
-   print(nom ?? "Anònim");</code>
+   <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<span class="c1">// Escriu el nom si no és nul, o escriu &quot;Anònim&quot;</span>
+<span class="n">print</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s2">&quot;Anònim&quot;</span><span class="p">);</span>
+</code></pre></div>
    - Assignació conscient de nuls (null aware assignment) (??=): Assigna un valor a una variable si aquesta té valor nul. En cas que la variable tinga un valor prèviament diferent a null, no s'assignarà:
-   <code>dart
-   int? variable1;   // Si no indiquem nullable donaria error
-   print(variable1); // Mostra null
-   variable1 ??= 10; 
-   print(variable1); // Mostra "10"
-   variable1 ??= 15; 
-   print(variable1); // Mostra "10", ja que variable1 tenia ja valor.</code>
+   <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="o">?</span><span class="w"> </span><span class="n">variable1</span><span class="p">;</span><span class="w">   </span><span class="c1">// Si no indiquem nullable donaria error</span>
+<span class="n">print</span><span class="p">(</span><span class="n">variable1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mostra null</span>
+<span class="n">variable1</span><span class="w"> </span><span class="o">??=</span><span class="w"> </span><span class="m">10</span><span class="p">;</span><span class="w"> </span>
+<span class="n">print</span><span class="p">(</span><span class="n">variable1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mostra &quot;10&quot;</span>
+<span class="n">variable1</span><span class="w"> </span><span class="o">??=</span><span class="w"> </span><span class="m">15</span><span class="p">;</span><span class="w"> </span>
+<span class="n">print</span><span class="p">(</span><span class="n">variable1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mostra &quot;10&quot;, ja que variable1 tenia ja valor.</span>
+</code></pre></div>
    - Accés conscient de nuls (null-aware access)(?.): Evita que es llance una excepció quan s'accedeix a una propietat o mètode d'un objecte que pot ser nul.
-   <code>dart
-   String? cadena;
-   print (cadena?.length);</code>
+   <div class="highlight"><pre><span></span><code><span class="kt">String</span><span class="o">?</span><span class="w"> </span><span class="n">cadena</span><span class="p">;</span>
+<span class="n">print</span><span class="w"> </span><span class="p">(</span><span class="n">cadena</span><span class="o">?</span><span class="p">.</span><span class="n">length</span><span class="p">);</span>
+</code></pre></div>
 - Dynamic: (<strong>dynamic</strong>)<p>
    Dart és un llenguatge que suporta tant tipat estàtic com dinàmic. Quan parlem de tipat estàtic fem referència a que els tipus s'assignen en temps de compilació, pel que s'ha d'indicar el tipus de variable en la pròpia declaració, tal i com hem vist fins ara. Ara bé, Dart també suporta tipat de dades dinàmic, de manera que fa la comprovació de tipus en temps d'execució.</p>
 <p>Per a això, es fa ús del tipus dynamic, un tipus de dada subjacent a tots els objectes Dart, i que ens permet utilitzar tipat dinàmic de dades, de manera que la comprovació d'aquests tipus es realitza en temps d'execució en lloc de temps de compilació.</p>
@@ -1419,17 +1511,17 @@ En general és recomanable que uses els widgets amb estat (<em>StatefulWidget</e
 <p>Per tal d'accedir a aquests valors, ho farem a través de la notació punt. Per exemple:</p>
 <p><code>DiesSetmana dia=DiesSetmana.dilluns;</code> </p>
 <p>Si volem obtenir una llista amb els valors de l'enumerat, farem ús de <code>values</code>:
-   <code>dart
-   List&lt;DiesSetmana&gt; = DiesSetmana.values;</code></p>
+   <div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">DiesSetmana</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DiesSetmana</span><span class="p">.</span><span class="n">values</span><span class="p">;</span><span class="w">   </span>
+</code></pre></div></p>
 <hr />
 <h2 id="construccio-de-pantalles-en-flutter">Construcció de pantalles en Flutter</h2>
 <p>Per a construir una pantalla en Flutter ens basarem en el projecte de prova, aleshores el que hem de fer és fxar-mon en l'apartat on diu:</p>
-<pre><code class="language-dart">@override 
-Widget build(BuildContext context){
+<p><div class="highlight"><pre><span></span><code><span class="nd">@override</span><span class="w"> </span>
+<span class="n">Widget</span><span class="w"> </span><span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span><span class="w"> </span><span class="n">context</span><span class="p">){</span>
 
-}
-</code></pre>
-<p>Això és el contingut on es mostrara per pantalla a l'executar l'aplicació, i no és com un fitxer normal, has d'utilitzar <em>widgets</em> per a desenvolupar com es veurà en pantalla, ací una xicoteta explicació d'alguns <em>widgets</em> del projecte de prova:
+<span class="p">}</span>
+</code></pre></div>
+Això és el contingut on es mostrara per pantalla a l'executar l'aplicació, i no és com un fitxer normal, has d'utilitzar <em>widgets</em> per a desenvolupar com es veurà en pantalla, ací una xicoteta explicació d'alguns <em>widgets</em> del projecte de prova:
 - <strong>Scaffold</strong>: Aquest widget conté l'estructura d'un disseny típic d'una aplicació basada en <em>Material Design</em>. A més dels components ja tractats (<em>appBar</em>, <em>body</em> i <em>floatingActionButton</em>), compta amb la possibilitat d'incloure elements de navegació o elements emergents, com els snackbars. Veiem algunes d'aquestes propietats:
    - <strong>bottomNavigationBar</strong>: Es tracta d'una barra de navegació (generalment un widget <em>BottomAppBar</em>) que s'afig a la part inferior de l'Scaffold.
    - <strong>drawer</strong>: La traducció literal d'un <em>Drawer</em> és caixonera, i consistix en un panell vertical, que generalment es mostra a l'esquerra del body, i que sol desplegar-se mitjançant un botó ubicat a la mateixa <em>AppBar</em>.
@@ -1667,28 +1759,24 @@ Després definim les propietats que tindrà la classe Faller:
 
 **Atenció**: Us heu fixat en la propietat rolsValids? Té una llista de Strings constant, que significa? Significa que en eixa llista sols es poden acceptar els valors que estan dins d'eixa llista, que en el constructor es revisara amb el rol que té, si coincideix algun dels valors correcte, si no, dona error mirem-ho amb un exemple:
 
+<div class="highlight"><pre><span></span><code><span class="kd">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rolsValids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Faller&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Cobrador&#39;</span><span class="p">,</span><span class="s1">&#39;Cap de familia&#39;</span><span class="p">,</span><span class="s1">&#39;Administrador&#39;</span><span class="p">,</span><span class="s1">&#39;SuperAdmin&#39;</span><span class="p">];</span><span class="w"> </span><span class="c1">//Llista de rols vàlids</span>
 
-<pre><code class="language-dart">static const List&lt;String&gt; rolsValids = ['Faller', 'Cobrador','Cap de familia','Administrador','SuperAdmin']; //Llista de rols vàlids
+<span class="n">rol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Faller&quot;</span><span class="w"> </span>
+<span class="n">rolsValids</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="n">rol</span><span class="p">)</span><span class="w"> </span><span class="c1">//Correcte</span>
 
-rol = &quot;Faller&quot; 
-rolsValids.contains(rol) //Correcte
-
-rol = &quot;Jefe&quot; 
-rolsValids.contains(rol) //Error
-</code></pre>
-
+<span class="n">rol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Jefe&quot;</span><span class="w"> </span>
+<span class="n">rolsValids</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="n">rol</span><span class="p">)</span><span class="w"> </span><span class="c1">//Error</span>
+</code></pre></div>
 
 I quan les tenim les passem al constructor, si alguna de les propietats es nul·lable no és recomanable que siga requerida.<p>
 **Exemple del constructor amb propietats nul·lables i no nul·lables**
-
-<pre><code class="language-dart">String id, //Propietat no nul·lable
-String? fotoPerfil //Propietat nul·lable
-Faller({
-   required this.id, //Com aquesta propietat no és nul·lable la demanem com a requerida
-   this.fotoPerfil //Com aquesta propietat és nul·lable no la demanem com a requerida, sinó més com una propietat opcional
-});
-</code></pre>
-
+<div class="highlight"><pre><span></span><code><span class="kt">String</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="c1">//Propietat no nul·lable</span>
+<span class="kt">String</span><span class="o">?</span><span class="w"> </span><span class="n">fotoPerfil</span><span class="w"> </span><span class="c1">//Propietat nul·lable</span>
+<span class="n">Faller</span><span class="p">({</span>
+<span class="w">   </span><span class="kd">required</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="c1">//Com aquesta propietat no és nul·lable la demanem com a requerida</span>
+<span class="w">   </span><span class="k">this</span><span class="p">.</span><span class="n">fotoPerfil</span><span class="w"> </span><span class="c1">//Com aquesta propietat és nul·lable no la demanem com a requerida, sinó més com una propietat opcional</span>
+<span class="p">});</span>
+</code></pre></div>
 
 Ja explicat, ací mostre el constructor de la classe Faller:
 
@@ -1775,30 +1863,28 @@ Creeu la següent cadena de carpetes si no les teniu creades:
 Ací és on ocorrerà la màgia que aparega en la pantalla, no n’hi ha molt més misteri, sols que ací podràs aplicar tant els DataSources, repositoris i/o gestors d’estats (BLOC, Provider, Riverpod..., etc).<p>
 
 Sols tin en compte que perquè es vegen les coses en la pantalla fa falta tindre `widget build` i usar tots els widgets esmentats anteriorment, sols comentar com pots tindre la pantalla tant en horitzontal com en vertical sense que se sobreïsca, haureu de posar el següent en el `widget build`:
-
-<pre><code class="language-dart">  @override
-  Widget build(BuildContext context) {
-   return Scaffold(
-      body: SafeArea(
-        child: LayoutBuilder(
-          builder: (context, constraints) {
-            return SingleChildScrollView(
-              child: ConstrainedBox(
-                constraints: BoxConstraints(
-                  minHeight: constraints.maxHeight,
-                ),
-                child: Center(
-                  //Resta del codi
-                ),
-              ),
-            );
-          },
-        ),
-      ),
-    );
-  }
-</code></pre>
-
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nd">@override</span>
+<span class="w">  </span><span class="n">Widget</span><span class="w"> </span><span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">Scaffold</span><span class="p">(</span>
+<span class="w">      </span><span class="nl">body:</span><span class="w"> </span><span class="n">SafeArea</span><span class="p">(</span>
+<span class="w">        </span><span class="nl">child:</span><span class="w"> </span><span class="n">LayoutBuilder</span><span class="p">(</span>
+<span class="w">          </span><span class="nl">builder:</span><span class="w"> </span><span class="p">(</span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">constraints</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">SingleChildScrollView</span><span class="p">(</span>
+<span class="w">              </span><span class="nl">child:</span><span class="w"> </span><span class="n">ConstrainedBox</span><span class="p">(</span>
+<span class="w">                </span><span class="nl">constraints:</span><span class="w"> </span><span class="n">BoxConstraints</span><span class="p">(</span>
+<span class="w">                  </span><span class="nl">minHeight:</span><span class="w"> </span><span class="n">constraints</span><span class="p">.</span><span class="n">maxHeight</span><span class="p">,</span>
+<span class="w">                </span><span class="p">),</span>
+<span class="w">                </span><span class="nl">child:</span><span class="w"> </span><span class="n">Center</span><span class="p">(</span>
+<span class="w">                  </span><span class="c1">//Resta del codi</span>
+<span class="w">                </span><span class="p">),</span>
+<span class="w">              </span><span class="p">),</span>
+<span class="w">            </span><span class="p">);</span>
+<span class="w">          </span><span class="p">},</span>
+<span class="w">        </span><span class="p">),</span>
+<span class="w">      </span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
 El que fa tot este codi és que transforma la pantalla en una pantalla en *`scroll`* per a que pugues navegar per les parts que no es vegen per pantalla tant de forma vertical com de forma horitzontal.
 
 ---
@@ -1955,11 +2041,10 @@ I amb això ja pots usar la teua funció provider en qualsevol lloc de l’aplic
  ```yaml
 dependencies:
    provider: ^6.1.4  #Versió de Provider utilitzada 
- ```
- I per últim executem en el terminal:
- ```plaintext
- flutter pub get
- ```
+ <div class="highlight"><pre><span></span><code>I per últim executem en el terminal:
+```plaintext
+flutter pub get
+</code></pre></div>
  Més documentació a [la pàgina oficial](https://pub.dev/packages/provider)
 
 ---
@@ -1971,16 +2056,14 @@ dependencies:
  ```yaml
 dependencies:
    nfc_manager: ^3.2.0  #Versió de nfc_manager utilitzada 
- ```
- Ara en el `AndroidManifest.xml` necessitarem posar el següent en l'apartat de `manifest`:
- ```xml
- <uses-permission android:name="android.permission.NFC"/>
- <uses-feature android:name="android.hardware.nfc" android:required="true"/>
- ```
+ <div class="highlight"><pre><span></span><code>Ara en el `AndroidManifest.xml` necessitarem posar el següent en l&#39;apartat de `manifest`:
+```xml
+&lt;uses-permission android:name=&quot;android.permission.NFC&quot;/&gt;
+&lt;uses-feature android:name=&quot;android.hardware.nfc&quot; android:required=&quot;true&quot;/&gt;
+</code></pre></div>
  I per últim executem en el terminal:
- ```plaintext
- flutter pub get
- ```
+ <div class="highlight"><pre><span></span><code>flutter pub get
+</code></pre></div>
  Més documentació en [la pàgina oficial](https://pub.dev/packages/nfc_manager)
 
 ---
@@ -1992,11 +2075,10 @@ dependencies:
  ```yaml
 dependencies:
    http: ^1.3.0  #Versió de http utilitzada 
- ```
- I per últim executem en el terminal:
- ```plaintext
- flutter pub get
- ```
+ <div class="highlight"><pre><span></span><code>I per últim executem en el terminal:
+```plaintext
+flutter pub get
+</code></pre></div>
  Més documentació en [la pàgina oficial](https://pub.dev/packages/http)
 
 ---
@@ -2010,9 +2092,8 @@ dependencies:
    qr_flutter: ^4.0.0 #Versió de qr_flutter utilitzada
   ```
 Després executem en el terminal:
- ```plaintext
- flutter pub get
- ```
+ <div class="highlight"><pre><span></span><code>flutter pub get
+</code></pre></div>
   Més documentació en [la pàgina oficial](https://pub.dev/packages/qr_flutter)
 
 ---
@@ -2025,11 +2106,10 @@ Després executem en el terminal:
  ```yaml
 dependencies:
    mobile_scanner: ^3.0.0 #Versió de mobile_scanner utilitzada
- ```
- Ara executem:
- ```plaintext
- flutter pub get
- ```
+ <div class="highlight"><pre><span></span><code>Ara executem:
+```plaintext
+flutter pub get
+</code></pre></div>
 
  Més documentació en [la pàgina oficial](https://pub.dev/packages/mobile_scanner)
 
@@ -2041,16 +2121,14 @@ dependencies:
 
  Per a poder llegir codis QR necessitarem la càmera, i per això hi haurà que demanar permisos de la següent forma:
  Anem al `AndroidManifest` que es troba en la següent ruta:
- ```plaintext
- /android/src/AndroidManifest.xml
- ```
+ <div class="highlight"><pre><span></span><code>/android/src/AndroidManifest.xml
+</code></pre></div>
  Tindrem que posar el següent en l'apartat de `manifest`:<br>
- ```
- <manifest xmlns:android="http://schemas.android.com/apk/res/android">
- ...
- <uses-permission android:name="android.permission.CAMERA"/>
- <uses-feature android:name="android.hardware.camera" android:required="false"/>
- ```
+ <div class="highlight"><pre><span></span><code>&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+...
+&lt;uses-permission android:name=&quot;android.permission.CAMERA&quot;/&gt;
+&lt;uses-feature android:name=&quot;android.hardware.camera&quot; android:required=&quot;false&quot;/&gt;
+</code></pre></div>
 
 ---
 
@@ -2069,29 +2147,24 @@ dependencies:
 
  Necessiteu anar al fitxer en `FlutterLocalNotificationsPlugin.java` que és troba en:
  - Windows:
- ```plaintext
- C:\Users\usuari\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_local_notifications-15.1\android\src\main\java\com\dexterous\flutterlocalnotifications\FlutterLocalNotificationsPlugin.java
- ```
+ <div class="highlight"><pre><span></span><code>C:\Users\usuari\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_local_notifications-15.1\android\src\main\java\com\dexterous\flutterlocalnotifications\FlutterLocalNotificationsPlugin.java
+</code></pre></div>
  - Linux:
- ```plaintext
- /home/usuari/.pub-cache/hosted/pub.dev/flutter_local_notifications-15.1.1/android/src/main/java/com/dexterous/flutterlocalnotifications/FlutterLocalNotificationsPlugin.java
- ```
+ <div class="highlight"><pre><span></span><code>/home/usuari/.pub-cache/hosted/pub.dev/flutter_local_notifications-15.1.1/android/src/main/java/com/dexterous/flutterlocalnotifications/FlutterLocalNotificationsPlugin.java
+</code></pre></div>
 
  El que teniu que canviar d'aquest fitxer és el següent:<p>
  **Nota**:Si ho feu en VSCode aconselle que premeu Ctrl+f per a obrir un buscador i posar la línia que volem modificar perquè el fitxer és molt llarg
 
- ```plaintext
- bigPictureStyle.bigLargeIcon(null);
- ```
+ <div class="highlight"><pre><span></span><code>bigPictureStyle.bigLargeIcon(null);
+</code></pre></div>
  Ho canviem a:
- ```plantext
- bigPictureStyle.bigLargeIcon((Bitmap) null);
- ```
+ <div class="highlight"><pre><span></span><code>bigPictureStyle.bigLargeIcon((Bitmap) null);
+</code></pre></div>
  Ho canviem degut a que elimina la ambigüitat perquè li diu al compilador que use la versió  `bigLargeIcon(Bitmap)`.<p>
  I per últim executem en el terminal:
- ```plaintext
- flutter pub get
- ```
+ <div class="highlight"><pre><span></span><code>flutter pub get
+</code></pre></div>
  Més documentació de les versions més actuals en [la pàgina oficial](https://pub.dev/packages/flutter_local_notifications)
 
  ---
@@ -2104,15 +2177,13 @@ dependencies:
  ```yaml
 dependencies:
    permission_handler: ^11.0.0  #Versió de permision_handler utilitzada 
- ```
- Ara en el fitxer anomenat `AndroidManifest.xml` posarem el següent en el `manifest`:
- ```xml
- <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
- ```
+ <div class="highlight"><pre><span></span><code>Ara en el fitxer anomenat `AndroidManifest.xml` posarem el següent en el `manifest`:
+```xml
+&lt;uses-permission android:name=&quot;android.permission.POST_NOTIFICATIONS&quot; /&gt;
+</code></pre></div>
  I per últim executem en el terminal:
- ```plaintext
- flutter pub get
- ```
+ <div class="highlight"><pre><span></span><code>flutter pub get
+</code></pre></div>
 
 ---
 
@@ -2155,37 +2226,31 @@ En resum, ací un resum de les llibreries que heu de posar al `pubspec.yaml` jun
 
 Per a posar una imatge ***que estiga definida en Flutter*** haurem de localitzar la imatge que volem que és vega i recomane posar-la en una carpeta **assets** perquè no es perda, després en el **pubspec.yaml** localitzem esta part:
 
+<div class="highlight"><pre><span></span><code><span class="nt">flutter</span><span class="p">:</span>
 
-<pre><code class="language-yaml">flutter:
-
-   # The following line ensures that the Material Icons font is
-   # included with your application, so that you can use the icons in
-   # the material Icons class.
-   uses-material-design: true
-   assets:
-</code></pre>
-
+<span class="w">   </span><span class="c1"># The following line ensures that the Material Icons font is</span>
+<span class="w">   </span><span class="c1"># included with your application, so that you can use the icons in</span>
+<span class="w">   </span><span class="c1"># the material Icons class.</span>
+<span class="w">   </span><span class="nt">uses-material-design</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">   </span><span class="nt">assets</span><span class="p">:</span>
+</code></pre></div>
 I posem la ruta de la imatge de la següent forma:
+<div class="highlight"><pre><span></span><code><span class="nt">flutter</span><span class="p">:</span>
 
-<pre><code class="language-yaml">flutter:
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
-  uses-material-design: true
-  assets:
-    - lib/assets/FallaPortal.png
-</code></pre>
-
+<span class="w">  </span><span class="c1"># The following line ensures that the Material Icons font is</span>
+<span class="w">  </span><span class="c1"># included with your application, so that you can use the icons in</span>
+<span class="w">  </span><span class="c1"># the material Icons class.</span>
+<span class="w">  </span><span class="nt">uses-material-design</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">assets</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lib/assets/FallaPortal.png</span>
+</code></pre></div>
 I així es veuria la imatge dins de l'aplicació
-
-<pre><code class="language-dart">// En codi
-child: Image.asset(
-  'lib/assets/FallaPortal.png',
-  fit: BoxFit.fill,
-),
-</code></pre>
-
+<div class="highlight"><pre><span></span><code><span class="c1">// En codi</span>
+<span class="nl">child:</span><span class="w"> </span><span class="n">Image</span><span class="p">.</span><span class="n">asset</span><span class="p">(</span>
+<span class="w">  </span><span class="s1">&#39;lib/assets/FallaPortal.png&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nl">fit:</span><span class="w"> </span><span class="n">BoxFit</span><span class="p">.</span><span class="n">fill</span><span class="p">,</span>
+<span class="p">),</span>
+</code></pre></div>
 
 ---
 
@@ -2195,20 +2260,16 @@ child: Image.asset(
 
 Paregut al que havíem fet abans per a posar una imatge, ens dirigim al mateix apartat, però en lloc de **assests** és **flutter_launcher_icons**, però abans de mostrar-ho tens que inicialitzar-lo en l'apartat de dependències:
 
+<div class="highlight"><pre><span></span><code><span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flutter_launcher_icons</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^0.14.3</span><span class="w"> </span><span class="c1">#Versió de flutter_launcher_icons utilizada</span>
+</code></pre></div>
 
-<pre><code class="language-yaml">dependencies:
-  flutter_launcher_icons: ^0.14.3 #Versió de flutter_launcher_icons utilizada
-</code></pre>
-
-
-
-<pre><code class="language-yaml">flutter_launcher_icons:
-  android: true
-  ios: true
-  adaptive_icon_foreground: &quot;assets/logo/foreground.png&quot;
-  adaptive_icon_background: &quot;#FFFFFF&quot;
-</code></pre>
-
+<div class="highlight"><pre><span></span><code><span class="nt">flutter_launcher_icons</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">android</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">ios</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">adaptive_icon_foreground</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;assets/logo/foreground.png&quot;</span>
+<span class="w">  </span><span class="nt">adaptive_icon_background</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#FFFFFF&quot;</span>
+</code></pre></div>
 
 ---
 
@@ -2217,80 +2278,78 @@ Paregut al que havíem fet abans per a posar una imatge, ens dirigim al mateix a
 ---
 
 Així quedaria el **pubspec.yaml** amb totes les modificacions:
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;nom</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">la</span><span class="nv"> </span><span class="s">vostra</span><span class="nv"> </span><span class="s">aplicació&#39;</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;A</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">Flutter</span><span class="nv"> </span><span class="s">project.&quot;</span>
+<span class="c1"># The following line prevents the package from being accidentally published to</span>
+<span class="c1"># pub.dev using `flutter pub publish`. This is preferred for private packages.</span>
+<span class="nt">publish_to</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;none&#39;</span><span class="w"> </span><span class="c1"># Remove this line if you wish to publish to pub.dev</span>
 
-<pre><code class="language-yaml">name: 'nom de la vostra aplicació'
-description: &quot;A new Flutter project.&quot;
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+<span class="c1"># The following defines the version and build number for your application.</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0+1</span>
 
-# The following defines the version and build number for your application.
-version: 1.0.0+1
+<span class="nt">environment</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sdk</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^3.7.0</span>
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flutter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">sdk</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flutter</span>
 
-environment:
-  sdk: ^3.7.0
-dependencies:
-  flutter:
-    sdk: flutter
+<span class="w">  </span><span class="c1"># The following adds the Cupertino Icons font to your application.</span>
+<span class="w">  </span><span class="c1"># Use with the CupertinoIcons class for iOS style icons.</span>
+<span class="w">  </span><span class="nt">cupertino_icons</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^1.0.8</span>
+<span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^6.1.4</span>
+<span class="w">  </span><span class="nt">nfc_manager</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^3.2.0</span>
+<span class="w">  </span><span class="nt">http</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^1.3.0</span>
+<span class="w">  </span><span class="nt">flutter_local_notifications</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15.1.1</span>
+<span class="w">  </span><span class="nt">permission_handler</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^11.0.0</span>
+<span class="w">  </span><span class="nt">mobile_scanner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^3.0.0</span>
+<span class="w">  </span><span class="nt">intl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^0.18.0</span>
+<span class="w">  </span><span class="nt">qr_flutter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^4.0.0</span>
+<span class="w">  </span><span class="nt">flutter_launcher_icons</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^0.14.3</span>
+<span class="w">  </span><span class="nt">shared_preferences</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^2.0.15</span>
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
-  provider: ^6.1.4
-  nfc_manager: ^3.2.0
-  http: ^1.3.0
-  flutter_local_notifications: 15.1.1
-  permission_handler: ^11.0.0
-  mobile_scanner: ^3.0.0
-  intl: ^0.18.0
-  qr_flutter: ^4.0.0
-  flutter_launcher_icons: ^0.14.3
-  shared_preferences: ^2.0.15
+<span class="nt">dev_dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">flutter_test</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">sdk</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flutter</span>
+<span class="w">  </span><span class="nt">flutter_lints</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^5.0.0</span>
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^5.0.0
+<span class="c1"># The following section is specific to Flutter packages.</span>
+<span class="nt">flutter</span><span class="p">:</span>
 
-# The following section is specific to Flutter packages.
-flutter:
+<span class="w">  </span><span class="c1"># The following line ensures that the Material Icons font is</span>
+<span class="w">  </span><span class="c1"># included with your application, so that you can use the icons in</span>
+<span class="w">  </span><span class="c1"># the material Icons class.</span>
+<span class="w">  </span><span class="nt">uses-material-design</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">assets</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lib/assets/FallaPortal.png</span>
+<span class="nt">flutter_launcher_icons</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">android</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">ios</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">adaptive_icon_foreground</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;assets/logo/foreground.png&quot;</span>
+<span class="w">  </span><span class="nt">adaptive_icon_background</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;#FFFFFF&quot;</span>
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
-  uses-material-design: true
-  assets:
-    - lib/assets/FallaPortal.png
-flutter_launcher_icons:
-  android: true
-  ios: true
-  adaptive_icon_foreground: &quot;assets/logo/foreground.png&quot;
-  adaptive_icon_background: &quot;#FFFFFF&quot;
+<span class="w">  </span><span class="c1"># For details regarding adding assets from package dependencies, see</span>
+<span class="w">  </span><span class="c1"># https://flutter.dev/to/asset-from-package</span>
 
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/to/asset-from-package
-
-  # To add custom fonts to your application, add a fonts section here,
-  # in this &quot;flutter&quot; section. Each entry in this list should have a
-  # &quot;family&quot; key with the font family name, and a &quot;fonts&quot; key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/to/font-from-package
-</code></pre>
-
+<span class="w">  </span><span class="c1"># To add custom fonts to your application, add a fonts section here,</span>
+<span class="w">  </span><span class="c1"># in this &quot;flutter&quot; section. Each entry in this list should have a</span>
+<span class="w">  </span><span class="c1"># &quot;family&quot; key with the font family name, and a &quot;fonts&quot; key with a</span>
+<span class="w">  </span><span class="c1"># list giving the asset and other descriptors for the font. For</span>
+<span class="w">  </span><span class="c1"># example:</span>
+<span class="w">  </span><span class="c1"># fonts:</span>
+<span class="w">  </span><span class="c1">#   - family: Schyler</span>
+<span class="w">  </span><span class="c1">#     fonts:</span>
+<span class="w">  </span><span class="c1">#       - asset: fonts/Schyler-Regular.ttf</span>
+<span class="w">  </span><span class="c1">#       - asset: fonts/Schyler-Italic.ttf</span>
+<span class="w">  </span><span class="c1">#         style: italic</span>
+<span class="w">  </span><span class="c1">#   - family: Trajan Pro</span>
+<span class="w">  </span><span class="c1">#     fonts:</span>
+<span class="w">  </span><span class="c1">#       - asset: fonts/TrajanPro.ttf</span>
+<span class="w">  </span><span class="c1">#       - asset: fonts/TrajanPro_Bold.ttf</span>
+<span class="w">  </span><span class="c1">#         weight: 700</span>
+<span class="w">  </span><span class="c1">#</span>
+<span class="w">  </span><span class="c1"># For details regarding fonts from package dependencies,</span>
+<span class="w">  </span><span class="c1"># see https://flutter.dev/to/font-from-package</span>
+</code></pre></div>
 
 ---
 ## NFC
@@ -2306,44 +2365,43 @@ Per a treballar amb NFC en flutter necessitarem la llibreria anteriorment esment
  - Future<void> **startSession**({required Future<void> Function(NfcTag) onDiscovered, Set<NfcPollingOption>? pollingOptions, String? alertMessage, bool? invalidateAfterFirstRead = true, Future<void> Function(NfcError)? onError,}): Esta funció fa que active el lector de NFC del dispositiu i busque un altre dispositiu/etiqueta NFC per a intercanviar informació.
  - Future<void> **stopSession**({String? alertMessage, String? errorMessage}): Para la lectura de NFC i pots mostrar missatges d'error i/o un missatge d'alerta.
 Ací teniu un exemple complet en l'aplicació real:
- ```dart
-   //Resta de la pantalla
-   String? valorLlegit; //Inicialitzem un valor que serà qui farà les operacions amb el NFC
+ <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="c1">//Resta de la pantalla</span>
+<span class="w">  </span><span class="kt">String</span><span class="o">?</span><span class="w"> </span><span class="n">valorLlegit</span><span class="p">;</span><span class="w"> </span><span class="c1">//Inicialitzem un valor que serà qui farà les operacions amb el NFC</span>
 
-    Completer<String?> completer = Completer();
+<span class="w">   </span><span class="n">Completer</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">?&gt;</span><span class="w"> </span><span class="n">completer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Completer</span><span class="p">();</span>
 
-    await NfcManager.instance.startSession(
-      onDiscovered: (NfcTag tag) async {
-        try {
-          final ndef = Ndef.from(tag);
-          if (ndef == null || ndef.cachedMessage == null) { //Verifica si l'etiqueta és compatible
-            await NfcManager.instance.stopSession(errorMessage: 'Etiqueta no compatible'); //Dona error si no
-            onError?.call();
-            completer.complete(null);
-            return;
-          }
+<span class="w">   </span><span class="kd">await</span><span class="w"> </span><span class="n">NfcManager</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">startSession</span><span class="p">(</span>
+<span class="w">     </span><span class="nl">onDiscovered:</span><span class="w"> </span><span class="p">(</span><span class="n">NfcTag</span><span class="w"> </span><span class="n">tag</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="kd">final</span><span class="w"> </span><span class="n">ndef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ndef</span><span class="p">.</span><span class="n">from</span><span class="p">(</span><span class="n">tag</span><span class="p">);</span>
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ndef</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">ndef</span><span class="p">.</span><span class="n">cachedMessage</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//Verifica si l&#39;etiqueta és compatible</span>
+<span class="w">           </span><span class="kd">await</span><span class="w"> </span><span class="n">NfcManager</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">stopSession</span><span class="p">(</span><span class="nl">errorMessage:</span><span class="w"> </span><span class="s1">&#39;Etiqueta no compatible&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">//Dona error si no</span>
+<span class="w">           </span><span class="n">onError</span><span class="o">?</span><span class="p">.</span><span class="n">call</span><span class="p">();</span>
+<span class="w">           </span><span class="n">completer</span><span class="p">.</span><span class="n">complete</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="w">           </span><span class="k">return</span><span class="p">;</span>
+<span class="w">         </span><span class="p">}</span>
 
-          final payload = ndef.cachedMessage!.records.first.payload;
-          valorLlegit = String.fromCharCodes(payload.skip(3));
+<span class="w">         </span><span class="kd">final</span><span class="w"> </span><span class="n">payload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ndef</span><span class="p">.</span><span class="n">cachedMessage</span><span class="o">!</span><span class="p">.</span><span class="n">records</span><span class="p">.</span><span class="n">first</span><span class="p">.</span><span class="n">payload</span><span class="p">;</span>
+<span class="w">         </span><span class="n">valorLlegit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">String</span><span class="p">.</span><span class="n">fromCharCodes</span><span class="p">(</span><span class="n">payload</span><span class="p">.</span><span class="n">skip</span><span class="p">(</span><span class="m">3</span><span class="p">));</span>
 
-          if (valorLlegit == valorEsperat) { //Compara si son igual
-            onCoincidencia?.call();
-          } else {
-            onError?.call();
-          }
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">valorLlegit</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">valorEsperat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//Compara si son igual</span>
+<span class="w">           </span><span class="n">onCoincidencia</span><span class="o">?</span><span class="p">.</span><span class="n">call</span><span class="p">();</span>
+<span class="w">         </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">           </span><span class="n">onError</span><span class="o">?</span><span class="p">.</span><span class="n">call</span><span class="p">();</span>
+<span class="w">         </span><span class="p">}</span>
 
-          await NfcManager.instance.stopSession();
-          completer.complete(valorLlegit); //Passa el valor que hem llegit al completer 
-        } catch (e) {
-          await NfcManager.instance.stopSession(errorMessage: 'Error en la lectura');
-          onError?.call();
-          completer.complete(null);
-        }
-      },
-    );
+<span class="w">         </span><span class="kd">await</span><span class="w"> </span><span class="n">NfcManager</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">stopSession</span><span class="p">();</span>
+<span class="w">         </span><span class="n">completer</span><span class="p">.</span><span class="n">complete</span><span class="p">(</span><span class="n">valorLlegit</span><span class="p">);</span><span class="w"> </span><span class="c1">//Passa el valor que hem llegit al completer </span>
+<span class="w">       </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="kd">await</span><span class="w"> </span><span class="n">NfcManager</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">stopSession</span><span class="p">(</span><span class="nl">errorMessage:</span><span class="w"> </span><span class="s1">&#39;Error en la lectura&#39;</span><span class="p">);</span>
+<span class="w">         </span><span class="n">onError</span><span class="o">?</span><span class="p">.</span><span class="n">call</span><span class="p">();</span>
+<span class="w">         </span><span class="n">completer</span><span class="p">.</span><span class="n">complete</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="w">       </span><span class="p">}</span>
+<span class="w">     </span><span class="p">},</span>
+<span class="w">   </span><span class="p">);</span>
 
-    return completer.future; // I tornem el completer de forma asíncrona
- ```
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">completer</span><span class="p">.</span><span class="n">future</span><span class="p">;</span><span class="w"> </span><span class="c1">// I tornem el completer de forma asíncrona</span>
+</code></pre></div>
 
 ---
 
@@ -2354,35 +2412,33 @@ Ací teniu un exemple complet en l'aplicació real:
  - NdefRecord NdefRecord.createText(String text, {String languageCode = 'en'}): Permet canviar el valor del nfc quan s'escaneja.
  - Future<void> write(NdefMessage message): Mostrara per pantalla el missatge que tu vulgues.
 Ací teniu un exemple complet en l'aplicació real:
-
-<pre><code class="language-dart">//Resta de la pantalla
-bool isAvailable= await NfcManager.instance.isAvailable(); 
-    if(!isAvailable){ //Verifica si el dispositiu és compatible amb la tecnologia NFC
-      return &quot;NFC no disponible en aquest dispositiu&quot;; //Dona el següent error sí no és compatible
-    }
-    String resultat=&quot;Esperant etiqueta ...&quot;;
-    await NfcManager.instance.startSession(onDiscovered: (NfcTag tag) async{
-      try{
-        final ndef= Ndef.from(tag);
-        if(ndef==null || !ndef.isWritable){ //Si no es llig l'etiqueta o no és pot modificar
-          resultat=&quot;Etiqueta no compatible o no es pot escriure&quot;;
-          NfcManager.instance.stopSession(errorMessage: &quot;Error&quot;);
-          return;
-        }
-        final message= NdefMessage([
-          NdefRecord.createText(&quot;1234&quot;) //Ací modificara el valor de la polsera a 1234
-        ]);
-        await ndef.write(message);
-        resultat=&quot;Etiqueta escrita amb èxit&quot;;
-        return;
-      }catch(e){
-        resultat=&quot;Error en escriure l'etiqueta&quot;;
-        return;
-      }
-    });
-    return resultat;
-</code></pre>
-
+<div class="highlight"><pre><span></span><code><span class="c1">//Resta de la pantalla</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">isAvailable</span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">NfcManager</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">isAvailable</span><span class="p">();</span><span class="w"> </span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isAvailable</span><span class="p">){</span><span class="w"> </span><span class="c1">//Verifica si el dispositiu és compatible amb la tecnologia NFC</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;NFC no disponible en aquest dispositiu&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">//Dona el següent error sí no és compatible</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">String</span><span class="w"> </span><span class="n">resultat</span><span class="o">=</span><span class="s2">&quot;Esperant etiqueta ...&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">await</span><span class="w"> </span><span class="n">NfcManager</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">startSession</span><span class="p">(</span><span class="nl">onDiscovered:</span><span class="w"> </span><span class="p">(</span><span class="n">NfcTag</span><span class="w"> </span><span class="n">tag</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="p">{</span>
+<span class="w">      </span><span class="k">try</span><span class="p">{</span>
+<span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">ndef</span><span class="o">=</span><span class="w"> </span><span class="n">Ndef</span><span class="p">.</span><span class="n">from</span><span class="p">(</span><span class="n">tag</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">ndef</span><span class="o">==</span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">ndef</span><span class="p">.</span><span class="n">isWritable</span><span class="p">){</span><span class="w"> </span><span class="c1">//Si no es llig l&#39;etiqueta o no és pot modificar</span>
+<span class="w">          </span><span class="n">resultat</span><span class="o">=</span><span class="s2">&quot;Etiqueta no compatible o no es pot escriure&quot;</span><span class="p">;</span>
+<span class="w">          </span><span class="n">NfcManager</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">stopSession</span><span class="p">(</span><span class="nl">errorMessage:</span><span class="w"> </span><span class="s2">&quot;Error&quot;</span><span class="p">);</span>
+<span class="w">          </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">message</span><span class="o">=</span><span class="w"> </span><span class="n">NdefMessage</span><span class="p">([</span>
+<span class="w">          </span><span class="n">NdefRecord</span><span class="p">.</span><span class="n">createText</span><span class="p">(</span><span class="s2">&quot;1234&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">//Ací modificara el valor de la polsera a 1234</span>
+<span class="w">        </span><span class="p">]);</span>
+<span class="w">        </span><span class="kd">await</span><span class="w"> </span><span class="n">ndef</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="w">        </span><span class="n">resultat</span><span class="o">=</span><span class="s2">&quot;Etiqueta escrita amb èxit&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="n">e</span><span class="p">){</span>
+<span class="w">        </span><span class="n">resultat</span><span class="o">=</span><span class="s2">&quot;Error en escriure l&#39;etiqueta&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">resultat</span><span class="p">;</span>
+</code></pre></div>
 
 ---
 
@@ -2398,46 +2454,44 @@ Necessitarem importar qr_flutter a la pantalla que vulguem i necessitarem saber 
 
 - Future<PermissionStatus> request(): Demana permís a l'usuari per a obrir la càmera. <p>
 Ací teniu un exemple complet en l'aplicació real:
+<div class="highlight"><pre><span></span><code><span class="c1">//Resta de la pantalla</span>
+<span class="kd">final</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">Permission</span><span class="p">.</span><span class="n">camera</span><span class="p">.</span><span class="n">request</span><span class="p">();</span><span class="w"> </span><span class="c1">// Demana permís a la càmera </span>
 
-<pre><code class="language-dart">//Resta de la pantalla
-final status = await Permission.camera.request(); // Demana permís a la càmera 
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">status</span><span class="p">.</span><span class="n">isGranted</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Sí es negat l&#39;aplicació donara el següent error</span>
+<span class="w">  </span><span class="n">ScaffoldMessenger</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">context</span><span class="p">).</span><span class="n">showSnackBar</span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SnackBar</span><span class="p">(</span><span class="nl">content:</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Permís de càmera denegat&#39;</span><span class="p">)),</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="n">onError</span><span class="o">?</span><span class="p">.</span><span class="n">call</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">await</span><span class="w"> </span><span class="n">showDialog</span><span class="p">(</span><span class="c1">// Obri el dialeg</span>
+<span class="w">      </span><span class="nl">context:</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="c1">//Passa el context</span>
+<span class="w">      </span><span class="nl">barrierDismissible:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nl">builder:</span><span class="w"> </span><span class="p">(</span><span class="n">BuildContext</span><span class="w"> </span><span class="n">dialogContext</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Scaffold</span><span class="p">(</span>
+<span class="w">          </span><span class="nl">appBar:</span><span class="w"> </span><span class="n">AppBar</span><span class="p">(</span><span class="nl">title:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Escàner QR&#39;</span><span class="p">)),</span>
+<span class="w">          </span><span class="nl">body:</span><span class="w"> </span><span class="n">MobileScanner</span><span class="p">(</span>
+<span class="w">            </span><span class="nl">controller:</span><span class="w"> </span><span class="n">MobileScannerController</span><span class="p">(),</span><span class="w"> </span><span class="c1">//Obri la càmera</span>
+<span class="w">            </span><span class="nl">onDetect:</span><span class="w"> </span><span class="p">(</span><span class="n">capture</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isProcessing</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">              </span><span class="n">isProcessing</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 
-if (!status.isGranted) { // Sí es negat l'aplicació donara el següent error
-  ScaffoldMessenger.of(context).showSnackBar(
-    const SnackBar(content: Text('Permís de càmera denegat')),
-  );
-  onError?.call();
-  return;
-}
-await showDialog(// Obri el dialeg
-      context: context,//Passa el context
-      barrierDismissible: false,
-      builder: (BuildContext dialogContext) {
-        return Scaffold(
-          appBar: AppBar(title: const Text('Escàner QR')),
-          body: MobileScanner(
-            controller: MobileScannerController(), //Obri la càmera
-            onDetect: (capture) {
-              if (isProcessing) return;
-              isProcessing = true;
+<span class="w">              </span><span class="kd">final</span><span class="w"> </span><span class="kt">String</span><span class="o">?</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">capture</span><span class="p">.</span><span class="n">barcodes</span><span class="p">.</span><span class="n">first</span><span class="p">.</span><span class="n">rawValue</span><span class="p">;</span><span class="w"> </span><span class="c1">//Agafa el valor llegit per la càmera</span>
+<span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">code</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
 
-              final String? code = capture.barcodes.first.rawValue; //Agafa el valor llegit per la càmera
-              if (code == null) return;
+<span class="w">              </span><span class="n">Navigator</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="n">dialogContext</span><span class="p">);</span>
 
-              Navigator.pop(dialogContext);
-
-              if (code == valorEsperat) { //Es compara per a vore si coincideix (en aquest cas la polsera de l'usuari)
-                onCoincidencia();
-              } else {
-                onDiferent?.call(code);
-              }
-            },
-          ),
-        );
-      },
-    );
-</code></pre>
-
+<span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">code</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">valorEsperat</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//Es compara per a vore si coincideix (en aquest cas la polsera de l&#39;usuari)</span>
+<span class="w">                </span><span class="n">onCoincidencia</span><span class="p">();</span>
+<span class="w">              </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">onDiferent</span><span class="o">?</span><span class="p">.</span><span class="n">call</span><span class="p">(</span><span class="n">code</span><span class="p">);</span>
+<span class="w">              </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">          </span><span class="p">),</span>
+<span class="w">        </span><span class="p">);</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">);</span>
+</code></pre></div>
 
 ---
 
@@ -2457,25 +2511,23 @@ await showDialog(// Obri el dialeg
    - QrDataModuleStyle? **dataModuleShape**: Objecte que li dona forma al QR.
    - Color? **color**: Objecte que li dona un color al QR.  
 Ací teniu un exemple complet en l'aplicació real:
-
-<pre><code class="language-dart">   //Resta de la pantalla
-  @override
-  Widget build(BuildContext context) {
-   QrImageView(
-     data: &quot;8430001000017&quot;, //Rep el valor de la polsera
-     size: 200.0, //Li assigna un tamany per a que no es desborde
-     eyeStyle: const QrEyeStyle( //Li assigna estil
-       eyeShape: QrEyeShape.square,
-       color: Colors.black,
-     ),
-     dataModuleStyle: const QrDataModuleStyle( //Li assigna estil
-       dataModuleShape: QrDataModuleShape.square,
-       color: Colors.black,
-     ),
-   ),
-  }
-</code></pre>
-
+<div class="highlight"><pre><span></span><code><span class="w">   </span><span class="c1">//Resta de la pantalla</span>
+<span class="w">  </span><span class="nd">@override</span>
+<span class="w">  </span><span class="n">Widget</span><span class="w"> </span><span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">QrImageView</span><span class="p">(</span>
+<span class="w">     </span><span class="nl">data:</span><span class="w"> </span><span class="s2">&quot;8430001000017&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">//Rep el valor de la polsera</span>
+<span class="w">     </span><span class="nl">size:</span><span class="w"> </span><span class="m">200.0</span><span class="p">,</span><span class="w"> </span><span class="c1">//Li assigna un tamany per a que no es desborde</span>
+<span class="w">     </span><span class="nl">eyeStyle:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">QrEyeStyle</span><span class="p">(</span><span class="w"> </span><span class="c1">//Li assigna estil</span>
+<span class="w">       </span><span class="nl">eyeShape:</span><span class="w"> </span><span class="n">QrEyeShape</span><span class="p">.</span><span class="n">square</span><span class="p">,</span>
+<span class="w">       </span><span class="nl">color:</span><span class="w"> </span><span class="n">Colors</span><span class="p">.</span><span class="n">black</span><span class="p">,</span>
+<span class="w">     </span><span class="p">),</span>
+<span class="w">     </span><span class="nl">dataModuleStyle:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">QrDataModuleStyle</span><span class="p">(</span><span class="w"> </span><span class="c1">//Li assigna estil</span>
+<span class="w">       </span><span class="nl">dataModuleShape:</span><span class="w"> </span><span class="n">QrDataModuleShape</span><span class="p">.</span><span class="n">square</span><span class="p">,</span>
+<span class="w">       </span><span class="nl">color:</span><span class="w"> </span><span class="n">Colors</span><span class="p">.</span><span class="n">black</span><span class="p">,</span>
+<span class="w">     </span><span class="p">),</span>
+<span class="w">   </span><span class="p">),</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
 
 ---
 

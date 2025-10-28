@@ -12,6 +12,8 @@
         <link rel="prev" href="../BD/">
       
       
+        <link rel="next" href="../../DIW/HTML/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
@@ -540,7 +542,7 @@
   
   
   <span class="md-ellipsis">
-    Base de dades
+    Problemes amb la base de dades en docker i solucions
     
   </span>
   
@@ -708,6 +710,98 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DIW
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            DIW
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DIW/HTML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DIW/CSS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -852,194 +946,193 @@ El que té que n'hi haure és el següent:
 - Una classe "Database" per a poder connectar-mo'n a la base de dades.
 - Variables de dades de la base de dades ja siga nom d'usuari, nom de la base de dades, nom del host..., etc.
 - Una funció que faja la connexió a la base de dades i que gaste les variables definits anteriorment.</p>
-<p>Ara mostre un exemple de com tindre el fitxer <code>db.php</code></p>
-<pre><code class="language-php">&lt;?php 
+<p>Ara mostre un exemple de com tindre el fitxer <code>db.php</code>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span> 
 
-//use PDO; // Esta linia la comentes o la elimines, de moment no té ús
+<span class="c1">//use PDO; // Esta linia la comentes o la elimines, de moment no té ús</span>
 
-class Database {
-    private $host = 'host'; // Canvia host per el host que tingues en el docker-compose.yml en MYSQL_HOST o si no tens res posa localhost
-    private $db = 'db'; // Canvia db per el nom de la base de dades que vas a utilitzar
-    private $user = 'user'; // Canvia user pel teu usuari de MySQL
-    private $pass = 'pass'; // Canvia pass per la teua contrasenya de MySQL
-    private $charset = 'utf8mb4';
+<span class="k">class</span> <span class="nc">Database</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$host</span> <span class="o">=</span> <span class="s1">&#39;host&#39;</span><span class="p">;</span> <span class="c1">// Canvia host per el host que tingues en el docker-compose.yml en MYSQL_HOST o si no tens res posa localhost</span>
+    <span class="k">private</span> <span class="nv">$db</span> <span class="o">=</span> <span class="s1">&#39;db&#39;</span><span class="p">;</span> <span class="c1">// Canvia db per el nom de la base de dades que vas a utilitzar</span>
+    <span class="k">private</span> <span class="nv">$user</span> <span class="o">=</span> <span class="s1">&#39;user&#39;</span><span class="p">;</span> <span class="c1">// Canvia user pel teu usuari de MySQL</span>
+    <span class="k">private</span> <span class="nv">$pass</span> <span class="o">=</span> <span class="s1">&#39;pass&#39;</span><span class="p">;</span> <span class="c1">// Canvia pass per la teua contrasenya de MySQL</span>
+    <span class="k">private</span> <span class="nv">$charset</span> <span class="o">=</span> <span class="s1">&#39;utf8mb4&#39;</span><span class="p">;</span>
 
-    public $pdo = null;
-    // Funció per a connectar-te a la base de dades MySQL
-    public function connect() {
-        if ($this-&gt;pdo === null) {
-            // Aquesta linia de codi fa la connexió amb les dades esmentades amb anterioritat
-            $dsn = &quot;mysql:host=$this-&gt;host;dbname=$this-&gt;db;charset=$this-&gt;charset&quot;;
-            // Try-catch per a probar si la connexió ha sigut exitosa o no
-            try {
-                //Acabar la connexió si ha sogut exitosa
-                $this-&gt;pdo = new PDO($dsn, $this-&gt;user, $this-&gt;pass);
-                $this-&gt;pdo-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            } catch (PDOException $e) {
-                //Missatge d'error si la connexió ha fallat
-                echo &quot;&lt;p&gt;Connection failed: &quot; . $e-&gt;getMessage() . &quot;&lt;/p&gt;&quot;;
-            }
-        }
-        return $this-&gt;pdo;
-    }
-}
-?&gt;
-</code></pre>
+    <span class="k">public</span> <span class="nv">$pdo</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+    <span class="c1">// Funció per a connectar-te a la base de dades MySQL</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">connect</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">pdo</span> <span class="o">===</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Aquesta linia de codi fa la connexió amb les dades esmentades amb anterioritat</span>
+            <span class="nv">$dsn</span> <span class="o">=</span> <span class="s2">&quot;mysql:host=</span><span class="si">$this-&gt;host</span><span class="s2">;dbname=</span><span class="si">$this-&gt;db</span><span class="s2">;charset=</span><span class="si">$this-&gt;charset</span><span class="s2">&quot;</span><span class="p">;</span>
+            <span class="c1">// Try-catch per a probar si la connexió ha sigut exitosa o no</span>
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="c1">//Acabar la connexió si ha sogut exitosa</span>
+                <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="nv">$dsn</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">user</span><span class="p">,</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">pass</span><span class="p">);</span>
+                <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">pdo</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">//Missatge d&#39;error si la connexió ha fallat</span>
+                <span class="k">echo</span> <span class="s2">&quot;&lt;p&gt;Connection failed: &quot;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">()</span> <span class="o">.</span> <span class="s2">&quot;&lt;/p&gt;&quot;</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">pdo</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></p>
 <h3 id="fitxer-indexphp">Fitxer index.php</h3>
 <p>Aquest fitxer va a ser el fitxer en el que és centrarà la funcionalitat d'iniciar el servidor, i connectar amb el fitxer de endpoints i el de base de dades amb slim.
-Ara mostre un exemple de com deura de ser:</p>
-<pre><code class="language-php">&lt;?php
-// Carrega slim i la base de dades
-require '../vendor/autoload.php';
-require './db.php';
+Ara mostre un exemple de com deura de ser:
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="c1">// Carrega slim i la base de dades</span>
+<span class="k">require</span> <span class="s1">&#39;../vendor/autoload.php&#39;</span><span class="p">;</span>
+<span class="k">require</span> <span class="s1">&#39;./db.php&#39;</span><span class="p">;</span>
 
-$db = new Database(); 
-$pdo = $db-&gt;connect();
+<span class="nv">$db</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Database</span><span class="p">();</span> 
+<span class="nv">$pdo</span> <span class="o">=</span> <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">connect</span><span class="p">();</span>
 
-// Crear l'aplicació Slim
-$app = \Slim\Factory\AppFactory::create();
+<span class="c1">// Crear l&#39;aplicació Slim</span>
+<span class="nv">$app</span> <span class="o">=</span> <span class="nx">\Slim\Factory\AppFactory</span><span class="o">::</span><span class="na">create</span><span class="p">();</span>
 
-// Definir una ruta bàsica
-$app-&gt;get('/', function ($request, $response, $args) {
-    $response-&gt;getBody()-&gt;write(&quot;&lt;p&gt;¡Hola, mundo!&lt;/p&gt;&quot;);
-    return $response;
-});
-// Carrega els altres endpoints
-require './routes/routes.php';
+<span class="c1">// Definir una ruta bàsica</span>
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">,</span> <span class="nv">$args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="s2">&quot;&lt;p&gt;¡Hola, mundo!&lt;/p&gt;&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nv">$response</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="c1">// Carrega els altres endpoints</span>
+<span class="k">require</span> <span class="s1">&#39;./routes/routes.php&#39;</span><span class="p">;</span>
 
-// Executar l'aplicació
-$app-&gt;run();
-?&gt;
-</code></pre>
+<span class="c1">// Executar l&#39;aplicació</span>
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">();</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></p>
 <h3 id="fitxer-routesphp">Fitxer routes.php</h3>
 <p>Aquest fitxer serà on farem els endpoints, principalment de les taules de la base de dades amb les peticions de la API.
 Ara en els seguents apartats entrarem en detall sobre les peticons que podem fer.</p>
 <h4 id="get">GET</h4>
 <p>Utilitzem <code>GET</code> per a obtindre dades de la base de dades.
-Ací un codi d'exemple:</p>
-<pre><code class="language-php">$app-&gt;get('/usuarios', function ($request, $response, $args) use ($pdo) {
-// Realitzem la consulta per a obtindre els usuaris
-$stmt = $pdo-&gt;query(&quot;SELECT * FROM usuarios&quot;);
-$usuarios = $stmt-&gt;fetchAll(PDO::FETCH_ASSOC);
+Ací un codi d'exemple:
+<div class="highlight"><pre><span></span><code><span class="x">$app-&gt;get(&#39;/usuarios&#39;, function ($request, $response, $args) use ($pdo) {</span>
+<span class="x">// Realitzem la consulta per a obtindre els usuaris</span>
+<span class="x">$stmt = $pdo-&gt;query(&quot;SELECT * FROM usuarios&quot;);</span>
+<span class="x">$usuarios = $stmt-&gt;fetchAll(PDO::FETCH_ASSOC);</span>
 
-// Creem un array amb els usuaris i el número total d'usuaris
-$data = [
-    'total' =&gt; count($usuarios),  // Contem el número d'usuaris
-    'usuarios' =&gt; $usuarios       // Les dades dels usuaris
-];
+<span class="x">// Creem un array amb els usuaris i el número total d&#39;usuaris</span>
+<span class="x">$data = [</span>
+<span class="x">    &#39;total&#39; =&gt; count($usuarios),  // Contem el número d&#39;usuaris</span>
+<span class="x">    &#39;usuarios&#39; =&gt; $usuarios       // Les dades dels usuaris</span>
+<span class="x">];</span>
 
-// Codifiquem el resultat en JSON
-$response-&gt;getBody()-&gt;write(json_encode($data));
+<span class="x">// Codifiquem el resultat en JSON</span>
+<span class="x">$response-&gt;getBody()-&gt;write(json_encode($data));</span>
 
-// Establim el header Content-Type a application/json
-return $response-&gt;withHeader('Content-Type', 'application/json');
-});
-</code></pre>
+<span class="x">// Establim el header Content-Type a application/json</span>
+<span class="x">return $response-&gt;withHeader(&#39;Content-Type&#39;, &#39;application/json&#39;);</span>
+<span class="x">});</span>
+</code></pre></div></p>
 <h4 id="post">POST</h4>
 <p>Utilitzem <code>POST</code> per a afegir dades de la base de dades.
-Ací un codi d'exemple:</p>
-<pre><code class="language-php">
-$app-&gt;post('/usuarios', function ($request, $response, $args) use ($pdo) {
-    $data = json_decode($request-&gt;getBody(), true);
-    // Dades per a enviar a la base de dades
-    $nombre = $data['nombre'] ?? '';
-    $email = $data['email'] ?? '';
+Ací un codi d'exemple:
+<div class="highlight"><pre><span></span><code><span class="x">$app-&gt;post(&#39;/usuarios&#39;, function ($request, $response, $args) use ($pdo) {</span>
+<span class="x">    $data = json_decode($request-&gt;getBody(), true);</span>
+<span class="x">    // Dades per a enviar a la base de dades</span>
+<span class="x">    $nombre = $data[&#39;nombre&#39;] ?? &#39;&#39;;</span>
+<span class="x">    $email = $data[&#39;email&#39;] ?? &#39;&#39;;</span>
 
-    // Validacions
-    if (empty($nombre) || empty($email)) {
-        $payload = [
-            'error' =&gt; true,
-            'message' =&gt; 'El nombre y el email son requeridos.'
-        ];
-        $response-&gt;getBody()-&gt;write(json_encode($payload));
-        // Codi de HTTP 400: Error en el client
-        return $response-&gt;withHeader('Content-Type', 'application/json')-&gt;withStatus(400);
-    }
+<span class="x">    // Validacions</span>
+<span class="x">    if (empty($nombre) || empty($email)) {</span>
+<span class="x">        $payload = [</span>
+<span class="x">            &#39;error&#39; =&gt; true,</span>
+<span class="x">            &#39;message&#39; =&gt; &#39;El nombre y el email son requeridos.&#39;</span>
+<span class="x">        ];</span>
+<span class="x">        $response-&gt;getBody()-&gt;write(json_encode($payload));</span>
+<span class="x">        // Codi de HTTP 400: Error en el client</span>
+<span class="x">        return $response-&gt;withHeader(&#39;Content-Type&#39;, &#39;application/json&#39;)-&gt;withStatus(400);</span>
+<span class="x">    }</span>
 
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $payload = [
-            'error' =&gt; true,
-            'message' =&gt; 'El email es inválido.'
-        ];
-        $response-&gt;getBody()-&gt;write(json_encode($payload));
-        // Codi de HTTP 400: Error en el client
-        return $response-&gt;withHeader('Content-Type', 'application/json')-&gt;withStatus(400);
-    }
+<span class="x">    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {</span>
+<span class="x">        $payload = [</span>
+<span class="x">            &#39;error&#39; =&gt; true,</span>
+<span class="x">            &#39;message&#39; =&gt; &#39;El email es inválido.&#39;</span>
+<span class="x">        ];</span>
+<span class="x">        $response-&gt;getBody()-&gt;write(json_encode($payload));</span>
+<span class="x">        // Codi de HTTP 400: Error en el client</span>
+<span class="x">        return $response-&gt;withHeader(&#39;Content-Type&#39;, &#39;application/json&#39;)-&gt;withStatus(400);</span>
+<span class="x">    }</span>
 
-    try {
-        // Realitzem la consulta per a afegir usuaris
-        $stmt = $pdo-&gt;prepare(&quot;INSERT INTO usuarios (nombre, email) VALUES (?, ?)&quot;);
-        //Passem els parametres per a afegir-los a la base de dades
-        $stmt-&gt;execute([$nombre, $email]);
-        $id = $pdo-&gt;lastInsertId();
-        // JSON per a la petició POST
-        $payload = [
-            'error' =&gt; false,
-            'message' =&gt; 'Usuario creado correctamente.',
-            'usuario' =&gt; [
-                'id' =&gt; $id,
-                'nombre' =&gt; $nombre,
-                'email' =&gt; $email
-            ]
-        ];
+<span class="x">    try {</span>
+<span class="x">        // Realitzem la consulta per a afegir usuaris</span>
+<span class="x">        $stmt = $pdo-&gt;prepare(&quot;INSERT INTO usuarios (nombre, email) VALUES (?, ?)&quot;);</span>
+<span class="x">        //Passem els parametres per a afegir-los a la base de dades</span>
+<span class="x">        $stmt-&gt;execute([$nombre, $email]);</span>
+<span class="x">        $id = $pdo-&gt;lastInsertId();</span>
+<span class="x">        // JSON per a la petició POST</span>
+<span class="x">        $payload = [</span>
+<span class="x">            &#39;error&#39; =&gt; false,</span>
+<span class="x">            &#39;message&#39; =&gt; &#39;Usuario creado correctamente.&#39;,</span>
+<span class="x">            &#39;usuario&#39; =&gt; [</span>
+<span class="x">                &#39;id&#39; =&gt; $id,</span>
+<span class="x">                &#39;nombre&#39; =&gt; $nombre,</span>
+<span class="x">                &#39;email&#39; =&gt; $email</span>
+<span class="x">            ]</span>
+<span class="x">        ];</span>
 
-        $response-&gt;getBody()-&gt;write(json_encode($payload));
-        //Codi de HTTP 201: Usuari creat
-        return $response-&gt;withHeader('Content-Type', 'application/json')-&gt;withStatus(201);
-    } catch (PDOException $e) {
-        //JSON amb misstage d'error
-        $payload = [
-            'error' =&gt; true,
-            'message' =&gt; 'Error en la base de datos: ' . $e-&gt;getMessage()
-        ];
-        $response-&gt;getBody()-&gt;write(json_encode($payload));
-        //Codi de HTTP 500: Error en el servidor
-        return $response-&gt;withHeader('Content-Type', 'application/json')-&gt;withStatus(500);
-    }
-});
-</code></pre>
+<span class="x">        $response-&gt;getBody()-&gt;write(json_encode($payload));</span>
+<span class="x">        //Codi de HTTP 201: Usuari creat</span>
+<span class="x">        return $response-&gt;withHeader(&#39;Content-Type&#39;, &#39;application/json&#39;)-&gt;withStatus(201);</span>
+<span class="x">    } catch (PDOException $e) {</span>
+<span class="x">        //JSON amb misstage d&#39;error</span>
+<span class="x">        $payload = [</span>
+<span class="x">            &#39;error&#39; =&gt; true,</span>
+<span class="x">            &#39;message&#39; =&gt; &#39;Error en la base de datos: &#39; . $e-&gt;getMessage()</span>
+<span class="x">        ];</span>
+<span class="x">        $response-&gt;getBody()-&gt;write(json_encode($payload));</span>
+<span class="x">        //Codi de HTTP 500: Error en el servidor</span>
+<span class="x">        return $response-&gt;withHeader(&#39;Content-Type&#39;, &#39;application/json&#39;)-&gt;withStatus(500);</span>
+<span class="x">    }</span>
+<span class="x">});</span>
+</code></pre></div></p>
 <h4 id="update">UPDATE</h4>
 <p>Utilitzem <code>PUT</code> per a actualitzar dades de la base de dades.
-Ací un codi d'exemple:</p>
-<pre><code class="language-php">$app-&gt;put('/usuarios/{id}', function ($request, $response, $args) use ($pdo) {
-    $id = $args['id'];
-    $data= json_decode($request-&gt;getBody(), true);
-    $nombre = $data['nombre'];
-    $email = $data['email'];
+Ací un codi d'exemple:
+<div class="highlight"><pre><span></span><code><span class="x">$app-&gt;put(&#39;/usuarios/{id}&#39;, function ($request, $response, $args) use ($pdo) {</span>
+<span class="x">    $id = $args[&#39;id&#39;];</span>
+<span class="x">    $data= json_decode($request-&gt;getBody(), true);</span>
+<span class="x">    $nombre = $data[&#39;nombre&#39;];</span>
+<span class="x">    $email = $data[&#39;email&#39;];</span>
 
-    $stmt = $pdo-&gt;prepare(&quot;UPDATE usuarios SET nombre = ?, email = ? WHERE id = ?&quot;);
-    $stmt-&gt;execute([$nombre, $email, $id]);
+<span class="x">    $stmt = $pdo-&gt;prepare(&quot;UPDATE usuarios SET nombre = ?, email = ? WHERE id = ?&quot;);</span>
+<span class="x">    $stmt-&gt;execute([$nombre, $email, $id]);</span>
 
-    $output  = [
-        'id' =&gt; $id,
-        'nombre' =&gt; $nombre,
-        'email' =&gt; $email,
-        'mensaje' =&gt; 'Usuario actualizado correctamente'
-    ];
+<span class="x">    $output  = [</span>
+<span class="x">        &#39;id&#39; =&gt; $id,</span>
+<span class="x">        &#39;nombre&#39; =&gt; $nombre,</span>
+<span class="x">        &#39;email&#39; =&gt; $email,</span>
+<span class="x">        &#39;mensaje&#39; =&gt; &#39;Usuario actualizado correctamente&#39;</span>
+<span class="x">    ];</span>
 
-    $response-&gt;getBody()-&gt;write(json_encode($output));
-    return $response-&gt;withHeader('Content-Type', 'application/json');
+<span class="x">    $response-&gt;getBody()-&gt;write(json_encode($output));</span>
+<span class="x">    return $response-&gt;withHeader(&#39;Content-Type&#39;, &#39;application/json&#39;);</span>
 
-});
-</code></pre>
+<span class="x">});</span>
+</code></pre></div></p>
 <h4 id="delete">DELETE</h4>
 <p>Utilitzem <code>DELETE</code> per a borrar dades de la base de dades.
-Ací un codi d'exemple:</p>
-<pre><code class="language-php">$app-&gt;delete('/usuarios/{id}', function ($request, $response, $args) use ($pdo) {
-    $id = $args['id'];
+Ací un codi d'exemple:
+<div class="highlight"><pre><span></span><code><span class="x">$app-&gt;delete(&#39;/usuarios/{id}&#39;, function ($request, $response, $args) use ($pdo) {</span>
+<span class="x">    $id = $args[&#39;id&#39;];</span>
 
-    $stmt = $pdo-&gt;prepare(&quot;DELETE FROM usuarios WHERE id = ?&quot;);
-    $stmt-&gt;execute([$id]);
+<span class="x">    $stmt = $pdo-&gt;prepare(&quot;DELETE FROM usuarios WHERE id = ?&quot;);</span>
+<span class="x">    $stmt-&gt;execute([$id]);</span>
 
-    $output  = [
-        'id' =&gt; $id,
-        'mensaje' =&gt; 'Usuario eliminado correctamente'
-    ];
+<span class="x">    $output  = [</span>
+<span class="x">        &#39;id&#39; =&gt; $id,</span>
+<span class="x">        &#39;mensaje&#39; =&gt; &#39;Usuario eliminado correctamente&#39;</span>
+<span class="x">    ];</span>
 
-    $response-&gt;getBody()-&gt;write(json_encode($output));
-    return $response-&gt;withHeader('Content-Type', 'application/json');
-});
-</code></pre>
+<span class="x">    $response-&gt;getBody()-&gt;write(json_encode($output));</span>
+<span class="x">    return $response-&gt;withHeader(&#39;Content-Type&#39;, &#39;application/json&#39;);</span>
+<span class="x">});</span>
+</code></pre></div></p>
 
 
 
