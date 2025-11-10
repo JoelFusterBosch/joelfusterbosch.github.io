@@ -20,7 +20,7 @@
     
     
       
-        <title>Backend en APIS amb Node.js - Pàgina de Joel</title>
+        <title>Backend en APIS amb SLIM PHP - Pàgina de Joel</title>
       
     
     
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Backend en APIS amb Node.js
+              Backend en APIS amb SLIM PHP
             
           </span>
         </div>
@@ -574,7 +574,7 @@
   
   
   <span class="md-ellipsis">
-    Backend en APIS amb Node.js
+    Backend en APIS amb SLIM PHP
     
   </span>
   
@@ -587,7 +587,7 @@
   
   
   <span class="md-ellipsis">
-    Backend en APIS amb Node.js
+    Backend en APIS amb SLIM PHP
     
   </span>
   
@@ -1011,127 +1011,135 @@ Ara en els seguents apartats entrarem en detall sobre les peticons que podem fer
 <h4 id="get">GET</h4>
 <p>Utilitzem <code>GET</code> per a obtindre dades de la base de dades.
 Ací un codi d'exemple:
-<div class="highlight"><pre><span></span><code><span class="x">$app-&gt;get(&#39;/usuarios&#39;, function ($request, $response, $args) use ($pdo) {</span>
-<span class="x">// Realitzem la consulta per a obtindre els usuaris</span>
-<span class="x">$stmt = $pdo-&gt;query(&quot;SELECT * FROM usuarios&quot;);</span>
-<span class="x">$usuarios = $stmt-&gt;fetchAll(PDO::FETCH_ASSOC);</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/usuarios&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">,</span> <span class="nv">$args</span><span class="p">)</span> <span class="k">use</span> <span class="p">(</span><span class="nv">$pdo</span><span class="p">)</span> <span class="p">{</span>
+<span class="c1">// Realitzem la consulta per a obtindre els usuaris</span>
+<span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM usuarios&quot;</span><span class="p">);</span>
+<span class="nv">$usuarios</span> <span class="o">=</span> <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
 
-<span class="x">// Creem un array amb els usuaris i el número total d&#39;usuaris</span>
-<span class="x">$data = [</span>
-<span class="x">    &#39;total&#39; =&gt; count($usuarios),  // Contem el número d&#39;usuaris</span>
-<span class="x">    &#39;usuarios&#39; =&gt; $usuarios       // Les dades dels usuaris</span>
-<span class="x">];</span>
+<span class="c1">// Creem un array amb els usuaris i el número total d&#39;usuaris</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;total&#39;</span> <span class="o">=&gt;</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$usuarios</span><span class="p">),</span>  <span class="c1">// Contem el número d&#39;usuaris</span>
+    <span class="s1">&#39;usuarios&#39;</span> <span class="o">=&gt;</span> <span class="nv">$usuarios</span>       <span class="c1">// Les dades dels usuaris</span>
+<span class="p">];</span>
 
-<span class="x">// Codifiquem el resultat en JSON</span>
-<span class="x">$response-&gt;getBody()-&gt;write(json_encode($data));</span>
+<span class="c1">// Codifiquem el resultat en JSON</span>
+<span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="nb">json_encode</span><span class="p">(</span><span class="nv">$data</span><span class="p">));</span>
 
-<span class="x">// Establim el header Content-Type a application/json</span>
-<span class="x">return $response-&gt;withHeader(&#39;Content-Type&#39;, &#39;application/json&#39;);</span>
-<span class="x">});</span>
+<span class="c1">// Establim el header Content-Type a application/json</span>
+<span class="k">return</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">withHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/json&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="cp">?&gt;</span>
 </code></pre></div></p>
 <h4 id="post">POST</h4>
 <p>Utilitzem <code>POST</code> per a afegir dades de la base de dades.
 Ací un codi d'exemple:
-<div class="highlight"><pre><span></span><code><span class="x">$app-&gt;post(&#39;/usuarios&#39;, function ($request, $response, $args) use ($pdo) {</span>
-<span class="x">    $data = json_decode($request-&gt;getBody(), true);</span>
-<span class="x">    // Dades per a enviar a la base de dades</span>
-<span class="x">    $nombre = $data[&#39;nombre&#39;] ?? &#39;&#39;;</span>
-<span class="x">    $email = $data[&#39;email&#39;] ?? &#39;&#39;;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;/usuarios&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">,</span> <span class="nv">$args</span><span class="p">)</span> <span class="k">use</span> <span class="p">(</span><span class="nv">$pdo</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$data</span> <span class="o">=</span> <span class="nb">json_decode</span><span class="p">(</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">(),</span> <span class="k">true</span><span class="p">);</span>
+    <span class="c1">// Dades per a enviar a la base de dades</span>
+    <span class="nv">$nombre</span> <span class="o">=</span> <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="nv">$email</span> <span class="o">=</span> <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 
-<span class="x">    // Validacions</span>
-<span class="x">    if (empty($nombre) || empty($email)) {</span>
-<span class="x">        $payload = [</span>
-<span class="x">            &#39;error&#39; =&gt; true,</span>
-<span class="x">            &#39;message&#39; =&gt; &#39;El nombre y el email son requeridos.&#39;</span>
-<span class="x">        ];</span>
-<span class="x">        $response-&gt;getBody()-&gt;write(json_encode($payload));</span>
-<span class="x">        // Codi de HTTP 400: Error en el client</span>
-<span class="x">        return $response-&gt;withHeader(&#39;Content-Type&#39;, &#39;application/json&#39;)-&gt;withStatus(400);</span>
-<span class="x">    }</span>
+    <span class="c1">// Validacions</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">empty</span><span class="p">(</span><span class="nv">$nombre</span><span class="p">)</span> <span class="o">||</span> <span class="k">empty</span><span class="p">(</span><span class="nv">$email</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nv">$payload</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">&#39;error&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+            <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;El nombre y el email son requeridos.&#39;</span>
+        <span class="p">];</span>
+        <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="nb">json_encode</span><span class="p">(</span><span class="nv">$payload</span><span class="p">));</span>
+        <span class="c1">// Codi de HTTP 400: Error en el client</span>
+        <span class="k">return</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">withHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/json&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">withStatus</span><span class="p">(</span><span class="mi">400</span><span class="p">);</span>
+    <span class="p">}</span>
 
-<span class="x">    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {</span>
-<span class="x">        $payload = [</span>
-<span class="x">            &#39;error&#39; =&gt; true,</span>
-<span class="x">            &#39;message&#39; =&gt; &#39;El email es inválido.&#39;</span>
-<span class="x">        ];</span>
-<span class="x">        $response-&gt;getBody()-&gt;write(json_encode($payload));</span>
-<span class="x">        // Codi de HTTP 400: Error en el client</span>
-<span class="x">        return $response-&gt;withHeader(&#39;Content-Type&#39;, &#39;application/json&#39;)-&gt;withStatus(400);</span>
-<span class="x">    }</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">filter_var</span><span class="p">(</span><span class="nv">$email</span><span class="p">,</span> <span class="nx">FILTER_VALIDATE_EMAIL</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nv">$payload</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">&#39;error&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+            <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;El email es inválido.&#39;</span>
+        <span class="p">];</span>
+        <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="nb">json_encode</span><span class="p">(</span><span class="nv">$payload</span><span class="p">));</span>
+        <span class="c1">// Codi de HTTP 400: Error en el client</span>
+        <span class="k">return</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">withHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/json&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">withStatus</span><span class="p">(</span><span class="mi">400</span><span class="p">);</span>
+    <span class="p">}</span>
 
-<span class="x">    try {</span>
-<span class="x">        // Realitzem la consulta per a afegir usuaris</span>
-<span class="x">        $stmt = $pdo-&gt;prepare(&quot;INSERT INTO usuarios (nombre, email) VALUES (?, ?)&quot;);</span>
-<span class="x">        //Passem els parametres per a afegir-los a la base de dades</span>
-<span class="x">        $stmt-&gt;execute([$nombre, $email]);</span>
-<span class="x">        $id = $pdo-&gt;lastInsertId();</span>
-<span class="x">        // JSON per a la petició POST</span>
-<span class="x">        $payload = [</span>
-<span class="x">            &#39;error&#39; =&gt; false,</span>
-<span class="x">            &#39;message&#39; =&gt; &#39;Usuario creado correctamente.&#39;,</span>
-<span class="x">            &#39;usuario&#39; =&gt; [</span>
-<span class="x">                &#39;id&#39; =&gt; $id,</span>
-<span class="x">                &#39;nombre&#39; =&gt; $nombre,</span>
-<span class="x">                &#39;email&#39; =&gt; $email</span>
-<span class="x">            ]</span>
-<span class="x">        ];</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="c1">// Realitzem la consulta per a afegir usuaris</span>
+        <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;INSERT INTO usuarios (nombre, email) VALUES (?, ?)&quot;</span><span class="p">);</span>
+        <span class="c1">//Passem els parametres per a afegir-los a la base de dades</span>
+        <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$nombre</span><span class="p">,</span> <span class="nv">$email</span><span class="p">]);</span>
+        <span class="nv">$id</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">lastInsertId</span><span class="p">();</span>
+        <span class="c1">// JSON per a la petició POST</span>
+        <span class="nv">$payload</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">&#39;error&#39;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
+            <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Usuario creado correctamente.&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;usuario&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="nv">$id</span><span class="p">,</span>
+                <span class="s1">&#39;nombre&#39;</span> <span class="o">=&gt;</span> <span class="nv">$nombre</span><span class="p">,</span>
+                <span class="s1">&#39;email&#39;</span> <span class="o">=&gt;</span> <span class="nv">$email</span>
+            <span class="p">]</span>
+        <span class="p">];</span>
 
-<span class="x">        $response-&gt;getBody()-&gt;write(json_encode($payload));</span>
-<span class="x">        //Codi de HTTP 201: Usuari creat</span>
-<span class="x">        return $response-&gt;withHeader(&#39;Content-Type&#39;, &#39;application/json&#39;)-&gt;withStatus(201);</span>
-<span class="x">    } catch (PDOException $e) {</span>
-<span class="x">        //JSON amb misstage d&#39;error</span>
-<span class="x">        $payload = [</span>
-<span class="x">            &#39;error&#39; =&gt; true,</span>
-<span class="x">            &#39;message&#39; =&gt; &#39;Error en la base de datos: &#39; . $e-&gt;getMessage()</span>
-<span class="x">        ];</span>
-<span class="x">        $response-&gt;getBody()-&gt;write(json_encode($payload));</span>
-<span class="x">        //Codi de HTTP 500: Error en el servidor</span>
-<span class="x">        return $response-&gt;withHeader(&#39;Content-Type&#39;, &#39;application/json&#39;)-&gt;withStatus(500);</span>
-<span class="x">    }</span>
-<span class="x">});</span>
+        <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="nb">json_encode</span><span class="p">(</span><span class="nv">$payload</span><span class="p">));</span>
+        <span class="c1">//Codi de HTTP 201: Usuari creat</span>
+        <span class="k">return</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">withHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/json&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">withStatus</span><span class="p">(</span><span class="mi">201</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//JSON amb misstage d&#39;error</span>
+        <span class="nv">$payload</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">&#39;error&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+            <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Error en la base de datos: &#39;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">()</span>
+        <span class="p">];</span>
+        <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="nb">json_encode</span><span class="p">(</span><span class="nv">$payload</span><span class="p">));</span>
+        <span class="c1">//Codi de HTTP 500: Error en el servidor</span>
+        <span class="k">return</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">withHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/json&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">withStatus</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+<span class="cp">?&gt;</span>
 </code></pre></div></p>
 <h4 id="update">UPDATE</h4>
 <p>Utilitzem <code>PUT</code> per a actualitzar dades de la base de dades.
 Ací un codi d'exemple:
-<div class="highlight"><pre><span></span><code><span class="x">$app-&gt;put(&#39;/usuarios/{id}&#39;, function ($request, $response, $args) use ($pdo) {</span>
-<span class="x">    $id = $args[&#39;id&#39;];</span>
-<span class="x">    $data= json_decode($request-&gt;getBody(), true);</span>
-<span class="x">    $nombre = $data[&#39;nombre&#39;];</span>
-<span class="x">    $email = $data[&#39;email&#39;];</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">put</span><span class="p">(</span><span class="s1">&#39;/usuarios/{id}&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">,</span> <span class="nv">$args</span><span class="p">)</span> <span class="k">use</span> <span class="p">(</span><span class="nv">$pdo</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$id</span> <span class="o">=</span> <span class="nv">$args</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
+    <span class="nv">$data</span><span class="o">=</span> <span class="nb">json_decode</span><span class="p">(</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">(),</span> <span class="k">true</span><span class="p">);</span>
+    <span class="nv">$nombre</span> <span class="o">=</span> <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">];</span>
+    <span class="nv">$email</span> <span class="o">=</span> <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;email&#39;</span><span class="p">];</span>
 
-<span class="x">    $stmt = $pdo-&gt;prepare(&quot;UPDATE usuarios SET nombre = ?, email = ? WHERE id = ?&quot;);</span>
-<span class="x">    $stmt-&gt;execute([$nombre, $email, $id]);</span>
+    <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;UPDATE usuarios SET nombre = ?, email = ? WHERE id = ?&quot;</span><span class="p">);</span>
+    <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$nombre</span><span class="p">,</span> <span class="nv">$email</span><span class="p">,</span> <span class="nv">$id</span><span class="p">]);</span>
 
-<span class="x">    $output  = [</span>
-<span class="x">        &#39;id&#39; =&gt; $id,</span>
-<span class="x">        &#39;nombre&#39; =&gt; $nombre,</span>
-<span class="x">        &#39;email&#39; =&gt; $email,</span>
-<span class="x">        &#39;mensaje&#39; =&gt; &#39;Usuario actualizado correctamente&#39;</span>
-<span class="x">    ];</span>
+    <span class="nv">$output</span>  <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="nv">$id</span><span class="p">,</span>
+        <span class="s1">&#39;nombre&#39;</span> <span class="o">=&gt;</span> <span class="nv">$nombre</span><span class="p">,</span>
+        <span class="s1">&#39;email&#39;</span> <span class="o">=&gt;</span> <span class="nv">$email</span><span class="p">,</span>
+        <span class="s1">&#39;mensaje&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Usuario actualizado correctamente&#39;</span>
+    <span class="p">];</span>
 
-<span class="x">    $response-&gt;getBody()-&gt;write(json_encode($output));</span>
-<span class="x">    return $response-&gt;withHeader(&#39;Content-Type&#39;, &#39;application/json&#39;);</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="nb">json_encode</span><span class="p">(</span><span class="nv">$output</span><span class="p">));</span>
+    <span class="k">return</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">withHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/json&#39;</span><span class="p">);</span>
 
-<span class="x">});</span>
+<span class="p">});</span>
+<span class="cp">?&gt;</span>
 </code></pre></div></p>
 <h4 id="delete">DELETE</h4>
 <p>Utilitzem <code>DELETE</code> per a borrar dades de la base de dades.
 Ací un codi d'exemple:
-<div class="highlight"><pre><span></span><code><span class="x">$app-&gt;delete(&#39;/usuarios/{id}&#39;, function ($request, $response, $args) use ($pdo) {</span>
-<span class="x">    $id = $args[&#39;id&#39;];</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="s1">&#39;/usuarios/{id}&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">,</span> <span class="nv">$args</span><span class="p">)</span> <span class="k">use</span> <span class="p">(</span><span class="nv">$pdo</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$id</span> <span class="o">=</span> <span class="nv">$args</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">];</span>
 
-<span class="x">    $stmt = $pdo-&gt;prepare(&quot;DELETE FROM usuarios WHERE id = ?&quot;);</span>
-<span class="x">    $stmt-&gt;execute([$id]);</span>
+    <span class="nv">$stmt</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;DELETE FROM usuarios WHERE id = ?&quot;</span><span class="p">);</span>
+    <span class="nv">$stmt</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="nv">$id</span><span class="p">]);</span>
 
-<span class="x">    $output  = [</span>
-<span class="x">        &#39;id&#39; =&gt; $id,</span>
-<span class="x">        &#39;mensaje&#39; =&gt; &#39;Usuario eliminado correctamente&#39;</span>
-<span class="x">    ];</span>
+    <span class="nv">$output</span>  <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="nv">$id</span><span class="p">,</span>
+        <span class="s1">&#39;mensaje&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Usuario eliminado correctamente&#39;</span>
+    <span class="p">];</span>
 
-<span class="x">    $response-&gt;getBody()-&gt;write(json_encode($output));</span>
-<span class="x">    return $response-&gt;withHeader(&#39;Content-Type&#39;, &#39;application/json&#39;);</span>
-<span class="x">});</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="nb">json_encode</span><span class="p">(</span><span class="nv">$output</span><span class="p">));</span>
+    <span class="k">return</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">withHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/json&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="cp">?&gt;</span>
 </code></pre></div></p>
 
 
