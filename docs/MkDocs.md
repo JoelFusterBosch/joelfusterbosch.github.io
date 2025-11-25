@@ -79,6 +79,14 @@ theme:
       icon: material/weather-sunny
       name: Tema clar
 ```
+
+I amb estes línies s'habilitara el botó per a canviar el tema
+```yaml
+markdown_extensions:
+  - pymdownx.tabbed:
+      alternate_style: true
+```
+  
 #### Posar un botó per a copiar codi
 Pots posar el botó de copiar amb el següent:
 ```yaml

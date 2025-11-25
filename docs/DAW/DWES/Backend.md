@@ -81,6 +81,7 @@ Ara en els seguents apartats entrarem en detall sobre les peticons que podem fer
 Utilitzem `GET` per a obtindre dades de la base de dades.
 Ací un codi d'exemple:
 ```php
+<?php
 $app->get('/usuarios', function ($request, $response, $args) use ($pdo) {
 // Realitzem la consulta per a obtindre els usuaris
 $stmt = $pdo->query("SELECT * FROM usuarios");
@@ -98,12 +99,14 @@ $response->getBody()->write(json_encode($data));
 // Establim el header Content-Type a application/json
 return $response->withHeader('Content-Type', 'application/json');
 });
+?>
+
 ```
 #### POST
 Utilitzem `POST` per a afegir dades de la base de dades.
 Ací un codi d'exemple:
 ```php
-
+<?php
 $app->post('/usuarios', function ($request, $response, $args) use ($pdo) {
     $data = json_decode($request->getBody(), true);
     // Dades per a enviar a la base de dades
@@ -162,11 +165,14 @@ $app->post('/usuarios', function ($request, $response, $args) use ($pdo) {
         return $response->withHeader('Content-Type', 'application/json')->withStatus(500);
     }
 });
+?>
+
 ```
 #### UPDATE
 Utilitzem `PUT` per a actualitzar dades de la base de dades.
 Ací un codi d'exemple:
 ```php
+<?php
 $app->put('/usuarios/{id}', function ($request, $response, $args) use ($pdo) {
     $id = $args['id'];
     $data= json_decode($request->getBody(), true);
@@ -187,11 +193,14 @@ $app->put('/usuarios/{id}', function ($request, $response, $args) use ($pdo) {
     return $response->withHeader('Content-Type', 'application/json');
 
 });
+?>
+
 ```
 #### DELETE
 Utilitzem `DELETE` per a borrar dades de la base de dades.
 Ací un codi d'exemple:
 ```php
+<?php
 $app->delete('/usuarios/{id}', function ($request, $response, $args) use ($pdo) {
     $id = $args['id'];
 
@@ -206,4 +215,5 @@ $app->delete('/usuarios/{id}', function ($request, $response, $args) use ($pdo) 
     $response->getBody()->write(json_encode($output));
     return $response->withHeader('Content-Type', 'application/json');
 });
+?>
 ```

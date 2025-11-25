@@ -28,6 +28,24 @@ nav:
     - DWEC: 
       - Base de dades : DAW/DWEC/BD.md
       - Backend en APIS amb Node.js : DAW/DWEC/Backend.md
+      - Formularis per a aplicacions web : DAW/DWEC/Formulari.md
     - DWES: 
-      - Base de dades : DAW/DWES/BD.md
-      - Backend en APIS amb Node.js : DAW/DWES/Backend.md
+      - Problemes amb la base de dades en docker i solucions: DAW/DWES/BD.md
+      - Backend en APIS amb SLIM PHP : DAW/DWES/Backend.md
+      - Backend en APIS amb Laravel PHP: DAW/DWES/laravel.md
+    - DIW:
+      - HTML : DAW/DIW/HTML.md
+      - CSS : DAW/DIW/CSS.md
+    - DAW:
+      - Instal·lació i configuració de Apache : DAW/DAW/Instal·lació de Apache.md
+      - Aplicació de mòduls en Apache: DAW/DAW/Aplicació de moduls en Apache.md
+      - VirtualHosts: DAW/DAW/VirtualHosts.md
+      - Configuració dels mecanismes d'autenticació: DAW/DAW/Configuració dels mecanismes d'autenticació.md
+      - Certificats de seguretat: DAW\DAW\Certificats de seguretat.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
