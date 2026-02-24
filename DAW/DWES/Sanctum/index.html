@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../laravel/">
       
-        <link rel="next" href="MkDocs/">
+      
+        <link rel="next" href="../seeders/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>Pàgina de Joel</title>
+        <title>Creacio de tokens amb Sanctum en Laravel PHP - Pàgina de Joel</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#sanctum" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Pàgina de Joel" class="md-header__button md-logo" aria-label="Pàgina de Joel" data-md-component="logo">
+    <a href="../../.." title="Pàgina de Joel" class="md-header__button md-logo" aria-label="Pàgina de Joel" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inici
+              Creacio de tokens amb Sanctum en Laravel PHP
             
           </span>
         </div>
@@ -210,7 +212,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Pàgina de Joel" class="md-nav__button md-logo" aria-label="Pàgina de Joel" data-md-component="logo">
+    <a href="../../.." title="Pàgina de Joel" class="md-nav__button md-logo" aria-label="Pàgina de Joel" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -225,32 +227,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Inici
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -261,44 +241,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -310,7 +252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="MkDocs/" class="md-nav__link">
+      <a href="../../../MkDocs/" class="md-nav__link">
         
   
   
@@ -370,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAM/PMDM/Flutter/" class="md-nav__link">
+      <a href="../../../DAM/PMDM/Flutter/" class="md-nav__link">
         
   
   
@@ -397,18 +339,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -424,7 +368,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             DAW
@@ -514,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DWEC/MySQL/BD/" class="md-nav__link">
+      <a href="../../DWEC/MySQL/BD/" class="md-nav__link">
         
   
   
@@ -583,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DWEC/Node.js/Backend/" class="md-nav__link">
+      <a href="../../DWEC/Node.js/Backend/" class="md-nav__link">
         
   
   
@@ -606,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DWEC/Node.js/tokens/" class="md-nav__link">
+      <a href="../../DWEC/Node.js/tokens/" class="md-nav__link">
         
   
   
@@ -629,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DWEC/Node.js/cookies/" class="md-nav__link">
+      <a href="../../DWEC/Node.js/cookies/" class="md-nav__link">
         
   
   
@@ -652,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DWEC/Node.js/Formulari/" class="md-nav__link">
+      <a href="../../DWEC/Node.js/Formulari/" class="md-nav__link">
         
   
   
@@ -721,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DWEC/Vue/Vue/" class="md-nav__link">
+      <a href="../../DWEC/Vue/Vue/" class="md-nav__link">
         
   
   
@@ -757,18 +701,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -784,7 +730,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             DWES
@@ -836,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DWES/BD/" class="md-nav__link">
+      <a href="../BD/" class="md-nav__link">
         
   
   
@@ -905,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DWES/Backend/" class="md-nav__link">
+      <a href="../Backend/" class="md-nav__link">
         
   
   
@@ -933,18 +879,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
@@ -960,7 +908,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2_3">
             <span class="md-nav__icon md-icon"></span>
             Laravel (PHP)
@@ -974,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DWES/Instal%C2%B7laci%C3%B3%20de%20Laravel/" class="md-nav__link">
+      <a href="../Instal%C2%B7laci%C3%B3%20de%20Laravel/" class="md-nav__link">
         
   
   
@@ -997,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DWES/laravel/" class="md-nav__link">
+      <a href="../laravel/" class="md-nav__link">
         
   
   
@@ -1017,10 +965,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="DAW/DWES/Sanctum/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Creacio de tokens amb Sanctum en Laravel PHP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1031,6 +1001,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-sanctum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què és Sanctum?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-de-sanctum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació de Sanctum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementació
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementació">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controladors-i-peticions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controladors i peticions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controladors i peticions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacio-del-token-en-el-controlador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació del token en el controlador
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacio-de-les-rutes-i-els-middlewares-necessaris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació de les rutes i els middlewares necessaris
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1043,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DWES/seeders/" class="md-nav__link">
+      <a href="../seeders/" class="md-nav__link">
         
   
   
@@ -1066,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DWES/Relacions%20Laravel/" class="md-nav__link">
+      <a href="../Relacions%20Laravel/" class="md-nav__link">
         
   
   
@@ -1143,7 +1208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DIW/HTML/" class="md-nav__link">
+      <a href="../../DIW/HTML/" class="md-nav__link">
         
   
   
@@ -1166,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DIW/CSS/" class="md-nav__link">
+      <a href="../../DIW/CSS/" class="md-nav__link">
         
   
   
@@ -1227,7 +1292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DIW/SCSS/Instal%C2%B7laci%C3%B3%20de%20scss/" class="md-nav__link">
+      <a href="../../DIW/SCSS/Instal%C2%B7laci%C3%B3%20de%20scss/" class="md-nav__link">
         
   
   
@@ -1250,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DIW/SCSS/scss/" class="md-nav__link">
+      <a href="../../DIW/SCSS/scss/" class="md-nav__link">
         
   
   
@@ -1365,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DAW/Apache/Instal%C2%B7laci%C3%B3%20de%20Apache/" class="md-nav__link">
+      <a href="../../DAW/Apache/Instal%C2%B7laci%C3%B3%20de%20Apache/" class="md-nav__link">
         
   
   
@@ -1388,7 +1453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DAW/Apache/Aplicaci%C3%B3%20de%20moduls%20en%20Apache/" class="md-nav__link">
+      <a href="../../DAW/Apache/Aplicaci%C3%B3%20de%20moduls%20en%20Apache/" class="md-nav__link">
         
   
   
@@ -1411,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DAW/Apache/VirtualHosts/" class="md-nav__link">
+      <a href="../../DAW/Apache/VirtualHosts/" class="md-nav__link">
         
   
   
@@ -1434,7 +1499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DAW/Apache/Configuraci%C3%B3%20dels%20mecanismes%20d%27autenticaci%C3%B3/" class="md-nav__link">
+      <a href="../../DAW/Apache/Configuraci%C3%B3%20dels%20mecanismes%20d%27autenticaci%C3%B3/" class="md-nav__link">
         
   
   
@@ -1457,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DAW/Apache/Certificats%20de%20seguretat/" class="md-nav__link">
+      <a href="../../DAW/Apache/Certificats%20de%20seguretat/" class="md-nav__link">
         
   
   
@@ -1526,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DAW/Tomcat/Instal%C2%B7laci%C3%B3%20de%20Tomcat/" class="md-nav__link">
+      <a href="../../DAW/Tomcat/Instal%C2%B7laci%C3%B3%20de%20Tomcat/" class="md-nav__link">
         
   
   
@@ -1549,7 +1614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DAW/Tomcat/Proxy%20i%20proxy%20invers%20en%20Tomcat/" class="md-nav__link">
+      <a href="../../DAW/Tomcat/Proxy%20i%20proxy%20invers%20en%20Tomcat/" class="md-nav__link">
         
   
   
@@ -1618,7 +1683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DAW/SFTP/SFTP/" class="md-nav__link">
+      <a href="../../DAW/SFTP/SFTP/" class="md-nav__link">
         
   
   
@@ -1687,7 +1752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="DAW/DAW/extres/ssh/" class="md-nav__link">
+      <a href="../../DAW/extres/ssh/" class="md-nav__link">
         
   
   
@@ -1753,20 +1818,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#que-es-sanctum" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
+      Què és Sanctum?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+  <a href="#installacio-de-sanctum" class="md-nav__link">
     <span class="md-ellipsis">
-      Project layout
+      Instal·lació de Sanctum
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementació
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementació">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controladors-i-peticions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controladors i peticions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controladors i peticions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacio-del-token-en-el-controlador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació del token en el controlador
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacio-de-les-rutes-i-els-middlewares-necessaris" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació de les rutes i els middlewares necessaris
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1786,21 +1908,173 @@
 
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<div class="highlight"><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<h1 id="sanctum">Sanctum</h1>
+<h2 id="que-es-sanctum">Què és Sanctum?</h2>
+<p><code>Sanctum</code> és un paquet dins de <code>Laravel</code> que permet la creació de <code>tokens</code> de forma senzilla basades en <code>APIs</code>, el qual permet generar múltiples tokens API, estos tokens poden tindre diverses funcions/àmbits els quals poden permetre a l'hora d'executar-se.</p>
+<h2 id="installacio-de-sanctum">Instal·lació de Sanctum</h2>
+<p>Primerament, necessitem instal·lar el gestor de APIs de Laravel, si estàs en la versió 12 o superior, si no pots botar-te este pas:
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>install:api
 </code></pre></div>
+Per a importar el paquet <code>Sanctum</code>, necessitem executar els següents comands:
+<div class="highlight"><pre><span></span><code>composer<span class="w"> </span>require<span class="w"> </span>laravel/sanctum
+</code></pre></div>
+Este comand crea el paquet de <code>Sanctum</code>:
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>vendor:publish<span class="w"> </span>--provider<span class="o">=</span><span class="s2">&quot;Laravel\Sanctum\SanctumServiceProvider&quot;</span>
+</code></pre></div>
+I per últim alcem les migracions de <code>Sanctum</code>:
+<div class="highlight"><pre><span></span><code>php<span class="w"> </span>artisan<span class="w"> </span>migrate
+</code></pre></div></p>
+<h2 id="implementacio">Implementació</h2>
+<h3 id="models">Models</h3>
+<p>Ja quan tingueu <code>Sanctum</code> correctament instal·lat i configurat ja podem usar-lo per a posar-li els tokens a l'usuari, però primer hem de modificar el model dels usuaris abans de fer els controladors de la següent forma:</p>
+<div class="highlight"><pre><span></span><code><span class="x">// Importem la llibreria de Sanctum de &quot;HasApiTokens&quot;</span>
+<span class="x">use Laravel\Sanctum\HasApiTokens;</span>
+
+<span class="x">// Implementem Authenticaable per a que puga autenticar i protrgir les rutes.</span>
+<span class="x">/*</span>
+<span class="x">IMPORTANT</span>
+<span class="x">Authenticable hereta de Model, així que ja té totes les funcions de &quot;Eloquent/Model&quot;</span>
+<span class="x">*/</span>
+<span class="x">class User extends Authenticatable</span>
+<span class="x">{</span>
+<span class="x">    use HasApiTokens, HasFactory, Notifiable;</span>
+<span class="x">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>IMPORTANT</strong>
+    &gt; Authenticable hereta de Model, així que ja té totes les funcions de "Eloquent/Model"</p>
+</blockquote>
+<h3 id="controladors-i-peticions">Controladors i peticions</h3>
+<p>Ara suposem que ja tenim un controlador i peticions en el qual pugues:
+- Crear usuaris (Register)
+<div class="highlight"><pre><span></span><code><span class="x">    // Request/Petició</span>
+<span class="x">    // Exten de FormRequest</span>
+<span class="x">    class UserRequest extends FormRequest</span>
+<span class="x">    {</span>
+<span class="x">        /**</span>
+<span class="x">         * Defineix els camps a omplir en el formulari:</span>
+<span class="x">         * nom: String obligatori màxim 255 caracters</span>
+<span class="x">         * email: String obligatori màxim 255 caracters que no es pot tornar a repetir</span>
+<span class="x">         * password: String obligatori</span>
+<span class="x">         */</span>
+<span class="x">        public function rules()</span>
+<span class="x">        {</span>
+<span class="x">            return [</span>
+<span class="x">                &#39;name&#39; =&gt; &#39;required|string|max:255&#39;,</span>
+<span class="x">                &#39;email&#39; =&gt; &#39;required|string|email|max:255|unique:users&#39;,</span>
+<span class="x">                &#39;password&#39; =&gt; &#39;required|string&#39;</span>
+<span class="x">            ];</span>
+<span class="x">        }</span>
+<span class="x">    }</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">    // Controlador</span>
+<span class="x">    /**</span>
+<span class="x">    * Crea un usuari mitjançant:</span>
+<span class="x">    *  - nom</span>
+<span class="x">    *  - correu electrònic</span>
+<span class="x">    *  - contrassenya</span>
+<span class="x">    */</span>
+<span class="x">    public function createUser(UserRequest $request)</span>
+<span class="x">    {</span>
+<span class="x">        // Passa el nom, correu i contrassenya per a crear-lo</span>
+<span class="x">        $user = User::create([</span>
+<span class="x">                &#39;name&#39; =&gt; $request-&gt;name,</span>
+<span class="x">                &#39;email&#39; =&gt; $request-&gt;email,</span>
+<span class="x">                &#39;password&#39; =&gt; Hash::make($request-&gt;password),</span>
+<span class="x">             ]);</span>
+<span class="x">        // Resposta en forma de JSON</span>
+<span class="x">        return response()-&gt;json([</span>
+<span class="x">            &#39;status&#39; =&gt; &#39;true&#39;,</span>
+<span class="x">            &#39;message&#39; =&gt; &#39;Usuari creat correctament&#39;</span>
+<span class="x">        ], 200);</span>
+<span class="x">    }</span>
+</code></pre></div>
+- Autenticar usuaris (Login)
+<div class="highlight"><pre><span></span><code><span class="x">    // Request/Petició</span>
+<span class="x">    class LoginUserRequest extends FormRequest</span>
+<span class="x">    {</span>
+<span class="x">        /**</span>
+<span class="x">         * Defineix els camps a omplir per al formulari</span>
+<span class="x">         * email: String obligatori màxim 255 caracters</span>
+<span class="x">         * password: String obligatori</span>
+<span class="x">         */</span>
+<span class="x">        public function rules()</span>
+<span class="x">        {</span>
+<span class="x">            return [</span>
+<span class="x">                &#39;email&#39; =&gt; &#39;required|string|email|max:255&#39;,</span>
+<span class="x">                &#39;password&#39; =&gt; &#39;required|string&#39;</span>
+<span class="x">            ];</span>
+<span class="x">        }</span>
+<span class="x">    }</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="x">    // Controlador</span>
+<span class="x">    public function loginUser(LoginUserRequest $request)</span>
+<span class="x">    {</span>
+<span class="x">        // Condicional d&#39;error si l&#39;usuari s&#39;enganya al posar les credencials</span>
+<span class="x">        if (!Auth::attempt($request-&gt;only([&#39;email&#39;, &#39;password&#39;]))) {</span>
+<span class="x">            // Resposta en JSON</span>
+<span class="x">            return response()-&gt;json([</span>
+<span class="x">                &#39;status&#39; =&gt; &#39;false&#39;,</span>
+<span class="x">                &#39;message&#39; =&gt; &#39;Credencials incorrectes&#39;,</span>
+<span class="x">            ], 401);</span>
+<span class="x">        }</span>
+<span class="x">        // Verifica el usuari</span>
+<span class="x">        $user = User::where(&#39;email&#39;, $request-&gt;email)-&gt;first();</span>
+<span class="x">        // Resposta en JSON</span>
+<span class="x">        return response()-&gt;json([</span>
+<span class="x">            &#39;status&#39; =&gt; &#39;true&#39;,</span>
+<span class="x">            &#39;message&#39; =&gt; &#39;Usuari autenticat correctament&#39;,</span>
+<span class="x">        ], 200);</span>
+<span class="x">    }</span>
+</code></pre></div></p>
+<h4 id="creacio-del-token-en-el-controlador">Creació del token en el controlador</h4>
+<p>Per a proporcionar-li el token a l'usuari, hem de ficar una línia extra en la resposta, la qual s'anomena <code>token</code>, que es creara de la següent forma:
+<div class="highlight"><pre><span></span><code><span class="x">// &#39;token&#39;: Etiqueta JSON que creara el token</span>
+<span class="x">// createToken(&#39;api-token&#39;)-&gt;plaintext: Funció que creara el token en forma de &quot;text pla&quot;</span>
+<span class="x">return response()-&gt;json([</span>
+<span class="x">    &#39;token&#39; =&gt; $user-&gt;createToken(&#39;api-token&#39;)-&gt;plaintext</span>
+<span class="x">], 200)</span>
+</code></pre></div></p>
+<p>I perquè estiguen en les funcions anteriors de <code>Register</code> i <code>Login</code> sols hem d'afegir la línia anterior al codi abans esmentat en la resposta del JSON:
+<div class="highlight"><pre><span></span><code><span class="x">return response()-&gt;json([</span>
+<span class="x">    &#39;status&#39; =&gt; &#39;true&#39;,</span>
+<span class="x">    &#39;message&#39; =&gt; &#39;Usuari creat correctament&#39;,</span>
+<span class="x">    &#39;token&#39; =&gt; $user-&gt;createToken(&#39;api-token&#39;)-&gt;plaintext</span>
+<span class="x">], 200);</span>
+</code></pre></div></p>
+<h3 id="creacio-de-les-rutes-i-els-middlewares-necessaris">Creació de les rutes i els middlewares necessaris</h3>
+<p>Ara que ja tenim creat el controlador per a crear els usuaris amb els tokens ara necessitem provar-los i que es puguen accedir mitjançant rutes, en el fitxer <code>api.php</code> que es troba en la següent ruta <code>routes/api.php</code>, suposem que també les teníem en anterioritat:
+<div class="highlight"><pre><span></span><code><span class="x">// Endpoint /register</span>
+<span class="x">// Registra un usuari </span>
+<span class="x">Route::post(&#39;/register&#39;, [AuthController::class, &#39;createUser&#39;])</span>
+<span class="x">    -&gt;name(&#39;register&#39;);</span>
+<span class="x">// Endpoint /login</span>
+<span class="x">// Autentica un usuari</span>
+<span class="x">Route::post(&#39;/login&#39;, [AuthController::class, &#39;loginUser&#39;])</span>
+<span class="x">    -&gt;name(&#39;login&#39;);</span>
+</code></pre></div>
+Amb això tot el món pot accedir sense necessitat del token, i tot el món podria accedir, inclòs sense falta d'autenticació, així que ara afegirem un middleware perquè sols es puga accedir si l'usuari està registrat:
+<div class="highlight"><pre><span></span><code><span class="x">// Executa el middleware de Sanctum abans de fer la petició</span>
+<span class="x">Route::middleware(&#39;auth:sanctum&#39;)</span>
+<span class="x">    // Si funciona fa el endpoint de &quot;/user&quot;</span>
+<span class="x">    -&gt;get(&#39;/user&#39;, function (Request $request) {</span>
+<span class="x">        return $request-&gt;user();</span>
+<span class="x">    })-&gt;name(&#39;user&#39;);</span>
+</code></pre></div>
+Ara sols fa falta provar els endpoint de <code>/user</code> per a vore si funciona correctament, si tot ha funcionat deuria de:
+- Donar error si no has fet login.</p>
+<p align= "center">
+    <img src="" alt="Error" width="500"/>
+ </p>
+<p align="center"><em>Fig 1: Error per falta de tokens</em></p>
+
+<ul>
+<li>Funcionar correctament si has fet login.</li>
+</ul>
+<p align= "center">
+    <img src="" alt="Execució correcta" width="500"/>
+ </p>
+<p align="center"><em>Fig 2: Execució correcta pels tokens</em></p>
 
 
 
@@ -1849,10 +2123,10 @@ docs/
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "palette.toggle"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "palette.toggle"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
