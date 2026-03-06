@@ -311,9 +311,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../DAM/PMDM/Flutter/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -322,7 +333,88 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            PMDM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DAM/PMDM/Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flutter
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DAM/PMDM/Creaci%C3%B3%20i%20execuci%C3%B3%20d%27un%20projecte%20Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creació i execució d'un projecte Flutter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DAM/PMDM/Instal%C2%B7laci%C3%B3%20de%20Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instal·lació de Flutter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1927,142 +2019,159 @@ I per últim alcem les migracions de <code>Sanctum</code>:
 <h2 id="implementacio">Implementació</h2>
 <h3 id="models">Models</h3>
 <p>Ja quan tingueu <code>Sanctum</code> correctament instal·lat i configurat ja podem usar-lo per a posar-li els tokens a l'usuari, però primer hem de modificar el model dels usuaris abans de fer els controladors de la següent forma:</p>
-<div class="highlight"><pre><span></span><code><span class="x">// Importem la llibreria de Sanctum de &quot;HasApiTokens&quot;</span>
-<span class="x">use Laravel\Sanctum\HasApiTokens;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="c1">// Importem la llibreria de Sanctum de &quot;HasApiTokens&quot;</span>
+<span class="k">use</span> <span class="nx">Laravel\Sanctum\HasApiTokens</span><span class="p">;</span>
 
-<span class="x">// Implementem Authenticaable per a que puga autenticar i protrgir les rutes.</span>
-<span class="x">/*</span>
-<span class="x">IMPORTANT</span>
-<span class="x">Authenticable hereta de Model, així que ja té totes les funcions de &quot;Eloquent/Model&quot;</span>
-<span class="x">*/</span>
-<span class="x">class User extends Authenticatable</span>
-<span class="x">{</span>
-<span class="x">    use HasApiTokens, HasFactory, Notifiable;</span>
-<span class="x">}</span>
+<span class="c1">// Implementem Authenticaable per a que puga autenticar i protrgir les rutes.</span>
+<span class="cm">/*</span>
+<span class="cm">IMPORTANT</span>
+<span class="cm">Authenticable hereta de Model, així que ja té totes les funcions de &quot;Eloquent/Model&quot;</span>
+<span class="cm">*/</span>
+<span class="k">class</span> <span class="nc">User</span> <span class="k">extends</span> <span class="nx">Authenticatable</span>
+<span class="p">{</span>
+    <span class="k">use</span> <span class="nx">HasApiTokens</span><span class="p">,</span> <span class="nx">HasFactory</span><span class="p">,</span> <span class="nx">Notifiable</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
-<blockquote>
-<p><strong>IMPORTANT</strong>
-    &gt; Authenticable hereta de Model, així que ja té totes les funcions de "Eloquent/Model"</p>
-</blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Authenticable hereta de Model, així que ja té totes les funcions de "Eloquent/Model"</p>
+</div>
 <h3 id="controladors-i-peticions">Controladors i peticions</h3>
-<p>Ara suposem que ja tenim un controlador i peticions en el qual pugues:
-- Crear usuaris (Register)
-<div class="highlight"><pre><span></span><code><span class="x">    // Request/Petició</span>
-<span class="x">    // Exten de FormRequest</span>
-<span class="x">    class UserRequest extends FormRequest</span>
-<span class="x">    {</span>
-<span class="x">        /**</span>
-<span class="x">         * Defineix els camps a omplir en el formulari:</span>
-<span class="x">         * nom: String obligatori màxim 255 caracters</span>
-<span class="x">         * email: String obligatori màxim 255 caracters que no es pot tornar a repetir</span>
-<span class="x">         * password: String obligatori</span>
-<span class="x">         */</span>
-<span class="x">        public function rules()</span>
-<span class="x">        {</span>
-<span class="x">            return [</span>
-<span class="x">                &#39;name&#39; =&gt; &#39;required|string|max:255&#39;,</span>
-<span class="x">                &#39;email&#39; =&gt; &#39;required|string|email|max:255|unique:users&#39;,</span>
-<span class="x">                &#39;password&#39; =&gt; &#39;required|string&#39;</span>
-<span class="x">            ];</span>
-<span class="x">        }</span>
-<span class="x">    }</span>
+<p>Ara suposem que ja tenim un controlador i peticions en el qual pugues:</p>
+<ul>
+<li>
+<p>Crear usuaris (Register)</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="c1">// Request/Petició</span>
+<span class="c1">// Exten de FormRequest</span>
+<span class="k">class</span> <span class="nc">UserRequest</span> <span class="k">extends</span> <span class="nx">FormRequest</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * Defineix els camps a omplir en el formulari:</span>
+<span class="sd">     * nom: String obligatori màxim 255 caracters</span>
+<span class="sd">     * email: String obligatori màxim 255 caracters que no es pot tornar a repetir</span>
+<span class="sd">     * password: String obligatori</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">rules</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;required|string|max:255&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;email&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;required|string|email|max:255|unique:users&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;required|string&#39;</span>
+        <span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="x">    // Controlador</span>
-<span class="x">    /**</span>
-<span class="x">    * Crea un usuari mitjançant:</span>
-<span class="x">    *  - nom</span>
-<span class="x">    *  - correu electrònic</span>
-<span class="x">    *  - contrassenya</span>
-<span class="x">    */</span>
-<span class="x">    public function createUser(UserRequest $request)</span>
-<span class="x">    {</span>
-<span class="x">        // Passa el nom, correu i contrassenya per a crear-lo</span>
-<span class="x">        $user = User::create([</span>
-<span class="x">                &#39;name&#39; =&gt; $request-&gt;name,</span>
-<span class="x">                &#39;email&#39; =&gt; $request-&gt;email,</span>
-<span class="x">                &#39;password&#39; =&gt; Hash::make($request-&gt;password),</span>
-<span class="x">             ]);</span>
-<span class="x">        // Resposta en forma de JSON</span>
-<span class="x">        return response()-&gt;json([</span>
-<span class="x">            &#39;status&#39; =&gt; &#39;true&#39;,</span>
-<span class="x">            &#39;message&#39; =&gt; &#39;Usuari creat correctament&#39;</span>
-<span class="x">        ], 200);</span>
-<span class="x">    }</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="c1">// Controlador</span>
+<span class="sd">/**</span>
+<span class="sd">* Crea un usuari mitjançant:</span>
+<span class="sd">*  - nom</span>
+<span class="sd">*  - correu electrònic</span>
+<span class="sd">*  - contrassenya</span>
+<span class="sd">*/</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">createUser</span><span class="p">(</span><span class="nx">UserRequest</span> <span class="nv">$request</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Passa el nom, correu i contrassenya per a crear-lo</span>
+    <span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">create</span><span class="p">([</span>
+            <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">,</span>
+            <span class="s1">&#39;email&#39;</span> <span class="o">=&gt;</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">email</span><span class="p">,</span>
+            <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="nx">Hash</span><span class="o">::</span><span class="na">make</span><span class="p">(</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">password</span><span class="p">),</span>
+         <span class="p">]);</span>
+    <span class="c1">// Resposta en forma de JSON</span>
+    <span class="k">return</span> <span class="nx">response</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">json</span><span class="p">([</span>
+        <span class="s1">&#39;status&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;true&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Usuari creat correctament&#39;</span>
+    <span class="p">],</span> <span class="mi">200</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
-- Autenticar usuaris (Login)
-<div class="highlight"><pre><span></span><code><span class="x">    // Request/Petició</span>
-<span class="x">    class LoginUserRequest extends FormRequest</span>
-<span class="x">    {</span>
-<span class="x">        /**</span>
-<span class="x">         * Defineix els camps a omplir per al formulari</span>
-<span class="x">         * email: String obligatori màxim 255 caracters</span>
-<span class="x">         * password: String obligatori</span>
-<span class="x">         */</span>
-<span class="x">        public function rules()</span>
-<span class="x">        {</span>
-<span class="x">            return [</span>
-<span class="x">                &#39;email&#39; =&gt; &#39;required|string|email|max:255&#39;,</span>
-<span class="x">                &#39;password&#39; =&gt; &#39;required|string&#39;</span>
-<span class="x">            ];</span>
-<span class="x">        }</span>
-<span class="x">    }</span>
+</li>
+<li>
+<p>Autenticar usuaris (Login)</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="c1">// Request/Petició</span>
+<span class="k">class</span> <span class="nc">LoginUserRequest</span> <span class="k">extends</span> <span class="nx">FormRequest</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * Defineix els camps a omplir per al formulari</span>
+<span class="sd">     * email: String obligatori màxim 255 caracters</span>
+<span class="sd">     * password: String obligatori</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">rules</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="s1">&#39;email&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;required|string|email|max:255&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;required|string&#39;</span>
+        <span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="x">    // Controlador</span>
-<span class="x">    public function loginUser(LoginUserRequest $request)</span>
-<span class="x">    {</span>
-<span class="x">        // Condicional d&#39;error si l&#39;usuari s&#39;enganya al posar les credencials</span>
-<span class="x">        if (!Auth::attempt($request-&gt;only([&#39;email&#39;, &#39;password&#39;]))) {</span>
-<span class="x">            // Resposta en JSON</span>
-<span class="x">            return response()-&gt;json([</span>
-<span class="x">                &#39;status&#39; =&gt; &#39;false&#39;,</span>
-<span class="x">                &#39;message&#39; =&gt; &#39;Credencials incorrectes&#39;,</span>
-<span class="x">            ], 401);</span>
-<span class="x">        }</span>
-<span class="x">        // Verifica el usuari</span>
-<span class="x">        $user = User::where(&#39;email&#39;, $request-&gt;email)-&gt;first();</span>
-<span class="x">        // Resposta en JSON</span>
-<span class="x">        return response()-&gt;json([</span>
-<span class="x">            &#39;status&#39; =&gt; &#39;true&#39;,</span>
-<span class="x">            &#39;message&#39; =&gt; &#39;Usuari autenticat correctament&#39;,</span>
-<span class="x">        ], 200);</span>
-<span class="x">    }</span>
-</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="c1">// Controlador</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">loginUser</span><span class="p">(</span><span class="nx">LoginUserRequest</span> <span class="nv">$request</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Condicional d&#39;error si l&#39;usuari s&#39;enganya al posar les credencials</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">Auth</span><span class="o">::</span><span class="na">attempt</span><span class="p">(</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">only</span><span class="p">([</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">])))</span> <span class="p">{</span>
+        <span class="c1">// Resposta en JSON</span>
+        <span class="k">return</span> <span class="nx">response</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">json</span><span class="p">([</span>
+            <span class="s1">&#39;status&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;false&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Credencials incorrectes&#39;</span><span class="p">,</span>
+        <span class="p">],</span> <span class="mi">401</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// Verifica el usuari</span>
+    <span class="nv">$user</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">email</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">first</span><span class="p">();</span>
+    <span class="c1">// Resposta en JSON</span>
+    <span class="k">return</span> <span class="nx">response</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">json</span><span class="p">([</span>
+        <span class="s1">&#39;status&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;true&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Usuari autenticat correctament&#39;</span><span class="p">,</span>
+    <span class="p">],</span> <span class="mi">200</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+</ul>
 <h4 id="creacio-del-token-en-el-controlador">Creació del token en el controlador</h4>
-<p>Per a proporcionar-li el token a l'usuari, hem de ficar una línia extra en la resposta, la qual s'anomena <code>token</code>, que es creara de la següent forma:
-<div class="highlight"><pre><span></span><code><span class="x">// &#39;token&#39;: Etiqueta JSON que creara el token</span>
-<span class="x">// createToken(&#39;api-token&#39;)-&gt;plaintext: Funció que creara el token en forma de &quot;text pla&quot;</span>
-<span class="x">return response()-&gt;json([</span>
-<span class="x">    &#39;token&#39; =&gt; $user-&gt;createToken(&#39;api-token&#39;)-&gt;plaintext</span>
-<span class="x">], 200)</span>
-</code></pre></div></p>
-<p>I perquè estiguen en les funcions anteriors de <code>Register</code> i <code>Login</code> sols hem d'afegir la línia anterior al codi abans esmentat en la resposta del JSON:
-<div class="highlight"><pre><span></span><code><span class="x">return response()-&gt;json([</span>
-<span class="x">    &#39;status&#39; =&gt; &#39;true&#39;,</span>
-<span class="x">    &#39;message&#39; =&gt; &#39;Usuari creat correctament&#39;,</span>
-<span class="x">    &#39;token&#39; =&gt; $user-&gt;createToken(&#39;api-token&#39;)-&gt;plaintext</span>
-<span class="x">], 200);</span>
-</code></pre></div></p>
+<p>Per a proporcionar-li el token a l'usuari, hem de ficar una línia extra en la resposta, la qual s'anomena <code>token</code>, que es creara de la següent forma:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="c1">// &#39;token&#39;: Etiqueta JSON que creara el token</span>
+<span class="c1">// createToken(&#39;api-token&#39;)-&gt;plaintext: Funció que creara el token en forma de &quot;text pla&quot;</span>
+<span class="k">return</span> <span class="nx">response</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">json</span><span class="p">([</span>
+    <span class="s1">&#39;token&#39;</span> <span class="o">=&gt;</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">createToken</span><span class="p">(</span><span class="s1">&#39;api-token&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">plaintext</span>
+<span class="p">],</span> <span class="mi">200</span><span class="p">)</span>
+</code></pre></div>
+<p>I perquè estiguen en les funcions anteriors de <code>Register</code> i <code>Login</code> sols hem d'afegir la línia anterior al codi abans esmentat en la resposta del JSON:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">return</span> <span class="nx">response</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">json</span><span class="p">([</span>
+    <span class="s1">&#39;status&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;true&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;message&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Usuari creat correctament&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;token&#39;</span> <span class="o">=&gt;</span> <span class="nv">$user</span><span class="o">-&gt;</span><span class="na">createToken</span><span class="p">(</span><span class="s1">&#39;api-token&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">plaintext</span>
+<span class="p">],</span> <span class="mi">200</span><span class="p">);</span>
+</code></pre></div>
 <h3 id="creacio-de-les-rutes-i-els-middlewares-necessaris">Creació de les rutes i els middlewares necessaris</h3>
-<p>Ara que ja tenim creat el controlador per a crear els usuaris amb els tokens ara necessitem provar-los i que es puguen accedir mitjançant rutes, en el fitxer <code>api.php</code> que es troba en la següent ruta <code>routes/api.php</code>, suposem que també les teníem en anterioritat:
-<div class="highlight"><pre><span></span><code><span class="x">// Endpoint /register</span>
-<span class="x">// Registra un usuari </span>
-<span class="x">Route::post(&#39;/register&#39;, [AuthController::class, &#39;createUser&#39;])</span>
-<span class="x">    -&gt;name(&#39;register&#39;);</span>
-<span class="x">// Endpoint /login</span>
-<span class="x">// Autentica un usuari</span>
-<span class="x">Route::post(&#39;/login&#39;, [AuthController::class, &#39;loginUser&#39;])</span>
-<span class="x">    -&gt;name(&#39;login&#39;);</span>
+<p>Ara que ja tenim creat el controlador per a crear els usuaris amb els tokens ara necessitem provar-los i que es puguen accedir mitjançant rutes, en el fitxer <code>api.php</code> que es troba en la següent ruta <code>routes/api.php</code>, suposem que també les teníem en anterioritat:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="c1">// Endpoint /register</span>
+<span class="c1">// Registra un usuari </span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;/register&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nx">AuthController</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="s1">&#39;createUser&#39;</span><span class="p">])</span>
+    <span class="o">-&gt;</span><span class="na">name</span><span class="p">(</span><span class="s1">&#39;register&#39;</span><span class="p">);</span>
+<span class="c1">// Endpoint /login</span>
+<span class="c1">// Autentica un usuari</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nx">AuthController</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="s1">&#39;loginUser&#39;</span><span class="p">])</span>
+    <span class="o">-&gt;</span><span class="na">name</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">);</span>
 </code></pre></div>
-Amb això tot el món pot accedir sense necessitat del token, i tot el món podria accedir, inclòs sense falta d'autenticació, així que ara afegirem un middleware perquè sols es puga accedir si l'usuari està registrat:
-<div class="highlight"><pre><span></span><code><span class="x">// Executa el middleware de Sanctum abans de fer la petició</span>
-<span class="x">Route::middleware(&#39;auth:sanctum&#39;)</span>
-<span class="x">    // Si funciona fa el endpoint de &quot;/user&quot;</span>
-<span class="x">    -&gt;get(&#39;/user&#39;, function (Request $request) {</span>
-<span class="x">        return $request-&gt;user();</span>
-<span class="x">    })-&gt;name(&#39;user&#39;);</span>
+<p>Amb això tot el món pot accedir sense necessitat del token, i tot el món podria accedir, inclòs sense falta d'autenticació, així que ara afegirem un middleware perquè sols es puga accedir si l'usuari està registrat:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="c1">// Executa el middleware de Sanctum abans de fer la petició</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">middleware</span><span class="p">(</span><span class="s1">&#39;auth:sanctum&#39;</span><span class="p">)</span>
+    <span class="c1">// Si funciona fa el endpoint de &quot;/user&quot;</span>
+    <span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/user&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">user</span><span class="p">();</span>
+    <span class="p">})</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">);</span>
 </code></pre></div>
-Ara sols fa falta provar els endpoint de <code>/user</code> per a vore si funciona correctament, si tot ha funcionat deuria de:
-- Donar error si no has fet login.</p>
+<p>Ara sols fa falta provar els endpoint de <code>/user</code> per a vore si funciona correctament, si tot ha funcionat deuria de:</p>
+<ul>
+<li>Donar error si no has fet login.</li>
+</ul>
 <p align= "center">
     <img src="" alt="Error" width="500"/>
  </p>

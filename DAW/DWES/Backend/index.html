@@ -311,9 +311,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../DAM/PMDM/Flutter/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -322,7 +333,88 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            PMDM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DAM/PMDM/Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flutter
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DAM/PMDM/Creaci%C3%B3%20i%20execuci%C3%B3%20d%27un%20projecte%20Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creació i execució d'un projecte Flutter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DAM/PMDM/Instal%C2%B7laci%C3%B3%20de%20Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instal·lació de Flutter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1933,10 +2025,12 @@
 <p>Primerament necessitem crear un fitxer php per a accedir a la base de dades, per exemple <code>db.php</code> o un <code>.env</code> (recomane més este últim per si vols publicar-ho en llocs com Github), en fi, la pregunta és que te que n'hi haure en el fitxer <code>db.php</code>?</p>
 <h3 id="fitxer-dbphp">Fitxer db.php</h3>
 <p>Aquest serà el fitxer en el que farem la connexió a la base de dades per a poder agafar la informació de la pròpia base de dades.
-El que té que n'hi haure és el següent:
-- Una classe "Database" per a poder connectar-mo'n a la base de dades.
-- Variables de dades de la base de dades ja siga nom d'usuari, nom de la base de dades, nom del host..., etc.
-- Una funció que faja la connexió a la base de dades i que gaste les variables definits anteriorment.</p>
+El que té que n'hi haure és el següent:</p>
+<ul>
+<li>Una classe <code>Database</code> per a poder connectar-mo'n a la base de dades.</li>
+<li>Variables de dades de la base de dades ja siga nom d'usuari, nom de la base de dades, nom del host..., etc.</li>
+<li>Una funció que faja la connexió a la base de dades i que gaste les variables definits anteriorment.</li>
+</ul>
 <p>Ara mostre un exemple de com tindre el fitxer <code>db.php</code>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span> 
 

@@ -311,9 +311,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../../DAM/PMDM/Flutter/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -322,7 +333,88 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            PMDM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../DAM/PMDM/Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flutter
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../DAM/PMDM/Creaci%C3%B3%20i%20execuci%C3%B3%20d%27un%20projecte%20Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creació i execució d'un projecte Flutter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../DAM/PMDM/Instal%C2%B7laci%C3%B3%20de%20Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instal·lació de Flutter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1840,11 +1932,13 @@ Quan s'instal·le deurieu de vore el següent en el fitxer <code>package.json</c
 <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">secretKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;secret&quot;</span><span class="p">;</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jwt</span><span class="p">.</span><span class="nx">sign</span><span class="p">({</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nx">secretKey</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">expiresIn</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1h&quot;</span><span class="w"> </span><span class="p">});</span>
-</code></pre></div>
-Explicació:
-- <code>secretKey</code>: Clau en la que encriptara el token.
-- <code>jwt.sign</code>: Firma el token per a que siga vàlid.
-- <code>"expiresIn: 1h"</code>: Duració en la que el token caducara.</p>
+</code></pre></div></p>
+<p>Explicació:</p>
+<ul>
+<li><code>secretKey</code>: Clau en la que encriptara el token.</li>
+<li><code>jwt.sign</code>: Firma el token per a que siga vàlid.</li>
+<li><code>"expiresIn: 1h"</code>: Duració en la que el token caducara.</li>
+</ul>
 <p>En este codi pots generar i firmar el token, però sense la  verificació necessaria no serveix per a molt més, però pots fer una funció per a verificar el token:
 <div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">verifyToken</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">,</span><span class="w"> </span><span class="nx">next</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">header</span><span class="p">(</span><span class="s2">&quot;Autorització&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
@@ -1863,14 +1957,16 @@ Explicació:
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">403</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Token no valid!&quot;</span><span class="w"> </span><span class="p">});</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div>
-Explicació:
-- <code>header.split(" ")[1];</code>: Separa un caracter per a que no sorgeixen problemes
-- <code>jwt.verify()</code>: Funció per a verificar el token
-I amb això ja pots aplicar-lo a les teues funcions de validació del usuari.</p>
+</code></pre></div></p>
+<p>Explicació:</p>
+<ul>
+<li><code>header.split(" ")[1];</code>: Separa un caracter per a que no sorgeixen problemes</li>
+<li><code>jwt.verify()</code>: Funció per a verificar el token
+I amb això ja pots aplicar-lo a les teues funcions de validació del usuari.</li>
+</ul>
 <h3 id="com-es-poden-usar-els-tokens">Com és poden usar els tokens?</h3>
-<p>Podriem usar els tokens per a no fer tantes consultes a la base de dades i no tindre que iniciar sessió cada vegada que entres, podries aplicar-lo de la següent forma:
-<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;/api/users/login&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<p>Podriem usar els tokens per a no fer tantes consultes a la base de dades i no tindre que iniciar sessió cada vegada que entres, podries aplicar-lo de la següent forma:</p>
+<p><div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;/api/users/login&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
 

@@ -311,9 +311,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../../DAM/PMDM/Flutter/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -322,7 +333,88 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            PMDM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../DAM/PMDM/Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flutter
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../DAM/PMDM/Creaci%C3%B3%20i%20execuci%C3%B3%20d%27un%20projecte%20Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creació i execució d'un projecte Flutter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../DAM/PMDM/Instal%C2%B7laci%C3%B3%20de%20Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instal·lació de Flutter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1870,43 +1962,44 @@
 </p>
 <p align="center"><em>Creació del usuari enric</em></p>
 
-<p>Ara crea el directori DEAW en la ruta: <code>/var/sftp/DEAW</code>.
+<p>Ara crea el directori DEAW en la ruta: <code>/var/sftp/DEAW</code>.</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mkdir<span class="w"> </span>/var/sftp/DEAW
-</code></pre></div></p>
+</code></pre></div>
 <p align= "center">
    <img src="../../imatges/sftp/Creació de la carpeta DEAW.png" alt="Creació de la carpeta DEAW" width="600"/>
 </p>
 <p align="center"><em>Creació de la carpeta DEAW</em></p>
 
-<p>Després assigna permisos a l'usuari en eixe directori:
+<p>Després assigna permisos a l'usuari en eixe directori:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>enric:enric<span class="w"> </span>/var/sftp/DEAW
-</code></pre></div></p>
+</code></pre></div>
 <p align= "center">
    <img src="../../imatges/sftp/Modificació de permisos de la carpeta DEAW.png" alt="Modificació de permisos de la carpeta DEAW" width="600"/>
 </p>
 <p align="center"><em>Modificació de permisos de la carpeta DEAW</em></p>
 
 <h2 id="configuracio-dacces-segur-mitjancant-sftp">Configuració d'accés segur mitjançant SFTP</h2>
-<p>Configura el servidor per a que l'usuari enric:
-- Solo pueda acceder mediante SFTP.
-- Esté limitado a su directorio asignado.
-- No pueda acceder al resto del sistema.
-Per aaixò n'hi ha que modificar la configuració de SSH. És troba en la carpeta <code>/etc/ssh/sshd_config</code>. 
-I per a que complisca amb el demanat es deuria afegir les següents linies al fitxer de configuració:
+<p>Ara configurare el servidor per a que l'usuari enric:</p>
+<ul>
+<li>Soles puga accedir mijançant SFTP.</li>
+<li>Estiga limitat al seu directori assignado.</li>
+<li>No puga accedir a la resta del sistema.</li>
+</ul>
+<p>Per això n'hi ha que modificar la configuració de SSH. És troba en la carpeta <code>/etc/ssh/sshd_config</code>. 
+I per a que complisca amb el demanat es deuria afegir les següents linies al fitxer de configuració:</p>
 <div class="highlight"><pre><span></span><code>Match<span class="w"> </span>User<span class="w"> </span>enric
 ChrootDirectory<span class="w"> </span>/var/sftp
 ForceCommand<span class="w"> </span>internal-sftp
 AllowTcpForwarding<span class="w"> </span>no
 X11Forwarding<span class="w"> </span>no
-</code></pre></div></p>
+</code></pre></div>
 <p align= "center">
    <img src="../../imatges/sftp/Contingut del fitxer de configuració de ssh.png" alt="Modificació de permisos de la carpeta DEAW" width="600"/>
 </p>
 <p align="center"><em>Modificació de permisos de la carpeta DEAW</em></p>
-<p>Es importante que el directori sftp se li donen permisos en root.</p>
-<ol>
-<li>Aplica els canvis i reinicia el servei corresponent.</li>
-</ol>
+
+<p>Es important que el directori <code>sftp</code> se li donen permisos en <code>root</code>.</p>
+<p>Per últim aplica els canvis i reinicia el servei corresponent.</p>
 <p align= "center">
    <img src="../../imatges/sftp/Reiniciar el servei de ssh.png" alt="Reiniciament del servei de ssh" width="600"/>
 </p>
@@ -1917,32 +2010,34 @@ X11Forwarding<span class="w"> </span>no
 <li>Accedeix al sistema amb l'usuari enric.</li>
 </ol>
 <p align= "center">
-   <img src="../../imatges/sftp/Canvi al usuari enric.png" alt="Canvi al usuari enric" width="600"/>
-</p>
+      <img src="../../imatges/sftp/Canvi al usuari enric.png" alt="Canvi al usuari enric" width="600"/>
+   </p>
 <p align="center"><em>Canvi al usuari enric</em></p>
 
 <ol>
 <li>Crea el fitxer <code>DEAW.txt</code> dins del directori asignat.</li>
 </ol>
 <p align= "center">
-   <img src="../../imatges/sftp/Contingut del fitxer de configuració de ssh.png" alt="Contingut del fitxer de configuració de ssh" width="600"/>
-</p>
+      <img src="../../imatges/sftp/Contingut del fitxer de configuració de ssh.png" alt="Contingut del fitxer de configuració de ssh" width="600"/>
+   </p>
 <p align="center"><em>Contingut del fitxer de configuració de ssh</em></p>
 
 <ol>
 <li>Posa-li el contingut que vullgues</li>
 </ol>
 <p align= "center">
-   <img src="../../imatges/sftp/Contingut del fitxer DEAW.png" alt="Contingut del fitxer DEAW" width="600"/>
-</p>
+      <img src="../../imatges/sftp/Contingut del fitxer DEAW.png" alt="Contingut del fitxer DEAW" width="600"/>
+   </p>
 <p align="center"><em>Contingut del fitxer DEAW</em></p>
 
 <h2 id="prova-de-connexio-amb-el-client-sftp">Prova de connexió amb el client SFTP</h2>
-<p>Utilitza un client SFTP per a conectarte al servidor. El puerto es el 22 per a SFTP. I en el servidor la IP que ens aparega en enp0s3 en la màquina virtual com per exemple FileZilla.
-Per últim verifica que:
-- Es posible acceder con el usuario creado.
-- Es posible descargar el archivo DEAW.txt.
-- No es posible acceder a otros directorios fuera del asignado</p>
+<p>Per últim anem a utilitzar un client SFTP per a conectar-mo'n al servidor. El port és el 22 per a SFTP. I en el servidor la IP que ens aparega en enp0s3 en la màquina virtual com per exemple FileZilla.
+Per últim verifica que:</p>
+<ul>
+<li>Es possible accedir amb l'usuari creat.</li>
+<li>Es possible descarregar el fitxet DEAW.txt.</li>
+<li>No es possible accedir a alres directoris fora del assignat</li>
+</ul>
 <p align= "center">
    <img src="../../imatges/sftp/Contingut de la carpeta home desde FileZilla.png" alt="Contingut de la carpeta home desde FileZilla" width="600"/>
 </p>

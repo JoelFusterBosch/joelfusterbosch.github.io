@@ -311,9 +311,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../DAM/PMDM/Flutter/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -322,7 +333,88 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            PMDM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DAM/PMDM/Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flutter
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DAM/PMDM/Creaci%C3%B3%20i%20execuci%C3%B3%20d%27un%20projecte%20Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creació i execució d'un projecte Flutter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DAM/PMDM/Instal%C2%B7laci%C3%B3%20de%20Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instal·lació de Flutter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2358,10 +2450,11 @@ Guardes els canvis, i com tenim el servidor de nginx no fa falta reiniciar-lo i 
 <span class="x">@endsection {{--Tanquem la secció del contingut--}}</span>
 </code></pre></div></li>
 <li>Posem les pàgines en el fitxer <code>web.php</code> i verifiquem els resultats
-<div class="highlight"><pre><span></span><code><span class="x">Route::view(&#39;/index2&#39;, &#39;blade.index&#39;)-&gt; name(&#39;blade.index&#39;);</span>
-<span class="x">Route::view(&#39;/about2&#39;, &#39;blade.about&#39;)-&gt; name(&#39;blade.about&#39;);</span>
-<span class="x">Route::view(&#39;/services&#39;, &#39;blade.services&#39;)-&gt; name(&#39;blade.services&#39;);</span>
-<span class="x">Route::view(&#39;/contact&#39;, &#39;blade.contact&#39;)-&gt; name(&#39;blade.contact&#39;);</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;/index2&#39;</span><span class="p">,</span> <span class="s1">&#39;blade.index&#39;</span><span class="p">)</span><span class="o">-&gt;</span> <span class="na">name</span><span class="p">(</span><span class="s1">&#39;blade.index&#39;</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;/about2&#39;</span><span class="p">,</span> <span class="s1">&#39;blade.about&#39;</span><span class="p">)</span><span class="o">-&gt;</span> <span class="na">name</span><span class="p">(</span><span class="s1">&#39;blade.about&#39;</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;/services&#39;</span><span class="p">,</span> <span class="s1">&#39;blade.services&#39;</span><span class="p">)</span><span class="o">-&gt;</span> <span class="na">name</span><span class="p">(</span><span class="s1">&#39;blade.services&#39;</span><span class="p">);</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;/contact&#39;</span><span class="p">,</span> <span class="s1">&#39;blade.contact&#39;</span><span class="p">)</span><span class="o">-&gt;</span> <span class="na">name</span><span class="p">(</span><span class="s1">&#39;blade.contact&#39;</span><span class="p">);</span>
 </code></pre></div></li>
 </ol>
 <h3 id="afegir-components">Afegir components</h3>
@@ -2714,16 +2807,18 @@ I en el navegador quan poseu <code>http:localhost:8080</code> apareixerà el seg
 <span class="x">&lt;/html&gt;</span>
 </code></pre></div>
 Quan tingam la vista haurem de posar-la en el controlador de la següent forma:
-<div class="highlight"><pre><span></span><code><span class="x">class UserController extends Controller</span>
-<span class="x">{</span>
-<span class="x">    public function index() {</span>
-<span class="x">        return view(&#39;users.index&#39;);</span>
-<span class="x">    }</span>
-<span class="x">}</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">UserController</span> <span class="k">extends</span> <span class="nx">Controller</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;users.index&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></p>
 <h4 id="com-usar-els-models-en-els-controladors">Com usar els models en els controladors</h4>
 <p>En el controlador posarem el següent:
-<div class="highlight"><pre><span></span><code><span class="x">use App\Models\User;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">use</span> <span class="nx">App\Models\User</span><span class="p">;</span>
 </code></pre></div>
 Quedant de la següent forma:
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
@@ -2756,14 +2851,16 @@ Això el que permet és usar els models en els controladors, quedant de la segü
 Amb això ja podem usar els objectes dels models en els controladors</p>
 <h4 id="pasar-dades-a-la-vista">Pasar dades a la vista</h4>
 <p>Per a pasar dades a la vista podem fer-lo de la següent forma:
-<div class="highlight"><pre><span></span><code><span class="x">return view(&#39;usuarios.index&#39;, compact(&#39;usuarios&#39;));</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;usuarios.index&#39;</span><span class="p">,</span> <span class="nb">compact</span><span class="p">(</span><span class="s1">&#39;usuarios&#39;</span><span class="p">));</span>
 </code></pre></div>
 El que fa això és pasar un <code>array</code> de forma asociativa on la clau dels usuaris contindra la col·lecció d'usuaris que hem recuperat de la base de dades.
 I quedaria de la següent forma la funció index:
-<div class="highlight"><pre><span></span><code><span class="x">public function index() {</span>
-<span class="x">    $usuarios = User::all();</span>
-<span class="x">    return view(&#39;users.index&#39;, compact(&#39;usuarios&#39;));</span>
-<span class="x">}</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nv">$usuarios</span> <span class="o">=</span> <span class="nx">User</span><span class="o">::</span><span class="na">all</span><span class="p">();</span>
+    <span class="k">return</span> <span class="nx">view</span><span class="p">(</span><span class="s1">&#39;users.index&#39;</span><span class="p">,</span> <span class="nb">compact</span><span class="p">(</span><span class="s1">&#39;usuarios&#39;</span><span class="p">));</span>
+<span class="p">}</span>
 </code></pre></div>
 Ara modificarem el fitxer <code>index.blade.php</code> que haviem creat en anterioritat de la següent forma:
 <div class="highlight"><pre><span></span><code><span class="x">&lt;!DOCTYPE html&gt;</span>
@@ -2855,7 +2952,8 @@ I per últim per a mitlllorar encara més el codi podriem usar la etiqueta <code
 <h4 id="crear-dades-de-prova">Crear dades de prova</h4>
 <h5 id="utils">utils</h5>
 <p>Pots usar el hsaah per a les contrasenyes de la següent forma:
-<div class="highlight"><pre><span></span><code><span class="x">use Illuminate\Support\Facades\Hash;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">use</span> <span class="nx">Illuminate\Support\Facades\Hash</span><span class="p">;</span>
 </code></pre></div>
 Ja amb els utils necessaris anem a crear 2 usuaris inventats en el controlador.</p>
 <div class="admonition nota">
@@ -2910,70 +3008,76 @@ Ja amb els utils necessaris anem a crear 2 usuaris inventats en el controlador.<
 <span class="p">}</span>
 </code></pre></div>
 Una vegada creats posarem el endpoint al que ha d'apuntar en el fitxer <code>web.php</code>
-<div class="highlight"><pre><span></span><code><span class="x">Route::get(&#39;/create&#39;, [UserController::class, &#39;create&#39;])-&gt;name(&#39;users.create&#39;);</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/create&#39;</span><span class="p">,</span> <span class="p">[</span><span class="nx">UserController</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="s1">&#39;create&#39;</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">(</span><span class="s1">&#39;users.create&#39;</span><span class="p">);</span>
 </code></pre></div></p>
 <h5 id="us-dels-where">us dels where()</h5>
-<p>També podem usar els <code>where</code> per a fer condicionals per als que agafem de la base de dades, ací un exemple de com es poden usar:
-- =     Igual
-- !=    Diferent
-- <code>&gt;</code>   Major que
-- <code>&gt;=</code>  Major o igual que
-- &lt;     Menor que
-- &lt;=    Menor o igual que
-LIKE    Coincideix amb el patró
-NOT LIKE    No coincideix amb el patró</p>
+<p>També podem usar els <code>where</code> per a fer condicionals per als que agafem de la base de dades, ací un exemple de com es poden usar:</p>
+<ul>
+<li>=     Igual</li>
+<li>!=    Diferent</li>
+<li><code>&gt;</code>   Major que</li>
+<li><code>&gt;=</code>  Major o igual que</li>
+<li>&lt;     Menor que</li>
+<li>&lt;=    Menor o igual que</li>
+<li>LIKE  Coincideix amb el patró</li>
+<li>NOT LIKE  No coincideix amb el patró</li>
+</ul>
 <h4 id="acces-a-bases-de-dades-de-forma-alternativa">Accés a bases de dades de forma alternativa</h4>
 <h5 id="sql-pur">SQL pur</h5>
 <p>Pots conseguir una consulta de SQL pura de la següent forma:
-<div class="highlight"><pre><span></span><code><span class="x">$usuarios = DB::select(DB::raw(&#39;SELECT * FROM users&#39;));</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$usuarios</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">select</span><span class="p">(</span><span class="nx">DB</span><span class="o">::</span><span class="na">raw</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users&#39;</span><span class="p">));</span>
 </code></pre></div>
 I en esta seria per a fer <code>JOIN</code> amb altra taula de la base de dades:
-<div class="highlight"><pre><span></span><code><span class="x">$usuarios = DB::select(DB::raw(&#39;SELECT users.*, posts.title FROM users INNER JOIN posts ON users.id = posts.user_id&#39;));</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="nv">$usuarios</span> <span class="o">=</span> <span class="nx">DB</span><span class="o">::</span><span class="na">select</span><span class="p">(</span><span class="nx">DB</span><span class="o">::</span><span class="na">raw</span><span class="p">(</span><span class="s1">&#39;SELECT users.*, posts.title FROM users INNER JOIN posts ON users.id = posts.user_id&#39;</span><span class="p">));</span>
 </code></pre></div></p>
 <h6 id="metodes-estatics">Mètodes estatics</h6>
 <p>Amb els mètodes estatics es poden realitzar de la següent forma:
-<div class="highlight"><pre><span></span><code><span class="x">//insert()</span>
-<span class="x">//Inserta un nou registre en la taula</span>
-<span class="x">DB::table(&#39;users&#39;)-&gt;insert([&#39;name&#39; =&gt; &#39;Pedro&#39;, &#39;email&#39; =&gt; &#39;correo@example.com&#39;, &#39;password&#39; =&gt; Hash::make(&#39;password&#39;)]);</span>
-<span class="x">//update()</span>
-<span class="x">//Actualiza un registro en la tabla.</span>
-<span class="x">DB::table(&#39;users&#39;)-&gt;where(&#39;id&#39;, 1)-&gt;update([&#39;name&#39; =&gt; &#39;Pedro Modificat&#39;]);</span>
-<span class="x">//delete()</span>
-<span class="x">//Elimina un registre de la taula.</span>
-<span class="x">DB::table(&#39;users&#39;)-&gt;where(&#39;id&#39;, 1)-&gt;delete();</span>
-<span class="x">//get()</span>
-<span class="x">//Recupera tots els registres de la taula.</span>
-<span class="x">DB::table(&#39;users&#39;)-&gt;get();</span>
-<span class="x">//find()</span>
-<span class="x">//Busca un registre pel seu ID.</span>
-<span class="x">DB::table(&#39;users&#39;)-&gt;find(1);</span>
-<span class="x">//first()</span>
-<span class="x">//Recupera el primer registre de la taula.</span>
-<span class="x">DB::table(&#39;users&#39;)-&gt;first();</span>
-<span class="x">//where()</span>
-<span class="x">//Filtra els resultats segons una condició.</span>
-<span class="x">DB::table(&#39;users&#39;)-&gt;where(&#39;age&#39;, &#39;&gt;=&#39;, 18)-&gt;get();</span>
-<span class="x">//whereIn()</span>
-<span class="x">//Filtra els resultats segons una llista de valors.</span>
-<span class="x">DB::table(&#39;users&#39;)-&gt;whereIn(&#39;zipCode&#39;, [28080, 28081])-&gt;get();</span>
-<span class="x">//orderBy()</span>
-<span class="x">//Ordena els resultats segonn un camp.</span>
-<span class="x">DB::table(&#39;users&#39;)-&gt;orderBy(&#39;name&#39;)-&gt;get();</span>
-<span class="x">//count()</span>
-<span class="x">//Compta el número de registres de la taula.</span>
-<span class="x">DB::table(&#39;users&#39;)-&gt;count();</span>
-<span class="x">//sum()</span>
-<span class="x">//Suma un camp de la taula.</span>
-<span class="x">DB::table(&#39;users&#39;)-&gt;sum(&#39;age&#39;);</span>
-<span class="x">//avg()</span>
-<span class="x">//Calcula el promedi de un camp de la taula.</span>
-<span class="x">DB::table(&#39;users&#39;)-&gt;avg(&#39;age&#39;);</span>
-<span class="x">//max()</span>
-<span class="x">//Torna el valor màxim d&#39;un camp de la taula.</span>
-<span class="x">DB::table(&#39;users&#39;)-&gt;max(&#39;age&#39;);</span>
-<span class="x">//min()</span>
-<span class="x">//Torna el valor mínim d&#39;un camp de la taula.</span>
-<span class="x">DB::table(&#39;users&#39;)-&gt;min(&#39;age&#39;);</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="c1">//insert()</span>
+<span class="c1">//Inserta un nou registre en la taula</span>
+<span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">([</span><span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Pedro&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;correo@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="nx">Hash</span><span class="o">::</span><span class="na">make</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">)]);</span>
+<span class="c1">//update()</span>
+<span class="c1">//Actualiza un registro en la tabla.</span>
+<span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">([</span><span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Pedro Modificat&#39;</span><span class="p">]);</span>
+<span class="c1">//delete()</span>
+<span class="c1">//Elimina un registre de la taula.</span>
+<span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">();</span>
+<span class="c1">//get()</span>
+<span class="c1">//Recupera tots els registres de la taula.</span>
+<span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span>
+<span class="c1">//find()</span>
+<span class="c1">//Busca un registre pel seu ID.</span>
+<span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="c1">//first()</span>
+<span class="c1">//Recupera el primer registre de la taula.</span>
+<span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">first</span><span class="p">();</span>
+<span class="c1">//where()</span>
+<span class="c1">//Filtra els resultats segons una condició.</span>
+<span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;=&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span>
+<span class="c1">//whereIn()</span>
+<span class="c1">//Filtra els resultats segons una llista de valors.</span>
+<span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">whereIn</span><span class="p">(</span><span class="s1">&#39;zipCode&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">28080</span><span class="p">,</span> <span class="mi">28081</span><span class="p">])</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span>
+<span class="c1">//orderBy()</span>
+<span class="c1">//Ordena els resultats segonn un camp.</span>
+<span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">orderBy</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span>
+<span class="c1">//count()</span>
+<span class="c1">//Compta el número de registres de la taula.</span>
+<span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">();</span>
+<span class="c1">//sum()</span>
+<span class="c1">//Suma un camp de la taula.</span>
+<span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">sum</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">);</span>
+<span class="c1">//avg()</span>
+<span class="c1">//Calcula el promedi de un camp de la taula.</span>
+<span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">avg</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">);</span>
+<span class="c1">//max()</span>
+<span class="c1">//Torna el valor màxim d&#39;un camp de la taula.</span>
+<span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">max</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">);</span>
+<span class="c1">//min()</span>
+<span class="c1">//Torna el valor mínim d&#39;un camp de la taula.</span>
+<span class="nx">DB</span><span class="o">::</span><span class="na">table</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">min</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">);</span>
 </code></pre></div></p>
 <h2 id="peticions-crud">Peticions CRUD</h2>
 <h4 id="get">GET</h4>

@@ -311,9 +311,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../../DAM/PMDM/Flutter/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -322,7 +333,88 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            PMDM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../DAM/PMDM/Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Flutter
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../DAM/PMDM/Creaci%C3%B3%20i%20execuci%C3%B3%20d%27un%20projecte%20Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Creació i execució d'un projecte Flutter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../DAM/PMDM/Instal%C2%B7laci%C3%B3%20de%20Flutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instal·lació de Flutter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1919,11 +2011,13 @@ npm<span class="w"> </span>-v<span class="w"> </span><span class="c1"># Debería
 <p>Per a crear un projecte en Node.js clarament necessitem tindre Node.js iinstal·lat i executar aquest comand:
 <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>init
 </code></pre></div>
-Ara amb el projecte creat necessitem instal·lar unes quantes llibreries per a poder tant connectar-mo'n a la base de dades com per a poder fer APIs, instal·larem les següents llibreries que tenen les següents funcions:
-- Express: Aquesta llibreria ens permet crear la creació i utilització de les APIs.
-- mysql2: Permet l'utilització de sentencies de MySQL.
-- dotenv: Permet llegir els fitxers .env que n'hi hagen en el projecte Node.
-- router:</p>
+Ara amb el projecte creat necessitem instal·lar unes quantes llibreries per a poder tant connectar-mo'n a la base de dades com per a poder fer APIs, instal·larem les següents llibreries que tenen les següents funcions:</p>
+<ul>
+<li>Express: Aquesta llibreria ens permet crear la creació i utilització de les APIs.</li>
+<li>mysql2: Permet l'utilització de sentencies de MySQL.</li>
+<li>dotenv: Permet llegir els fitxers .env que n'hi hagen en el projecte Node.</li>
+<li>router:</li>
+</ul>
 <p>I totes aquestes llibreries podem instal·lar-les de la següent forma:
 <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>express
 npm<span class="w"> </span>install<span class="w"> </span>mysql2
@@ -1956,8 +2050,10 @@ DB_PORT=3306 (Per defecte el port de la base de dades MySQL es 3306, però pots 
 
 # Port del servidor
 PORT=3000 (El mateix que en el de MySQL, però que siga diferent)
-</code></pre></div>
-- db.js</p>
+</code></pre></div></p>
+<ul>
+<li>db.js</li>
+</ul>
 <p>En aquest fitxer és posen les dades de la base de dades, però com ja les tenim en el fitxer <code>.env</code> les importem allí:
 <div class="highlight"><pre><span></span><code><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;dotenv&#39;</span><span class="p">).</span><span class="nx">config</span><span class="p">();</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">mysql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mysql2&#39;</span><span class="p">);</span>
@@ -1975,10 +2071,14 @@ PORT=3000 (El mateix que en el de MySQL, però que siga diferent)
 
 <span class="c1">// Exportamos la versión que soporta Promesas</span>
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">pool</span><span class="p">.</span><span class="nx">promise</span><span class="p">();</span>
-</code></pre></div>
-- "Nom del endpoint".js (o el endpoint que necessites)
-Ací sera on farem els endpoints de les nostres taules en SQL, este apartat és dividira en 4 parts, però en el exercici són 3 perquè és important que saber totes les instancies dels endpoints en una API:
-  - GET</p>
+</code></pre></div></p>
+<ul>
+<li>"Nom del endpoint".js (o el endpoint que necessites)</li>
+</ul>
+<p>Ací sera on farem els endpoints de les nostres taules en SQL, este apartat és dividira en 4 parts, però en el exercici són 3 perquè és important que saber totes les instancies dels endpoints en una API:</p>
+<ul>
+<li>GET</li>
+</ul>
 <p>Utilitzem GET per a ontindre informació del servidor, comunment per a obtindre les dades de la base de dades.
 En Node seria fer el següent:
 <div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
@@ -2019,8 +2119,10 @@ En Node seria fer el següent:
 <span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Error a l&#39;hora d&#39;afegir els recursos de la taula&quot;</span><span class="w"> </span><span class="p">});</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">});</span>
-</code></pre></div>
-  - UPDATE</p>
+</code></pre></div></p>
+<ul>
+<li>UPDATE</li>
+</ul>
 <p>Utilitzem UPDATE per a actualitzar la informació del servidor, comunment per a actualitzar les dades de la base de dades.
 En Node seria fer el següent:
 <div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="s1">&#39;/update/:id&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
@@ -2034,9 +2136,11 @@ En Node seria fer el següent:
 <span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Error a l&#39;hora d&#39;actualitzar els recursos de la taula&quot;</span><span class="w"> </span><span class="p">});</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">});</span>
-</code></pre></div>
-  - DELETE
-Utilitzem DELETE per a eliminar la informació del servidor, comunment per a eliminar les dades de la base de dades.
+</code></pre></div></p>
+<ul>
+<li>DELETE</li>
+</ul>
+<p>Utilitzem DELETE per a eliminar la informació del servidor, comunment per a eliminar les dades de la base de dades.
 En Node seria fer el següent:
 <div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="ow">delete</span><span class="p">(</span><span class="s1">&#39;/borrar/:id&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
@@ -2112,8 +2216,10 @@ En Node seria fer el següent:
 <span class="p">});</span>
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">router</span><span class="p">;</span>
-</code></pre></div>
-- index.js (o com siga el fitxer principal creat amb npm init)</p>
+</code></pre></div></p>
+<ul>
+<li>index.js (o com siga el fitxer principal creat amb npm init)</li>
+</ul>
 <p>En el ftxer principal hem de crear la connexió al endpoint principal, i on el servidor tindra accés als altres endpoints que teniem en la carpteta routes, que deuria de quedar de la següent forma:
 <div class="highlight"><pre><span></span><code><span class="c1">// Importem les llibreries de express i les usem</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">express</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
