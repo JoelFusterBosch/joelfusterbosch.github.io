@@ -23,25 +23,106 @@ nav:
   - Inici: index.md
   - Com fer el MkDocs: MkDocs.md
   - DAM:
-    - PMDM: DAM/PMDM/Flutter.md
+    - PMDM: 
+      - Flutter: DAM/PMDM/Flutter.md
+      - Creació i execució d'un projecte Flutter: DAM/PMDM/Creació i execució d'un projecte Flutter.md
+      - Instal·lació de Flutter: DAM/PMDM/Instal·lació de Flutter.md
   - DAW:
     - DWEC: 
-      - Base de dades : DAW/DWEC/BD.md
-      - Backend en APIS amb Node.js : DAW/DWEC/Backend.md
-      - Formularis per a aplicacions web : DAW/DWEC/Formulari.md
+      - MySQL (Docker):
+        - Base de dades : DAW/DWEC/MySQL/BD.md
+      - Node.js:
+        - Backend en APIS amb Node.js : DAW/DWEC/Node.js/Backend.md
+        - Creacio de tokens amb Node.js: DAW/DWEC/Node.js/tokens.md
+        - Creació de cookies amb Node.js: DAW/DWEC/Node.js/cookies.md
+        - Formularis per a aplicacions web : DAW/DWEC/Node.js/Formulari.md
+      - Vue:
+        - Instal·lació i configuració de Vue:
+          - Instal·lació i configuració de Vue: DAW/DWEC/Vue/Instal·lació i configuració de Vue/Instal·lació i configuració de Vue.md
+        - Curs Intro-to-Vue-3-Composition-API: 
+            - Curs Intro-to-Vue-3-Composition-API: DAW/DWEC/Vue/Curs Intro-to-Vue-3-Composition-API/Obtenció i execució del repositori.md
+            - Exercicis:
+              - Exercici 1: DAW/DWEC/Vue/Curs Intro-to-Vue-3-Composition-API/Exercicis/Exercici 1.md
+              - Exercici 2: DAW/DWEC/Vue/Curs Intro-to-Vue-3-Composition-API/Exercicis/Exercici 2.md
+              - Exercici 3: DAW/DWEC/Vue/Curs Intro-to-Vue-3-Composition-API/Exercicis/Exercici 3.md
+              - Exercici 4: DAW/DWEC/Vue/Curs Intro-to-Vue-3-Composition-API/Exercicis/Exercici 4.md
+              - Exercici 5: DAW/DWEC/Vue/Curs Intro-to-Vue-3-Composition-API/Exercicis/Exercici 5.md
+              - Exercici 6: DAW/DWEC/Vue/Curs Intro-to-Vue-3-Composition-API/Exercicis/Exercici 6.md
+              - Exercici 7: DAW/DWEC/Vue/Curs Intro-to-Vue-3-Composition-API/Exercicis/Exercici 7.md
+              - Exercici 8: DAW/DWEC/Vue/Curs Intro-to-Vue-3-Composition-API/Exercicis/Exercici 8.md
+        - Vue: DAW/DWEC/Vue/Vue.md
     - DWES: 
-      - Problemes amb la base de dades en docker i solucions: DAW/DWES/BD.md
-      - Backend en APIS amb SLIM PHP : DAW/DWES/Backend.md
-      - Backend en APIS amb Laravel PHP: DAW/DWES/laravel.md
+      - MySQL (Docker):
+        - Problemes amb la base de dades en docker i solucions: DAW/DWES/BD.md
+      - Slim (PHP):
+        - Backend en APIS amb SLIM PHP : DAW/DWES/Backend.md
+      - Laravel (PHP):
+        - Instal·lació de Laravel : DAW/DWES/Instal·lació de Laravel.md
+        - Backend en APIS amb Laravel PHP: DAW/DWES/laravel.md
+        - Creacio de tokens amb Sanctum en Laravel PHP: DAW/DWES/Sanctum.md
+        - Seeders en Laravel: DAW/DWES/seeders.md
+        - Relacions en Laravel: DAW/DWES/Relacions Laravel.md
     - DIW:
-      - HTML : DAW/DIW/HTML.md
-      - CSS : DAW/DIW/CSS.md
+      - HTML:
+        - HTML: DAW/DIW/HTML/HTML.md
+        - Text: DAW/DIW/HTML/Text.md
+        - Formulari: DAW/DIW/HTML/Formularis.md
+      - CSS: 
+        - Dev Css: DAW/DIW/dev CSS.md
+        - CSS: DAW/DIW/CSS/CSS.md
+        - Selectors CSS: DAW/DIW/CSS/Selectors CSS.md
+        - Caixes: DAW/DIW/CSS/Caixes.md
+        - Transformacions: DAW/DIW/CSS/Transformacions.md
+        - Animacions: DAW/DIW/CSS/Animacions.md
+        - Variables: DAW/DIW/CSS/Variables.md
+        - Grid i Layout: DAW/DIW/CSS/Grid i Layout.md
+        - Media Queries: DAW/DIW/CSS/Media Queries.md
+      - SCSS:
+        - DAW/DIW/SCSS/Instal·lació de scss.md
+        - DAW/DIW/SCSS/scss.md
+      - Bootstrap:
+        - Instal·lació de Bootstrap: DAW/DIW/Bootstrap/Instal·lació de bootstrap.md
+        - Bootstrap: DAW/DIW/Bootstrap/Bootstrap.md
     - DAW:
-      - Instal·lació i configuració de Apache : DAW/DAW/Instal·lació de Apache.md
-      - Aplicació de mòduls en Apache: DAW/DAW/Aplicació de moduls en Apache.md
-      - VirtualHosts: DAW/DAW/VirtualHosts.md
-      - Configuració dels mecanismes d'autenticació: DAW/DAW/Configuració dels mecanismes d'autenticació.md
-      - Certificats de seguretat: DAW\DAW\Certificats de seguretat.md
+      - Apache:
+        - Instal·lació i configuració de Apache : DAW/DAW/Apache/Instal·lació de Apache.md
+        - Aplicació de mòduls en Apache: DAW/DAW/Apache/Aplicació de moduls en Apache.md
+        - VirtualHosts: DAW/DAW/Apache/VirtualHosts.md
+        - Configuració dels mecanismes d'autenticació: DAW/DAW/Apache/Configuració dels mecanismes d'autenticació.md
+        - Certificats de seguretat: DAW/DAW/Apache/Certificats de seguretat.md
+      - Tomcat:
+        - Instal·lació de Tomcat: DAW/DAW/Tomcat/Instal·lació de Tomcat.md
+        - Proxy amb Tomcat: DAW/DAW/Tomcat/Proxy i proxy invers en Tomcat.md
+      - SFTP:
+        - DAW/DAW/SFTP/SFTP.md
+      - Extres:
+        - Configuració de SSH: DAW/DAW/extres/ssh.md
+    - CLOUD:
+      - Introducció a Cloud: DAW/CLOUD/Introducció al cloud.md
+      - Azure:
+        - DAW/CLOUD/Azure/Configuració d'una VNet.md
+        - DAW/CLOUD/Azure/Configuració dels NSG.md
+        - DAW/CLOUD/Azure/Configuració de VM.md
+        - DAW/CLOUD/Azure/Configuració de File Share entre diverses VM.md
+        - DAW/CLOUD/Azure/Configuració primer Azure App Service.md
+        - DAW/CLOUD/Azure/Configuració Azure Database per a MySQL.md
+        - DAW/CLOUD/Azure/Connexió d'App Service amb MySQL.md
+        - DAW/CLOUD/Azure/Configuració i connexió d'App Service en Azure Storage.md
+      - Docker:
+        - DAW/CLOUD/Docker/Instàncies en Docker.md
+        - DAW/CLOUD/Docker/Logs i terminal.md
+        - DAW/CLOUD/Docker/Instal·lació Node i descarregar imatges de BD.md
+        - DAW/CLOUD/Docker/Desplegament d'aplicació.md
+        - DAW/CLOUD/Docker/Gestió dels logs.md
+        - DAW/CLOUD/Docker/Iniciar contenidors en Yaml.md
+        - DAW/CLOUD/Docker/Funcionament amb Yaml.md
+        - DAW/CLOUD/Docker/Creació i desplegament d'una app mitjançant un contenidor.md
+      - AWS:
+        - Aclaració: DAW/CLOUD/AWS/aclaració.md
+        - Mòdul 3:
+          - Protecció d'accés: DAW/CLOUD/AWS/mòdul 3/protecció d'accés.md
+    - IA (Intel·ligència Artificial) & BD (Big Data): 
+      - Programació de IA
 
 markdown_extensions:
   - admonition

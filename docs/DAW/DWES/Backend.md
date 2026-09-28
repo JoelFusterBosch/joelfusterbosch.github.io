@@ -9,7 +9,8 @@ Primerament necessitem crear un fitxer php per a accedir a la base de dades, per
 ### Fitxer db.php
 Aquest serà el fitxer en el que farem la connexió a la base de dades per a poder agafar la informació de la pròpia base de dades.
 El que té que n'hi haure és el següent:
-- Una classe "Database" per a poder connectar-mo'n a la base de dades.
+
+- Una classe `Database` per a poder connectar-mo'n a la base de dades.
 - Variables de dades de la base de dades ja siga nom d'usuari, nom de la base de dades, nom del host..., etc.
 - Una funció que faja la connexió a la base de dades i que gaste les variables definits anteriorment.
 
