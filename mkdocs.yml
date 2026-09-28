@@ -121,8 +121,17 @@ nav:
         - Aclaració: DAW/CLOUD/AWS/aclaració.md
         - Mòdul 3:
           - Protecció d'accés: DAW/CLOUD/AWS/mòdul 3/protecció d'accés.md
-    - IA (Intel·ligència Artificial) & BD (Big Data): 
-      - Programació de IA
+  - IA (Intel·ligència Artificial) & BD (Big Data): 
+    - Big Data Aplicat:
+      - Placeholder: IA&BD/Big_Data_Aplicat/placeholder.md
+    - Models d'Intel·ligència Artificial: 
+      - Placeholder: IA&BD/Models_de_Intel·ligència_Artificial/placeholder.md
+    - Programació de IA: 
+      - Placeholder: IA&BD/Programació_de_IA/placeholder.md
+    - Sistemes d'Aprenentatge automàtic: 
+      - Placeholder: IA&BD/Sistemes_de_Aprenentatge_automatic/placeholder.md
+    - Sistemes de Big Data: 
+      - Placeholder: IA&BD/Sistemes_de_Big_Data/placeholder.md
 
 markdown_extensions:
   - admonition
