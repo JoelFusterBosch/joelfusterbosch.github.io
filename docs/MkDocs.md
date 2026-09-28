@@ -1,6 +1,6 @@
 # Què és MkDocs
 MkDocs es una eina que converteix els fitxers `Markdown`(.md) en pàgines web estàtiques amb un disseny net — ideal per a apunts, documentació o blogs tècnics. 
-## Com instal·lar-lo
+## Com instal·lar-lo en Windows
 Per a instal·lar `MkDocs` has de tindre `Python` instal·lat en el sistema, després en la terminal hauras d'executar el següent:
 
 ```bash
@@ -50,6 +50,33 @@ Si dona problemes podeu forçar-lo:
 ```bash
 python -m mkdocs gh-deploy --force
 ```
+
+## Com instal·lar-lo en Linux
+
+Has de seguir de forma pareguda com el de Windows, sols hauràs de crear un entorn virtual de Python (també conegut com `venv`)
+
+Primer hem de crear el entorn virtual i després activar-lo en eixa instància del terminal, i es consigueix de la següent forma:
+
+```bash
+# Crear un entorn virtual anomenat .venv
+python3 -m venv .venv
+
+# Activar l'entorn virtual
+source .venv/bin/activate
+```
+
+Ara amb aquests comands veuras com en la terminal et posara entre parentesis el nom del entorn de la següent forma:
+
+```bash
+(.venv) user@user-Desktop:
+```
+
+I amb això executes eks comands esmentats en l' apartat de Windows:
+
+```bash
+mkdocs gh-deploy
+```
+
 ### Opcional
 #### Canviar el tema
 Si voleu posar un tema podeu fer-lo de la següent forma:
